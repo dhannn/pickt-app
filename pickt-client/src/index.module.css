@@ -11,6 +11,11 @@
 
     --body-font-size: 0.8rem;
 
+    --thin-font-weight: 100;
+    --light-font-weight: 300;
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+
     --microinteraction-transition: .3s cubic-bezier(0,.94,.4,.95);
 }
 

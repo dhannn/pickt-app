@@ -1,0 +1,16 @@
+@import url('./../../index.module.css');
+
+.formElements {
+    outline: none;
+    padding: 10px;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: var(--light-font-weight);
+}
+
+.textarea {
+    resize: none;
+    width: 100%;
+}
