@@ -1,0 +1,11 @@
+:root {
+    --black: #373b48;
+    --white: #fdfcfc;
+    --dirty-white: #eef0eb;
+    --lavender: #9a94a8;
+    --greenish-gray: #92a0a5;
+}
+
+.rounded-10px {
+    border-radius: 10px;
+}

@@ -1,0 +1,5 @@
+@import url('../../index.module.css');
+
+.primary-button {
+    background-color: var(--black);
+}
