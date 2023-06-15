@@ -1,8 +1,15 @@
 import React from "react";
-import FormButton from "./components/Button/FormButton";
+import Button from "./components/Button/Button";
 
 export function App() {
-    return (<FormButton value={"Create"} onClick={function (event: React.FormEvent<HTMLInputElement>): void {
-        event.preventDefault(); console.log('Clicked!');
-    } }/>);
+    return (
+    <>
+        <Button type='primary' value={'Create'} onClick={function (): void {
+            console.log('Clicked!');
+        } }/>
+        <Button type='secondary' value={'Cancel'} onClick={function (): void {
+            console.log('Clicked!');
+        } }/>
+    </>
+    );
 }

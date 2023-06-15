@@ -1,5 +1,55 @@
 @import url('../../index.module.css');
 
+
+
+.button {
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    font-size: var(--body-font-size);
+    cursor: pointer;
+    position: relative;
+    transition: var(--microinteraction-transition);
+
+    margin: 10px;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    height: 15%;
+    width: 0%;
+    bottom: 0%;
+    left: 50%;
+    transition: var(--microinteraction-transition); 
+}
+
+.button:hover::after {
+    width: 100%;
+    left: 0%;
+    transition: var(--microinteraction-transition);
+}
+
 .primary-button {
+    background-color: var(--lavender);
+    color: var(--dirty-white);
+}
+
+.primary-button:hover {
     background-color: var(--black);
+    transition: var(--microinteraction-transition);
+}
+
+.primary-button::after {
+    background-color: var(--lavender);
+    z-index: 1;
+}
+
+.secondary-button {
+    color: var(--lavender);
+    background-color: var(--white);
+}
+
+.secondary-button::after {
+    background-color: var(--lavender);
 }
