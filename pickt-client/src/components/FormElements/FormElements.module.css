@@ -3,6 +3,7 @@
 .formElements {
     outline: none;
     padding: 10px;
+    border: solid 1px;
 }
 
 .label {
