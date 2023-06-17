@@ -4,15 +4,15 @@ import globalStyles from './../../index.module.css'
 
 type TextAreaProps = {
     classNames?: string
-    height?: number
+    style?: React.CSSProperties
 }
 
 export default function TextArea(props: TextAreaProps) {
-    const { classNames, height } = props;
+    const { classNames, style } = props;
     const css = `${globalStyles['rounded-5px']} ${formStyles['textarea']} ${formStyles['formElements']}`;
 
     return (
-        <textarea className={css + ' ' + classNames} style={{height: height?.toString() + 'vh'}}></textarea>
+        <textarea className={css + ' ' + classNames} style={style}></textarea>
     );
 }
 

@@ -2,16 +2,26 @@
 
 .formElements {
     outline: none;
-    padding: 10px;
     border: solid 1px;
+    font-size: var(--body-font-size);
+}
+
+.input {
+    padding: 10px 15px;
 }
 
 .label {
-    font-size: 0.8rem;
+    font-size: var(--small-font-size);
     font-weight: var(--light-font-weight);
+    margin-bottom: 0.5vh;
 }
 
 .textarea {
+    padding: 15px;
     resize: none;
-    width: 100%;
+    width: calc(100% - 20px);
+}
+
+.select {
+    padding: 10px;
 }

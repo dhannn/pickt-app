@@ -9,7 +9,8 @@
     --greenish-gray: #92a0a5;
     --light-greenish-gray: #dbded4;
 
-    --body-font-size: 0.8rem;
+    --body-font-size: 1rem;
+    --small-font-size: 0.9rem;
 
     --thin-font-weight: 100;
     --light-font-weight: 300;
@@ -31,4 +32,8 @@ a {
 
 .rounded-5px {
     border-radius: 5px;
+}
+
+.rounded-10px {
+    border-radius: 10px;
 }
