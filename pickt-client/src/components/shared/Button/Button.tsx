@@ -1,6 +1,6 @@
 import React, { MouseEventHandler } from "react";
 import btnStyles from './Button.module.css';
-import styles from './../../index.module.css';
+import styles from './../../../index.module.css';
 
 type FormButtonProps = {
     type: string,

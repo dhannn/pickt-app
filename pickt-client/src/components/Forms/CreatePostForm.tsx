@@ -1,8 +1,8 @@
 import React from 'react';
-import { Input, Label, Select, TextArea } from '../FormElements';
+import { Input, Label, Select, TextArea } from '../shared/FormElements';
 import formStyles from './Forms.module.css'
 import globalStyles from './../../index.module.css'
-import Button from '../Button/Button';
+import Button from '../shared/Button/Button';
 
 type CreatePostProperties = {
     isFormFocused: boolean,

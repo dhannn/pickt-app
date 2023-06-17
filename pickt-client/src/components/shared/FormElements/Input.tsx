@@ -1,6 +1,6 @@
 import React from 'react';
 import formStyles from './FormElements.module.css'
-import globalStyles from './../../index.module.css'
+import globalStyles from './../../../index.module.css'
 
 type InputProps = {
     type?: string
