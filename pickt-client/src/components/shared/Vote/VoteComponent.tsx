@@ -2,14 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import useVote from "./useVote"
 import React from "react";
-import buttonStyles from './Button.module.css'
+import buttonStyles from './Vote.module.css'
+import { Vote } from "../../../types/Vote";
 
-type VoteProps = {
-    upvotes: number,
-    downvotes: number
-}
-
-export function Vote(props: VoteProps) {
+export function VoteComponent(props: Vote) {
     const { upvotes, downvotes } = props;
     const initialNetVotes = upvotes - downvotes;
 

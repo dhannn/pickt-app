@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import buttonStyle from './Button.module.css';
+import buttonStyle from './Vote.module.css';
 
 const voteButtonClass = buttonStyle['vote-button'];
 const activeButtonClass = buttonStyle['active-vote-button'];
