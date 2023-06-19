@@ -1,0 +1,21 @@
+.avatar {
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;  
+}
+
+
+.small {
+    width: 3vw;
+    padding-bottom: 3vw;
+}
+
+.medium {
+    width: 6vw;
+    padding-bottom: 6vw;
+}
+
+.large {
+    width: 10vw;
+    padding-bottom: 10vw;
+}
