@@ -17,7 +17,7 @@ export default function CreatePostForm(props: CreatePostProperties) {
 
     function renderActiveForm() {
         return (
-            <form className={formStyles['form']}>
+            <form className={formStyles['form']}>   
                 <div className={formStyles['post-title'] + ' ' + globalStyles['rounded-10px'] + ' ' + formStyles['formInput']}>
                     <Label classNames={formStyles['post-title-label']} value='Title'/>
                     <Input classNames={`${globalStyles['rounded-10px']} ${formStyles['post-title-input']}`} style={{padding: '10px', background: 'none', borderColor: 'white'}} />
