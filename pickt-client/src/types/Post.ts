@@ -2,6 +2,7 @@ import { User } from "./User";
 import { Vote } from "./Vote";
 
 export type Post = {
+    _id: string
     content: PostContent,
     metadata: PostMetadata,
     voteInfo: Vote,

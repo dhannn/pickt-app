@@ -6,6 +6,7 @@
     --white: #fdfcfc;
     --dirty-white: #eef0eb;
     --lavender: #9a94a8;
+    --lavender-40: #9a94a840;
     --greenish-gray: #92a0a5;
     --light-greenish-gray: #dbded4;
 
@@ -36,4 +37,12 @@ a {
 
 .rounded-10px {
     border-radius: 10px;
+}
+
+.rounded-20px {
+    border-radius: 20px;
+}
+
+.inline {
+    display: inline;
 }

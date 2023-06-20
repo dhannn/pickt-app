@@ -1,0 +1,47 @@
+
+.post-snippet, .post-snippet-with-photo {
+    padding: 8vh 6vw 8vh 8vw;
+    box-shadow: 0px 0px 40px var(--lavender-40);
+}
+
+.post-snippet-with-photo .title, .post-snippet-with-photo .content{
+    color: var(--dirty-white);
+}
+
+.post-list {
+    width: 45vw;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    padding-bottom: 20vh;
+    top: 20vh;
+    right: 10vw;
+    gap: 5vh;
+}
+
+.content {
+    text-align: justify;
+    line-height: 1.5rem;
+    margin-top: 8px;
+}
+
+.tag {
+    background-color: var(--lavender);
+    padding: 3px 6px;
+    color: var(--dirty-white);
+    font-size: var(--small-font-size);
+    font-weight: var(--light-font-weight);
+
+    margin-bottom: 1vh;
+    display: inline-block;
+}
+
+.author, .date {
+    font-size: var(--small-font-size);
+    color: var(--greenish-gray);
+}
+
+.author {
+    color: var(--lavender);
+}
