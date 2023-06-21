@@ -25,3 +25,22 @@
     transition: var(--microinteraction-transition);
     cursor: pointer;
 }
+
+.vote-button-dark {
+    color: var(--lavender);
+    font-size: 1.5rem;
+    transform: scale(1);
+    transition: var(--microinteraction-transition);
+    width: 2vw;
+}
+
+.vote-count-dark {
+    color: var(--dirty-white);
+}
+
+.active-vote-button-dark {
+    color: var(--light-greenish-gray);
+    transform: scale(1.2);
+    transition: var(--microinteraction-transition);
+    cursor: pointer;
+}

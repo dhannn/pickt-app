@@ -10,12 +10,11 @@ import { getRelativeDateTime } from '../../utils/format';
 
 export function PostSnippet(props: Post) {
     const { _id, content, voteInfo, metadata } = props;
-    const voteComponent = renderVoteComponent(voteInfo);
+    const voteComponent = renderVoteComponent(voteInfo, content.photoUrl !== undefined);
     const contentComponent = renderContent(content, metadata);
 
     let cssClasses = `${globalStyles['rounded-20px']} `;
     content.photoUrl? cssClasses += `${postStyles['post-snippet-with-photo']}`: cssClasses += `${postStyles['post-snippet']}`;
-    console.log(cssClasses);
     
     const customStyles: CSSProperties = content.photoUrl !== undefined? { 
         backgroundColor: 'rgb(100, 100, 100)',
@@ -23,6 +22,7 @@ export function PostSnippet(props: Post) {
         backgroundPosition: 'center',
         backgroundBlendMode: 'multiply'
     }: {};
+
     return (
         <div className={cssClasses} style={customStyles}>
             { voteComponent }
@@ -30,10 +30,10 @@ export function PostSnippet(props: Post) {
         </div>
     );
 
-    function renderVoteComponent(voteInfo: Vote) {
+    function renderVoteComponent(voteInfo: Vote, darkBg: boolean = false) {
         const style: CSSProperties = {position: 'absolute', left: '2.5vw'};
 
-        return <VoteComponent voteInfo={voteInfo} styles={ style }/>;
+        return <VoteComponent voteInfo={voteInfo} styles={ style } darkBg={darkBg} />;
     }
     
     function renderContent(postContent: PostContent, postMetadata: PostMetadata) {
