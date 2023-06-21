@@ -3,13 +3,18 @@ import { VoteComponent } from "./components/shared/Vote/VoteComponent";
 import Avatar from "./components/shared/Avatar/Avatar";
 import { getPostById } from "./services/post/PostServices";
 import { PostList } from "./components/Post/PostList";
+import { Home } from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export function App() {
     getPostById('s');
 
     return (
-    <>
-        <PostList/>
-    </>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/post/:postId'/>
+            </Routes>
+        </BrowserRouter>
     );
 }

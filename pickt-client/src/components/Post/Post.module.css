@@ -1,7 +1,11 @@
 
 .post-snippet, .post-snippet-with-photo {
-    padding: 8vh 6vw 8vh 8vw;
     box-shadow: 0px 0px 40px var(--lavender-40);
+}
+
+.content-container {
+    padding: 8vh 6vw 8vh 8vw;
+    color: var(--black);
 }
 
 .post-snippet-with-photo .title, .post-snippet-with-photo .content{

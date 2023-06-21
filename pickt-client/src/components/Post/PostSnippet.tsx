@@ -7,6 +7,7 @@ import { PostTag } from './PostTag';
 import postStyles from './Post.module.css'
 import globalStyles from './../../index.module.css'
 import { getRelativeDateTime } from '../../utils/format';
+import { Link } from 'react-router-dom';
 
 export function PostSnippet(props: Post) {
     const { _id, content, voteInfo, metadata } = props;
@@ -26,12 +27,14 @@ export function PostSnippet(props: Post) {
     return (
         <div className={cssClasses} style={customStyles}>
             { voteComponent }
-            { contentComponent }
+            <Link to={`/post/${_id}`}>
+                    { contentComponent }
+            </Link>
         </div>
     );
 
     function renderVoteComponent(voteInfo: Vote, darkBg: boolean = false) {
-        const style: CSSProperties = {position: 'absolute', left: '2.5vw'};
+        const style: CSSProperties = {float: 'left', padding: '7vh 2.5vw 10vh'};
 
         return <VoteComponent voteInfo={voteInfo} styles={ style } darkBg={darkBg} />;
     }
@@ -44,13 +47,13 @@ export function PostSnippet(props: Post) {
         const truncatedContent = truncatePost(content);
 
         return (
-            <>
+            <div className={`${postStyles['content-container']}`}>
                 <p> <PostTag tag={tag}/>      </p>
                 <h1 className={`${postStyles['title']}`}>{ title }       </h1>
                 <p className={`${globalStyles['inline']} ${postStyles['author']}`}> @{ author.username } </p>
             <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
                 <p className={postStyles['content']} dangerouslySetInnerHTML={{ __html: truncatedContent }}/>
-            </>
+            </div>
         );
     }
 
