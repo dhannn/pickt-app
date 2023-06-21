@@ -35,3 +35,7 @@ export function getRelativeDateTime(timestamp: Date): string {
     const significantDigit = (units as any)[significantUnit];
     return `${significantDigit} ${significantUnit}${significantDigit === 1? '': 's'} ago`;
 }
+
+export function htmlify(str: string) {
+    return str.replace(/\n/g, '<br/>');
+}

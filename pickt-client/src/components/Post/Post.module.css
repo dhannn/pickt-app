@@ -12,6 +12,10 @@
     color: var(--dirty-white);
 }
 
+.title {
+    text-wrap: balance;
+}
+
 .post-list {
     width: 45vw;
     display: flex;
@@ -24,7 +28,7 @@
     gap: 5vh;
 }
 
-.content {
+.content, .content-full {
     text-align: justify;
     line-height: 1.5rem;
     margin-top: 8px;
@@ -48,4 +52,30 @@
 
 .author {
     color: var(--lavender);
+}
+
+.full-post {
+    width: 30vw;
+    padding: 10vh 10vw 15vh 10vw;
+    
+    box-shadow: 0px 50px 30px -50px #373b4820;
+}
+
+.title-full {
+    text-wrap: balance;
+}
+
+.photo-full {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.content-full {
+    line-height: 1.8rem;
+    margin-top: 2vh;
 }

@@ -1,3 +1,4 @@
+import { Comment } from "./Comment";
 import { User } from "./User";
 import { Vote } from "./Vote";
 

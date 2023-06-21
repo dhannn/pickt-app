@@ -34,7 +34,7 @@ export function PostSnippet(props: Post) {
     );
 
     function renderVoteComponent(voteInfo: Vote, darkBg: boolean = false) {
-        const style: CSSProperties = {float: 'left', padding: '7vh 2.5vw 10vh'};
+        const style: CSSProperties = {float: 'left', padding: '7vh 3vw 10vh'};
 
         return <VoteComponent voteInfo={voteInfo} styles={ style } darkBg={darkBg} />;
     }
@@ -47,7 +47,7 @@ export function PostSnippet(props: Post) {
         const truncatedContent = truncatePost(content);
 
         return (
-            <div className={`${postStyles['content-container']}`}>
+            <div className={`${postStyles['content-container']} ${globalStyles['rounded-10px']}`}>
                 <p> <PostTag tag={tag}/>      </p>
                 <h1 className={`${postStyles['title']}`}>{ title }       </h1>
                 <p className={`${globalStyles['inline']} ${postStyles['author']}`}> @{ author.username } </p>
@@ -83,7 +83,7 @@ export function PostSnippet(props: Post) {
             len += APPROX_CHAR_PER_LINE;
         });
 
-        truncated = truncated.trimEnd().replace('\n', '<br/>');
+        truncated = truncated.trimEnd().replace(/\n/g, '<br/>');
         return truncated;
     }
 }

@@ -10,6 +10,10 @@ export function getPosts() {
 
 export function getPostById(id: string) {
     for (let i in postsJSON) {
-        console.log(postsJSON[i]);
+        if (postsJSON[i]._id === id) {
+            return postsJSON[i];
+        }
     }
+
+    return null;
 }
