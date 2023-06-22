@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
 import styles from './Avatar.module.css'
 
-type AvatarSize = 'small' | 'medium' | 'large'
+type AvatarSize = 'small' | 'medium' | 'large' | 'smaller'
 
 type AvatarProps = {
     size: AvatarSize,

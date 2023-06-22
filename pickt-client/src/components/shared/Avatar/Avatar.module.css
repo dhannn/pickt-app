@@ -19,3 +19,8 @@
     width: 10vw;
     padding-bottom: 10vw;
 }
+
+.smaller {
+    width: 2vw;
+    padding-bottom: 2vw;
+}

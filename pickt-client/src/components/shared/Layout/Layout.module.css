@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@200&display=swap');
+
+.navbar {
+    width: 100vw;
+    height: 6vh;
+    position: fixed;
+    top: 0;
+    background-color: var(--black);
+    z-index: 2;
+}
+
+.search-bar {
+    position: absolute;
+    top: 1vh;
+    right: 40vw;
+}
+
+.site-name {
+    font-family: 'Noto Serif';
+    position: relative;
+    font-size: 2rem;
+    color: var(--dirty-white);
+    left: 10vw;
+    top: 0.5vh;
+    height: 100%;
+}
+
+.about-link {
+    position: relative;
+    left: 12.5vw;
+}

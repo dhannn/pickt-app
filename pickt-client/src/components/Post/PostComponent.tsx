@@ -1,6 +1,5 @@
 import React from "react";
 import { Post, PostContent, PostMetadata } from "../../types/Post";
-import { CommentComponent } from "../Comment/CommentComponent";
 import { PostTag } from "./PostTag";
 
 import globalStyles from './../../index.module.css';
@@ -19,7 +18,7 @@ export function PostComponent(props: Post) {
         <div>
             <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '3vw', top: '20vh'}}/>
             { contentComponents }
-            <div>
+            <div style={{paddingBottom: '10vh'}}>
                 <h1 style={{margin: '10vh 0vw 5vh 5vw'}}>Comments</h1>
                 <CommentList comments={comments!}/>
             </div>
