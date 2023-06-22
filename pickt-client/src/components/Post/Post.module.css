@@ -66,7 +66,7 @@
 }
 
 .photo-full {
-    position: absolute;
+    position: fixed;
     right: 0;
     width: 50vw;
     height: 100vh;

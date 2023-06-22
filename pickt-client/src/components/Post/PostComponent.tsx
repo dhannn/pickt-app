@@ -19,6 +19,9 @@ export function PostComponent(props: Post) {
             <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '3vw', top: '8vh'}}/>
             { contentComponents }
             <CommentComponent info={comments![0]} level={0}/>
+            <CommentComponent info={comments![1]} level={1}/>
+            <CommentComponent info={comments![1]} level={1}/>
+            <CommentComponent info={comments![0]} level={3}/>
         </div>
     );    
 

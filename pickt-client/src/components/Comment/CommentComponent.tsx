@@ -4,6 +4,10 @@ import { VoteComponent } from "../shared/Vote/VoteComponent";
 import { Link } from "react-router-dom";
 import Avatar from "../shared/Avatar/Avatar";
 
+import commentStyles from './Comment.module.css'
+import { getRelativeDateTime } from "../../utils/format";
+import Button from "../shared/Button/Button";
+
 type CommentProperty = {
     info: Comment,
     level: number
@@ -15,16 +19,29 @@ export function CommentComponent(props: CommentProperty) {
 
     const { _id, content, metadata, voteInfo } = info;
 
-    return (
-        <div>
-            <VoteComponent voteInfo={voteInfo}/>
+    const relativeDate = getRelativeDateTime(new Date(metadata.createdAt))
 
-            <Link to={`/user/${metadata.author._id}`}>
-                <Avatar size='medium'/> 
-                <p>{ metadata.author.name.firstName } { metadata.author.name.lastName }</p>
-            </Link>
+    return (
+        <div className={`${commentStyles['comment']}`} style={{width: `${30 - paddingSize}vw`, left: `${paddingSize + 2}vw`}}>
+            <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute'}}/>
+
+            <div className={`${commentStyles['metadata-container']}`}>
+                <Link style={{position: 'relative', left: '-1vw'}} to={`/user/${metadata.author._id}`}>
+                    <Avatar size='small' /> 
+                </Link>
+
+                <div>
+                    <Link to={`/user/${metadata.author._id}`}>
+                        { metadata.author.name.firstName } { metadata.author.name.lastName }
+                    </Link>
+                    
+                    <p>{relativeDate}</p>
+                </div>
+
+            </div>
             
-            <p>{content}</p>
+            <p className={`${commentStyles['content']}`} style={{left: `${8}vw`, width: `${25 - paddingSize}vw`}}>{content}</p>
+            {/* <Button type='primary' value='Reply' onClick={() => {}}/> */}
         </div>
     );
 }
