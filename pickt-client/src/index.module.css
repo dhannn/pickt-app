@@ -32,6 +32,10 @@ a {
     color: var(--lavender);
 }
 
+.small-font-size, .small-font-size * {
+    font-size: var(--small-font-size);
+}
+
 .rounded-5px {
     border-radius: 5px;
 }

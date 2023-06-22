@@ -1,21 +1,32 @@
-import React from "react";
-import { VoteComponent } from "./components/shared/Vote/VoteComponent";
-import Avatar from "./components/shared/Avatar/Avatar";
-import { getPostById } from "./services/post/PostServices";
-import { PostList } from "./components/Post/PostList";
+import React, { createContext, useState } from "react";
 import { Home } from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Post } from "./pages/Post";
+import { User } from "./types/User";
+import { useUserAuth } from "./hooks/useUserAuth";
 
 export function App() {
-    getPostById('s');
+    const myUser: User = {
+        _id: "3fcca2",
+        name: {
+            firstName: "Clarence",
+            lastName: undefined
+        },
+        username: "rncs_21",
+        profilePictureURL: "/dp2.png"
+    };
+    
+    const [ user, setUser ] = useState<User | undefined>(undefined);
+    const UserAuthContext = useUserAuth();
 
     return (
         <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/post/:postId' element={<Post/>}/>
-            </Routes>
+            <UserAuthContext.Provider value={ { user, setUser } }>
+                <Routes>
+                    <Route path='/' element={ <Home/> }/>
+                    <Route path='/post/:postId' element={ <Post/> }/>
+                </Routes>
+            </UserAuthContext.Provider>
         </BrowserRouter>
     );
 }

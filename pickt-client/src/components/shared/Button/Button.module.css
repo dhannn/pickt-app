@@ -53,3 +53,9 @@
 .secondary-button::after {
     background-color: var(--lavender);
 }
+
+.login-signup {
+    background-color: var(--black);
+    width: 100%;
+    color: var(--dirty-white);
+}
