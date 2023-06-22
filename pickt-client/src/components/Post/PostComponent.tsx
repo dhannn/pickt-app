@@ -8,6 +8,7 @@ import postStyles from './Post.module.css';
 import { getRelativeDateTime, htmlify } from "../../utils/format";
 import { VoteComponent } from "../shared/Vote/VoteComponent";
 import { Link } from "react-router-dom";
+import { CommentList } from "../Comment/CommentList";
 
 export function PostComponent(props: Post) {
     const { content, metadata, voteInfo, comments } = props;
@@ -16,12 +17,12 @@ export function PostComponent(props: Post) {
 
     return (
         <div>
-            <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '3vw', top: '8vh'}}/>
+            <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '3vw', top: '20vh'}}/>
             { contentComponents }
-            <CommentComponent info={comments![0]} level={0}/>
-            <CommentComponent info={comments![1]} level={1}/>
-            <CommentComponent info={comments![1]} level={1}/>
-            <CommentComponent info={comments![0]} level={3}/>
+            <div>
+                <h1 style={{margin: '10vh 0vw 5vh 5vw'}}>Comments</h1>
+                <CommentList comments={comments!}/>
+            </div>
         </div>
     );    
 

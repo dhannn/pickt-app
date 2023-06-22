@@ -7,6 +7,7 @@ import Avatar from "../shared/Avatar/Avatar";
 import commentStyles from './Comment.module.css'
 import { getRelativeDateTime } from "../../utils/format";
 import Button from "../shared/Button/Button";
+import { TextArea } from "../shared/FormElements";
 
 type CommentProperty = {
     info: Comment,
@@ -15,18 +16,18 @@ type CommentProperty = {
 
 export function CommentComponent(props: CommentProperty) {
     const {info, level} = props;
-    const paddingSize = level * 2;
+    const leftValue = level * 2;
 
     const { _id, content, metadata, voteInfo } = info;
 
     const relativeDate = getRelativeDateTime(new Date(metadata.createdAt))
 
     return (
-        <div className={`${commentStyles['comment']}`} style={{width: `${30 - paddingSize}vw`, left: `${paddingSize + 2}vw`}}>
-            <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute'}}/>
+        <div className={`${commentStyles['comment']}`} style={{width: `${25 - leftValue}vw`, left: `${leftValue + 5}vw`}}>
+            <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '1.5vw'}}/>
 
             <div className={`${commentStyles['metadata-container']}`}>
-                <Link style={{position: 'relative', left: '-1vw'}} to={`/user/${metadata.author._id}`}>
+                <Link style={{position: 'relative', left: '-1.5vw'}} to={`/user/${metadata.author._id}`}>
                     <Avatar size='small' /> 
                 </Link>
 
@@ -40,8 +41,8 @@ export function CommentComponent(props: CommentProperty) {
 
             </div>
             
-            <p className={`${commentStyles['content']}`} style={{left: `${8}vw`, width: `${25 - paddingSize}vw`}}>{content}</p>
-            {/* <Button type='primary' value='Reply' onClick={() => {}}/> */}
+            <p className={`${commentStyles['content']}`} style={{left: `${5.5}vw`, width: `${24 - leftValue}vw`}}>{content}</p>
+            <Button style={{left: '4.5vw', top: '1vh'}} type='secondary' value='Reply' onClick={() => {}}/>
         </div>
     );
 }

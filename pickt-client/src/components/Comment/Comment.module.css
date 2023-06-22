@@ -1,19 +1,21 @@
 .comment {
     position: relative;
-    box-shadow: 0px 40px 50px -20px #373b4810;
+    box-shadow: 0px 40px 50px -20px #373b4815;
     margin-bottom: 1vh;
     padding: 6vh 8vw 6vh 4vw;
     border-radius: 10px;
+    border-left: solid 2px var(--lavender-40);
+    margin-bottom: 2vh;
 }
 
 .metadata-container {
     display: flex;
     position: relative;
-    left: 5vw;
+    left: 2.5vw;
 }
 
 .content {
-    /* margin-left: 15vw; */
+    line-height: 1.5rem;
     position: relative;
     text-align: justify;
 }
