@@ -19,12 +19,12 @@
 .post-list {
     width: 45vw;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     flex-direction: column;
 
     padding-bottom: 20vh;
-    top: 20vh;
-    right: 10vw;
+    margin-top: 15vh;
+    margin-left: calc(100% - 10vw - 45vw);
     gap: 5vh;
 }
 
@@ -75,6 +75,7 @@
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    background-color: var(--dirty-white);
 }
 
 .content-full {

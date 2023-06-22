@@ -1,17 +1,68 @@
-@import url('./../../index.module.css');
-
 .form {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
-    width: 40vw;
-    top: 15vh;
-    right: 10vw;
+    width: 41vw;
+    top: 12vh;
+    left: 44vw;
 
-    box-shadow: 0px 0px 50px #373b4820;
+    box-shadow: 0px 0px 50px #373b4800;
     padding: 2vw 2vw;
+}
+
+.active-form {
+    height: 57vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px #373b4820;
+    transition: 0.2s;
+    transition-delay: .4s;
+}
+
+
+@keyframes fade-out {
+    0% {
+        visibility: inherit;
+        opacity: 1;
+    }
+
+    50% {
+        visibility: inherit;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        visibility: none;
+        opacity: 0;
+    }
+
+    50% {
+        visibility: inherit;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: inherit;
+        opacity: 1;
+    }
+}
+
+@keyframes activate-title {
+    from {
+        padding-top: 0vh;
+    }
+
+    to {
+        padding-top: 1vh;
+    }
 }
 
 .formInput {
@@ -32,6 +83,13 @@
     left: 0%;
     display: flex;
     flex-direction: column;
+}
+
+.active-form .post-title {
+    animation-name: activate-title;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    transition-delay: .4s;
 }
 
 .post-title-label {

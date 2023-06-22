@@ -6,17 +6,18 @@ type SelectProps = {
     choices: Array<string>,
     classNames?: string
     width?: number,
-    style?: React.CSSProperties
+    style?: React.CSSProperties, 
+    required?: boolean
 }
 
 export default function Select(props: SelectProps) {
-    const { classNames, choices, style } = props;
+    const { classNames, choices, style, required } = props;
     const css = `${globalStyles['rounded-5px']} ${formStyles['select']} ${formStyles['formElements']}`;
 
     const choiceHtml = choices.map(renderChoice);
 
     return (
-        <select className={classNames + ' ' + css} style={style} required defaultValue=''>
+        <select required={required} className={classNames + ' ' + css} style={style} defaultValue=''>
             <option value='' selected disabled hidden> </option>
             {choiceHtml}
         </select>
