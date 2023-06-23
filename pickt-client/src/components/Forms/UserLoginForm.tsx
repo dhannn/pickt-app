@@ -42,7 +42,7 @@ export function UserLoginForm() {
         const usernameEmail = usernameEmailInput.current?.value;
         const password = passwordInput.current?.value;
         const isUsername = usernameExists(usernameEmail!);
-        const isEmail = usernameExists(usernameEmail!);
+        const isEmail = emailExists(usernameEmail!);
         
         if (!isUsername && !isEmail) {
             return alert('The email or username does not exist.');

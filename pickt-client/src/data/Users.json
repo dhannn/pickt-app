@@ -7,8 +7,8 @@
         },
         "username": "dhannn",
         "email": "dhannn.r@gmail.com",
-        "profilePictureURL": "profilepictures/dp.jpg",
-        "password": "101123"
+        "profilePictureURL": "/profilepictures/dp.jpg",
+        "password": "101122"
     },
     {
         "_id": "5678efga",
@@ -17,7 +17,7 @@
         },
         "username": "rncs_21",
         "email": "rncs.21@gmail.com",
-        "profilePictureURL": "profilepictures/dp2.jpg",
+        "profilePictureURL": "/profilepictures/dp2.jpg",
         "password": "therebetterbeamirrorball"
     },
     {
