@@ -5,17 +5,9 @@ import { Post } from "./pages/Post";
 import { User } from "./types/User";
 import { useUserAuth } from "./hooks/useUserAuth";
 import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
 
 export function App() {
-    const myUser: User = {
-        _id: "3fcca2",
-        name: {
-            firstName: "Clarence",
-            lastName: undefined
-        },
-        username: "rncs_21",
-        profilePictureURL: "/dp2.png"
-    };
     
     const [ user, setUser ] = useState<User | undefined>(undefined);
     const UserAuthContext = useUserAuth();
@@ -27,6 +19,7 @@ export function App() {
                     <Route path='/' element={ <Home/> }/>
                     <Route path='/post/:postId' element={ <Post/> }/>
                     <Route path='/user/login' element={ <Login/> } />
+                    <Route path='/user/new' element={ <Register/> } />
                 </Routes>
             </UserAuthContext.Provider>
         </BrowserRouter>

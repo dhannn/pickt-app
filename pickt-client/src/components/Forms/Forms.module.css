@@ -126,3 +126,40 @@
 .user-login-form .buttons {
     align-self: center;
 }
+
+.user-register-form {
+    width: 20vw;
+    display: flex;
+    padding: 10vh 5vw;
+    flex-direction: column;
+    box-shadow: 0px 0px 40px var(--lavender-40);
+    border-radius: 20px;
+    margin-left: 35vw;
+    margin-top: 10vh;
+}
+
+.user-register-form Label {
+    margin-top: 20px;
+}
+
+.user-register-form Input {
+    margin-bottom: 20px;
+}
+
+.user-register-form .buttons {
+    align-self: center;
+    margin-top: 2vh;
+}
+
+.register-name {
+    display: flex;
+    gap: 1vw;
+}
+
+.register-name Label {
+    display: inline-block;
+}
+
+.register-name Label, .register-name Input {
+    width: 80%;
+}
