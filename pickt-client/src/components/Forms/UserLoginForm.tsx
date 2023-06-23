@@ -17,14 +17,14 @@ export function UserLoginForm() {
     const navigate = useNavigate();
 
     return(
-        <form ref={formElement} className={formStyles['user-login-form']}>
-            <h1>Login</h1>
-            <Label value='Username or Email'/>
+        <form ref={formElement} className={formStyles['user-login-form']} style={{backdropFilter: `blur(20px)`}}>
+            <h1 style={{color: 'var(--black)', fontSize: '3rem'}}>Login</h1>
+            <Label style={{color: 'var(--black)'}} value='Username or Email'/>
             <Input required ref={ usernameEmailInput }/>
-            <Label value='Password'/>
+            <Label style={{color: 'var(--black)'}} value='Password'/>
             <Input required ref={ passwordInput } type='password'/>
             <div className={formStyles['buttons']}>
-                <Button type='primary' value='Log in' onClick={login}/>
+                <Button style={{backgroundColor: 'var(--black)'}} type='primary' value='Log in' onClick={login}/>
                 <Button type='secondary' value='Cancel' onClick={() => {}}/>
             </div>
         </form>
