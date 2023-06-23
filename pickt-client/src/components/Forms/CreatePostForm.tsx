@@ -43,7 +43,7 @@ export default function CreatePostForm(props: CreatePostProperties) {
     function handleSubmit(e: React.MouseEvent) {
         e.preventDefault();
         if (form.current?.checkValidity()) {
-            form.current.submit();
+            setFocused!(false);
         } else {
             form.current?.reportValidity()
         }

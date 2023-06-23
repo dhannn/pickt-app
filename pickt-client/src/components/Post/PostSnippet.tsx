@@ -50,7 +50,7 @@ export function PostSnippet(props: Post) {
             <div className={`${postStyles['content-container']} ${globalStyles['rounded-10px']}`}>
                 <p> <PostTag tag={tag}/>      </p>
                 <h1 className={`${postStyles['title']}`}>{ title }       </h1>
-                <p className={`${globalStyles['inline']} ${postStyles['author']}`}> @{ author.username } </p>
+                <Link to={`/user/@${author.username}`} className={`${globalStyles['inline']} ${postStyles['author']}`}> @{ author.username } </Link>
             <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
                 <p className={postStyles['content']} dangerouslySetInnerHTML={{ __html: truncatedContent }}/>
             </div>

@@ -25,7 +25,7 @@ export function UserLoginForm() {
             <Input required ref={ passwordInput } type='password'/>
             <div className={formStyles['buttons']}>
                 <Button style={{backgroundColor: 'var(--black)'}} type='primary' value='Log in' onClick={login}/>
-                <Button type='secondary' value='Cancel' onClick={() => {}}/>
+                <Button type='secondary' value='Cancel' onClick={() => {navigate('/')}}/>
             </div>
         </form>
     );

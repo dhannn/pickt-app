@@ -38,7 +38,7 @@ export function PostComponent(props: Post) {
                 <div className={`${postStyles['full-post']}`}>
                     <PostTag tag={ tag }/>
                     <h1 className={`${postStyles['title-full']}`}>{ title }</h1>
-                    <Link className={`${globalStyles['inline']} ${postStyles['author']}`} to={`/user/${ author._id }`}> @{ author.username } </Link>
+                    <Link className={`${globalStyles['inline']} ${postStyles['author']}`} to={`/user/@${ author.username }`}> @{ author.username } </Link>
                     <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
                     <p className={postStyles['content-full']} dangerouslySetInnerHTML={{ __html: htmlified }}/>
                 </div>

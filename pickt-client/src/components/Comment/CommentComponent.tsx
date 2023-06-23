@@ -27,12 +27,12 @@ export function CommentComponent(props: CommentProperty) {
             <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '1.5vw'}}/>
 
             <div className={`${commentStyles['metadata-container']}`}>
-                <Link style={{position: 'relative', left: '-1.5vw'}} to={`/user/${metadata.author._id}`}>
+                <Link style={{position: 'relative', left: '-1.5vw'}} to={`/user/@${metadata.author.username}`}>
                     <Avatar size='small' /> 
                 </Link>
 
                 <div>
-                    <Link to={`/user/${metadata.author._id}`}>
+                    <Link to={`/user/@${metadata.author.username}`}>
                         { metadata.author.name.firstName } { metadata.author.name.lastName }
                     </Link>
                     

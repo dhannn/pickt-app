@@ -28,7 +28,7 @@ export function NavBar() {
         const { profilePictureURL, name, username } = user;
 
         return (
-            <Link to={'/'}  style={{position: 'absolute', display: 'flex', right: '12vw', top: '1vh', color: 'var(--light-greenish-gray)'}}>
+            <Link to={`/user/@${username}`}  style={{position: 'absolute', display: 'flex', right: '12vw', top: '1vh', color: 'var(--light-greenish-gray)'}}>
                 <Avatar size={'smaller'} url={ profilePictureURL }/>
                 <div>
                     <p style={{marginLeft: '1vw', marginTop: '0vh'}}>{`${name.firstName} ${name.lastName? name.lastName: ''}`}</p>
