@@ -103,3 +103,26 @@
 .post-tag-label {
     margin-top: 8vh;
 }
+
+.user-login-form {
+    width: 20vw;
+    display: flex;
+    padding: 15vh 5vw;
+    flex-direction: column;
+    box-shadow: 0px 0px 40px var(--lavender-40);
+    border-radius: 20px;
+    margin-left: 35vw;
+    margin-top: 15vh;
+}
+
+.user-login-form Label {
+    margin-top: 20px;
+}
+
+.user-login-form Input {
+    margin-bottom: 20px;
+}
+
+.user-login-form .buttons {
+    align-self: center;
+}

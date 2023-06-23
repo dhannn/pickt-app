@@ -1,4 +1,4 @@
-import React, { FocusEventHandler } from 'react';
+import React, { FocusEventHandler, forwardRef } from 'react';
 import formStyles from './FormElements.module.css'
 import globalStyles from './../../../index.module.css'
 
@@ -11,12 +11,13 @@ type InputProps = {
     required?: boolean
 }
 
-export default function Input(props: InputProps) {
+const Input = forwardRef<HTMLInputElement, InputProps>(function (props: InputProps, ref) {
     const { classNames, type, style, onFocus, placeholder, required } = props;
     const css = `${globalStyles['rounded-5px']} ${formStyles['input']} ${formStyles['formElements']}`;
 
     return (
-        <input required={required} className={ classNames + ' ' + css} type={type === undefined? 'text': type} style={style} onFocus={onFocus} placeholder={placeholder}></input>
+        <input ref={ref} required={required} className={ classNames + ' ' + css} type={type === undefined? 'text': type} style={style} onFocus={onFocus} placeholder={placeholder}></input>
     );
-}
+});
 
+export default Input;

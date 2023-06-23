@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "1234abcd",
+        "name": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+        },
+        "username": "dhannn",
+        "email": "dhannn.r@gmail.com",
+        "profilePictureURL": "profilepictures/dp.jpg",
+        "password": "101123"
+    },
+    {
+        "_id": "5678efga",
+        "name": {
+            "firstName": "Clarence"
+        },
+        "username": "rncs_21",
+        "email": "rncs.21@gmail.com",
+        "profilePictureURL": "profilepictures/dp2.jpg",
+        "password": "therebetterbeamirrorball"
+    },
+    {
+        "_id": "a3c9b2f7",
+        "name": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "username": "johndoe",
+        "email": "john.doe@gmail.com",
+        "profilePictureURL": "https://example.com/profile_picture.jpg",
+        "password": "0000"
+    }, 
+    {
+        "_id": "e1f8d4b6",
+        "name": {
+            "firstName": "Jane",
+            "lastName": "Smith"
+        },
+        "username": "janesmith",
+        "profilePictureURL": "https://example.com/profile_picture.jpg",
+        "email": "jane.smith@gmail.com",
+        "password": "1234"
+    },
+    {
+        "_id": "c6fa3bc0",
+        "name": {
+            "firstName": "Noah",
+            "lastName": "Parker"
+        },
+        "username": "noahparker",
+        "email": "noah.parker@gmail.com",
+        "profilePictureURL": "https://example.com/noah.jpg",
+        "password": "incorrect"
+    }
+]

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Post } from "./pages/Post";
 import { User } from "./types/User";
 import { useUserAuth } from "./hooks/useUserAuth";
+import { Login } from "./pages/Login";
 
 export function App() {
     const myUser: User = {
@@ -25,6 +26,7 @@ export function App() {
                 <Routes>
                     <Route path='/' element={ <Home/> }/>
                     <Route path='/post/:postId' element={ <Post/> }/>
+                    <Route path='/user/login' element={ <Login/> } />
                 </Routes>
             </UserAuthContext.Provider>
         </BrowserRouter>
