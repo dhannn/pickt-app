@@ -28,7 +28,7 @@ export function CommentComponent(props: CommentProperty) {
 
             <div className={`${commentStyles['metadata-container']}`}>
                 <Link style={{position: 'relative', left: '-1.5vw'}} to={`/user/@${metadata.author.username}`}>
-                    <Avatar size='small' /> 
+                    <Avatar size='small' url={metadata.author.profilePictureURL}/> 
                 </Link>
 
                 <div>

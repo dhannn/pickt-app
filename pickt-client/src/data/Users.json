@@ -8,7 +8,10 @@
         "username": "dhannn",
         "email": "dhannn.r@gmail.com",
         "profilePictureURL": "/profilepictures/dp.jpg",
-        "password": "101122"
+        "password": "101122",
+        "bio": "Beginner photographer looking to capture moments",
+        "posts": [],
+        "photoURLs": [] 
     },
     {
         "_id": "5678efga",
@@ -18,7 +21,10 @@
         "username": "rncs_21",
         "email": "rncs.21@gmail.com",
         "profilePictureURL": "/profilepictures/dp2.jpg",
-        "password": "therebetterbeamirrorball"
+        "password": "therebetterbeamirrorball",
+        "bio": "Art is my passion; life is an endless series of photographs.",
+        "posts": [],
+        "photoURLs": []
     },
     {
         "_id": "a3c9b2f7",
@@ -28,7 +34,6 @@
         },
         "username": "johndoe",
         "email": "john.doe@gmail.com",
-        "profilePictureURL": "https://example.com/profile_picture.jpg",
         "password": "0000"
     }, 
     {
@@ -38,7 +43,6 @@
             "lastName": "Smith"
         },
         "username": "janesmith",
-        "profilePictureURL": "https://example.com/profile_picture.jpg",
         "email": "jane.smith@gmail.com",
         "password": "1234"
     },
@@ -50,7 +54,6 @@
         },
         "username": "noahparker",
         "email": "noah.parker@gmail.com",
-        "profilePictureURL": "https://example.com/noah.jpg",
         "password": "incorrect"
     }
 ]

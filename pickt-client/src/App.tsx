@@ -6,6 +6,7 @@ import { User } from "./types/User";
 import { useUserAuth } from "./hooks/useUserAuth";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
+import { Profile } from "./pages/Profile";
 
 export function App() {
     
@@ -20,6 +21,7 @@ export function App() {
                     <Route path='/post/:postId' element={ <Post/> }/>
                     <Route path='/user/login' element={ <Login/> } />
                     <Route path='/user/new' element={ <Register/> } />
+                    <Route path='/user/:formattedUsername' element={ <Profile/> } />
                 </Routes>
             </UserAuthContext.Provider>
         </BrowserRouter>

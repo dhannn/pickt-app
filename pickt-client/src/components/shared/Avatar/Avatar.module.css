@@ -24,3 +24,27 @@
     width: 2vw;
     padding-bottom: 2vw;
 }
+
+.default-large {
+    background-color: var(--light-greenish-gray);
+    font-size: 4vw;
+    padding: 3vw;
+    color: var(--black);
+    border-radius: 50%;
+}
+
+.default-small {
+    background-color: var(--light-greenish-gray);
+    font-size: 1vw;
+    padding: 1vw;
+    color: var(--black);
+    border-radius: 50%;
+}
+
+.default-smaller {
+    background-color: var(--light-greenish-gray);
+    font-size: 1vw;
+    padding: 0.5vw;
+    color: var(--black);
+    border-radius: 50%;
+}
