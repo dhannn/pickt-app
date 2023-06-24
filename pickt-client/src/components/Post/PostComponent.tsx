@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Post, PostContent, PostMetadata } from "../../types/Post";
 import { PostTag } from "./PostTag";
 
@@ -8,11 +8,17 @@ import { getRelativeDateTime, htmlify } from "../../utils/format";
 import { VoteComponent } from "../shared/Vote/VoteComponent";
 import { Link } from "react-router-dom";
 import { CommentList } from "../Comment/CommentList";
+import { UserAuthProvider, useUserAuth } from "../../hooks/useUserAuth";
+import { TextArea } from "../shared/FormElements";
+import { LoginSignup } from "../shared/Button/LoginSignup";
+import Button from "../shared/Button/Button";
 
 export function PostComponent(props: Post) {
     const { content, metadata, voteInfo, comments } = props;
     
     const contentComponents = renderContent(content, metadata);
+    const Context = useUserAuth();
+    const userAuth = useContext(Context);
 
     return (
         <div>
@@ -20,10 +26,26 @@ export function PostComponent(props: Post) {
             { contentComponents }
             <div style={{paddingBottom: '10vh'}}>
                 <h1 style={{margin: '10vh 0vw 5vh 5vw'}}>Comments</h1>
+                {userAuth?.user? renderCommentTextArea(): renderLoginSignupButton()}
                 <CommentList comments={comments!}/>
             </div>
         </div>
-    );    
+    );
+
+    function renderCommentTextArea() {
+        return(
+            <form>
+                <TextArea required style={{width: '35vw', margin: '0vh 0vw 5vh 5vw', height: '10vh'}}/>
+                <Button style={{left: '-6vw'}} value='Comment'type='primary' onClick={(e) => {e.preventDefault()}}/>
+            </form>
+        );
+    }
+
+    function renderLoginSignupButton() {
+        return (
+            <LoginSignup style={{width: '37vw', marginLeft: '5vw', marginBottom: '5vh', marginTop: '-1vh'}} message='to comment.'/>
+        );
+    }
 
     function renderContent(postInfo: PostContent, postMetadata: PostMetadata) {
         const { title, content, photoUrl } = postInfo;

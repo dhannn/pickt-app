@@ -56,7 +56,7 @@ export function UserLoginForm() {
         userAuth?.setUser(user!);
         
         alert('Login Successful!');
-        navigate('/');
+        navigate(-1);
         
     }
 }
