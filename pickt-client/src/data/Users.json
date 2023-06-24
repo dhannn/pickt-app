@@ -10,7 +10,81 @@
         "profilePictureURL": "/profilepictures/dp.jpg",
         "password": "101122",
         "bio": "Beginner photographer looking to capture moments",
-        "posts": [],
+        "posts": [
+            {
+                "_id": "b9d8c7a6",
+                "content": {
+                    "title": "Camera Recommendation",
+                    "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+                },
+                "metadata": {
+                    "tag": "Question",
+                    "author": {
+                        "_id": "e1f8d4b6",
+                        "name": {
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
+                        },
+                        "username": "dhannn",
+                        "profilePictureURL": "/profilepictures/dp2.jpg"
+                    },
+                    "createdAt": "2023-06-14T16:20:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 8,
+                    "downvotes": 4
+                }
+            },
+            {
+                "_id": "c1e7d9f2",
+                "content": {
+                    "title": "Need Feedback: Portrait Composition",
+                    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+                },
+                "metadata": {
+                    "tag": "Need Feedback",
+                    "author": {
+                        "_id": "1234abcd",
+                        "name": {
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
+                        },
+                        "username": "dhannn",
+                        "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-11T17:10:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 7,
+                    "downvotes": 6
+                }
+            },
+            {
+                "_id": "f6e5d4",
+                "content": {
+                    "title": "Beginner Camera Recommendations",
+                    "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+                },
+                "metadata": {
+                    "tag": "Question",
+                    "author": {
+                        "_id": "1234abcd",
+                        "name": {
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
+                        },
+                        "username": "dhannn",
+                        "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-18T10:00:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 18,
+                    "downvotes": 4
+                }
+            }
+        ],
         "photoURLs": []
     },
     {
@@ -47,7 +121,7 @@
                     "upvotes": 10,
                     "downvotes": 2
                 }
-            }, 
+            },
             {
                 "_id": "d7a4e2f1",
                 "content": {
@@ -96,30 +170,6 @@
                 }
             },
             {
-                "_id": "c1e7d9f2",
-                "content": {
-                    "title": "Need Feedback: Portrait Composition",
-                    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
-                    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
-                },
-                "metadata": {
-                    "tag": "Need Feedback",
-                    "author": {
-                        "_id": "a3c9b2f7",
-                        "name": {
-                            "firstName": "Clarence"
-                        },
-                        "username": "rncs_21",
-                        "profilePictureURL": "https://example.com/profile_picture.jpg"
-                    },
-                    "createdAt": "2023-06-11T17:10:00Z"
-                },
-                "voteInfo": {
-                    "upvotes": 7,
-                    "downvotes": 6
-                }
-            },
-            {
                 "_id": "f9a3b6c2",
                 "content": {
                     "title": "Photography Gear Sale",
@@ -153,7 +203,33 @@
         },
         "username": "johndoe",
         "email": "john.doe@gmail.com",
-        "password": "0000"
+        "password": "0000",
+        "posts": [
+            {
+                "_id": "9e8d7c",
+                "content": {
+                    "title": "Macro Photography Tips",
+                    "content": "Macro photography allows you to capture the intricate details of small subjects. Here are some tips:\n1. Use a macro lens or extension tubes for close-up shots.\n2. Look for interesting textures and patterns.\n3. Use a tripod to ensure sharpness.",
+                    "photoUrl": "https://images.unsplash.com/photo-1589144669495-b5905b68ea9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"
+                },
+                "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                        "_id": "a3c9b2f7",
+                        "name": {
+                            "firstName": "John",
+                            "lastName": "Doe"
+                        },
+                        "username": "johndoe"
+                    },
+                    "createdAt": "2023-06-19T14:00:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 22,
+                    "downvotes": 8
+                }
+            }
+        ]
     },
     {
         "_id": "e1f8d4b6",
@@ -163,7 +239,32 @@
         },
         "username": "janesmith",
         "email": "jane.smith@gmail.com",
-        "password": "1234"
+        "password": "1234",
+        "posts": [
+            {
+                "_id": "5d8f6b",
+                "content": {
+                    "title": "Lens Recommendations for Wildlife Photography",
+                    "content": "I'm planning to venture into wildlife photography and need recommendations for a good telephoto lens. What focal length would be ideal? Any specific lens suggestions?"
+                },
+                "metadata": {
+                    "tag": "Question",
+                    "author": {
+                        "_id": "e1f8d4b6",
+                        "name": {
+                            "firstName": "Jane",
+                            "lastName": "Smith"
+                        },
+                        "username": "janesmith"
+                    },
+                    "createdAt": "2023-06-19T09:30:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 14,
+                    "downvotes": 6
+                }
+            }
+        ]
     },
     {
         "_id": "c6fa3bc0",
@@ -173,6 +274,79 @@
         },
         "username": "noahparker",
         "email": "noah.parker@gmail.com",
-        "password": "incorrect"
+        "password": "incorrect",
+        "posts": [
+            {
+                "_id": "d4b3a2",
+                "content": {
+                    "title": "Editing Software Comparison",
+                    "content": "I'm looking for advice on choosing the right editing software. I mainly shoot landscapes and want to enhance the colors and details in my photos. Any recommendations?"
+                },
+                "metadata": {
+                    "tag": "Discussion",
+                    "author": {
+                        "_id": "c6fa3bc0",
+                        "name": {
+                            "firstName": "Noah",
+                            "lastName": "Parker"
+                        },
+                        "username": "noahparker",
+                        "profilePictureURL": "https://example.com/noah.jpg"
+                    },
+                    "createdAt": "2023-06-17T14:30:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 12,
+                    "downvotes": 9
+                }
+            },
+            {
+                "_id": "7a9b1c",
+                "content": {
+                    "title": "Black and White Photography Tips",
+                    "content": "Black and white photography can be incredibly expressive. Here are some tips:\n1. Look for strong contrasts in your subjects.\n2. Pay attention to textures and patterns.\n3. Experiment with different lighting conditions.",
+                    "photoUrl": "https://images.unsplash.com/photo-1563643520035-5926c12692e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                },
+                "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                        "_id": "c6fa3bc0",
+                        "name": {
+                            "firstName": "Noah",
+                            "lastName": "Parker"
+                        },
+                        "username": "noahparker"
+                    },
+                    "createdAt": "2023-06-18T15:30:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 25,
+                    "downvotes": 12
+                }
+            },
+            {
+                "_id": "3f2e1d",
+                "content": {
+                    "title": "Photography Exhibition Announcement",
+                    "content": "I'm excited to announce my upcoming photography exhibition, showcasing a collection of my landscape photographs. The exhibition will be held at the XYZ Gallery from July 1st to July 31st. I would be thrilled to have you all attend!"
+                },
+                "metadata": {
+                    "tag": "Discussion",
+                    "author": {
+                        "_id": "c6fa3bc0",
+                        "name": {
+                            "firstName": "Noah",
+                            "lastName": "Parker"
+                        },
+                        "username": "noahparker"
+                    },
+                    "createdAt": "2023-06-19T16:30:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 32,
+                    "downvotes": 6
+                }
+            }
+        ]
     }
 ]

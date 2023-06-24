@@ -52,7 +52,7 @@ export function getUserByUsername(username: string) {
     return null;
 }
 
-export function getPostByUser(username: string) {
+export function getPostsByUser(username: string) {
     for (let i in usersJSON) {
         if (usersJSON[i].username === username) {
             return usersJSON[i].posts;

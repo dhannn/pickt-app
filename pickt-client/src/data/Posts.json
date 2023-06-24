@@ -134,13 +134,12 @@
                 "content": "If you prefer Canon, the EOS 90D is a great choice for wildlife photography. It has advanced autofocus and burst shooting capabilities.",
                 "metadata": {
                     "author": {
-                        "_id": "e1f8d4b6",
+                        "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Daniel",
-                            "lastName": "Ramos"
+                            "firstName": "John",
+                            "lastName": "Doe"
                         },
-                        "username": "dhannn",
-                        "profilePictureURL": "/profilepictures/dp.jpg"
+                        "username": "johndoe"
                     },
                     "createdAt": "2023-06-15T09:30:00Z"
                 },
@@ -252,12 +251,13 @@
         "metadata": {
             "tag": "Need Feedback",
             "author": {
-                "_id": "a3c9b2f7",
+                "_id": "1234abcd",
                 "name": {
-                    "firstName": "Clarence"
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
                 },
-                "username": "rncs_21",
-                "profilePictureURL": "https://example.com/profile_picture.jpg"
+                "username": "dhannn",
+                "profilePictureURL": "/profilepictures/dp.jpg"
             },
             "createdAt": "2023-06-11T17:10:00Z"
         },
@@ -271,13 +271,12 @@
                 "content": "I think the composition is great! The subject is well-positioned, and the lighting adds a nice touch to the overall mood. Well done!",
                 "metadata": {
                     "author": {
-                        "_id": "e1f8d4b6",
+                        "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Daniel",
-                            "lastName": "Ramos"
+                            "firstName": "Clarence"
                         },
-                        "username": "dhannn",
-                        "profilePictureURL": "/profilepictures/dp.jpg"
+                        "username": "rncs_21",
+                        "profilePictureURL": "/profilepictures/dp2.jpg"
                     },
                     "createdAt": "2023-06-11T17:30:00Z"
                 },
@@ -293,10 +292,10 @@
                     "author": {
                         "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Clarence"
+                            "firstName": "John",
+                            "lastName": "Doe"
                         },
-                        "username": "rncs_21",
-                        "profilePictureURL": "/profilepictures/dp2.jpg"
+                        "username": "johndoe"
                     },
                     "createdAt": "2023-06-12T08:45:00Z"
                 },
@@ -335,13 +334,12 @@
                 "content": "Could you please provide more details about the Canon EOS 5D Mark IV? How old is it, and does it come with any accessories?",
                 "metadata": {
                     "author": {
-                        "_id": "e1f8d4b6",
+                        "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Daniel",
-                            "lastName": "Ramos"
+                            "firstName": "John",
+                            "lastName": "Doe"
                         },
-                        "username": "dhannn",
-                        "profilePictureURL": "/profilepictures/dp.jpg"
+                        "username": "johndoe"
                     },
                     "createdAt": "2023-06-10T14:00:00Z"
                 },
@@ -355,12 +353,13 @@
                 "content": "I'm interested in the Canon EF 24-70mm f/2.8L II USM Lens. Is it still available?",
                 "metadata": {
                     "author": {
-                        "_id": "a3c9b2f7",
+                        "_id": "1234abcd",
                         "name": {
-                            "firstName": "Clarence"
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
                         },
-                        "username": "rncs_21",
-                        "profilePictureURL": "/profilepictures/dp2.jpg"
+                        "username": "dhannn",
+                        "profilePictureURL": "/profilepictures/dp.jpg"
                     },
                     "createdAt": "2023-06-10T16:30:00Z"
                 },
@@ -400,13 +399,13 @@
                 "content": "For enhancing colors and details in landscape photos, Adobe Lightroom is a popular choice among photographers. It offers powerful editing tools and a user-friendly interface.",
                 "metadata": {
                     "author": {
-                        "_id": "u27",
+                        "_id": "5678efga",
                         "name": {
-                            "firstName": "Sophia",
-                            "lastName": "Harris"
+                            "firstName": "Clarence"
                         },
-                        "username": "sophiaharris",
-                        "profilePictureURL": "https://example.com/sophia.jpg"
+                        "username": "rncs_21",
+                        "email": "rncs.21@gmail.com",
+                        "profilePictureURL": "/profilepictures/dp2.jpg"
                     },
                     "createdAt": "2023-06-17T15:00:00Z"
                 },
@@ -420,13 +419,12 @@
                 "content": "Another option you can consider is Capture One. It provides excellent color grading tools and advanced image processing capabilities.",
                 "metadata": {
                     "author": {
-                        "_id": "u28",
+                        "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Lucas",
-                            "lastName": "Baker"
+                            "firstName": "John",
+                            "lastName": "Doe"
                         },
-                        "username": "lucasbaker",
-                        "profilePictureURL": "https://example.com/lucas.jpg"
+                        "username": "johndoe"
                     },
                     "createdAt": "2023-06-17T15:15:00Z"
                 },
@@ -446,13 +444,13 @@
         "metadata": {
             "tag": "Question",
             "author": {
-                "_id": "u29",
+                "_id": "1234abcd",
                 "name": {
-                    "firstName": "Emily",
-                    "lastName": "King"
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
                 },
-                "username": "emilyking",
-                "profilePictureURL": "https://example.com/emily.jpg"
+                "username": "dhannn",
+                "profilePictureURL": "/profilepictures/dp.jpg"
             },
             "createdAt": "2023-06-18T10:00:00Z"
         },
@@ -466,13 +464,12 @@
                 "content": "For a beginner camera under $500, you can consider the Nikon D3500 or the Canon EOS Rebel T7. Both are great entry-level DSLRs with good image quality.",
                 "metadata": {
                     "author": {
-                        "_id": "u30",
+                        "_id": "5678efga",
                         "name": {
-                            "firstName": "Daniel",
-                            "lastName": "Wright"
+                            "firstName": "Clarence"
                         },
-                        "username": "danielwright",
-                        "profilePictureURL": "https://example.com/daniel.jpg"
+                        "username": "rncs_21",
+                        "profilePictureURL": "/profilepictures/dp2.jpg"
                     },
                     "createdAt": "2023-06-18T10:30:00Z"
                 },
@@ -486,13 +483,12 @@
                         "content": "I second the recommendation for the Nikon D3500. It's a reliable and user-friendly camera for beginners.",
                         "metadata": {
                             "author": {
-                                "_id": "u31",
+                                "_id": "a3c9b2f7",
                                 "name": {
-                                    "firstName": "Ella",
-                                    "lastName": "Anderson"
+                                    "firstName": "John",
+                                    "lastName": "Doe"
                                 },
-                                "username": "ellaanderson",
-                                "profilePictureURL": "https://example.com/ella.jpg"
+                                "username": "johndoe"
                             },
                             "createdAt": "2023-06-18T10:45:00Z"
                         },
@@ -508,13 +504,12 @@
                 "content": "Consider mirrorless options as well. The Sony Alpha a6000 is a popular choice for beginners due to its compact size and excellent image quality.",
                 "metadata": {
                     "author": {
-                        "_id": "u32",
+                        "_id": "e1f8d4b6",
                         "name": {
-                            "firstName": "Henry",
-                            "lastName": "Brooks"
+                            "firstName": "Jane",
+                            "lastName": "Smith"
                         },
-                        "username": "henrybrooks",
-                        "profilePictureURL": "https://example.com/henry.jpg"
+                        "username": "janesmith"
                     },
                     "createdAt": "2023-06-18T11:00:00Z"
                 },
@@ -535,13 +530,12 @@
         "metadata": {
             "tag": "Tips & Tricks",
             "author": {
-                "_id": "u33",
+                "_id": "c6fa3bc0",
                 "name": {
-                    "firstName": "Liam",
-                    "lastName": "Robinson"
+                    "firstName": "Noah",
+                    "lastName": "Parker"
                 },
-                "username": "liamrobinson",
-                "profilePictureURL": "https://example.com/liam.jpg"
+                "username": "noahparker"
             },
             "createdAt": "2023-06-18T15:30:00Z"
         },
@@ -555,13 +549,13 @@
                 "content": "I love shooting in black and white. It really brings out the emotion and mood in a photograph.",
                 "metadata": {
                     "author": {
-                        "_id": "u34",
+                        "_id": "5678efga",
                         "name": {
-                            "firstName": "Aria",
-                            "lastName": "Gomez"
+                            "firstName": "Clarence"
                         },
-                        "username": "ariagomez",
-                        "profilePictureURL": "https://example.com/aria.jpg"
+                        "username": "rncs_21",
+                        "email": "rncs.21@gmail.com",
+                        "profilePictureURL": "/profilepictures/dp2.jpg"
                     },
                     "createdAt": "2023-06-18T16:00:00Z"
                 },
@@ -575,13 +569,13 @@
                 "content": "Thanks for the tips! I'll definitely try them out in my next black and white photoshoot.",
                 "metadata": {
                     "author": {
-                        "_id": "u35",
+                        "_id": "1234abcd",
                         "name": {
-                            "firstName": "Mia",
-                            "lastName": "Carter"
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
                         },
-                        "username": "miacarter",
-                        "profilePictureURL": "https://example.com/mia.jpg"
+                        "username": "dhannn",
+                        "profilePictureURL": "/profilepictures/dp.jpg"
                     },
                     "createdAt": "2023-06-18T16:15:00Z"
                 },
@@ -601,13 +595,12 @@
         "metadata": {
             "tag": "Question",
             "author": {
-                "_id": "u36",
+                "_id": "e1f8d4b6",
                 "name": {
-                    "firstName": "Sophie",
-                    "lastName": "Morgan"
+                    "firstName": "Jane",
+                    "lastName": "Smith"
                 },
-                "username": "sophiemorgan",
-                "profilePictureURL": "https://example.com/sophie.jpg"
+                "username": "janesmith"
             },
             "createdAt": "2023-06-19T09:30:00Z"
         },
@@ -621,13 +614,13 @@
                 "content": "For wildlife photography, a telephoto lens with a focal length of at least 300mm is recommended to capture distant subjects. The Canon EF 100-400mm f/4.5-5.6L IS II USM and the Nikon AF-S 200-500mm f/5.6E ED VR are popular choices among wildlife photographers.",
                 "metadata": {
                     "author": {
-                        "_id": "u37",
+                        "_id": "5678efga",
                         "name": {
-                            "firstName": "Oliver",
-                            "lastName": "Ward"
+                            "firstName": "Clarence"
                         },
-                        "username": "oliverward",
-                        "profilePictureURL": "https://example.com/oliver.jpg"
+                        "username": "rncs_21",
+                        "email": "rncs.21@gmail.com",
+                        "profilePictureURL": "/profilepictures/dp2.jpg"
                     },
                     "createdAt": "2023-06-19T10:00:00Z"
                 },
@@ -641,13 +634,12 @@
                         "content": "I have the Canon EF 100-400mm f/4.5-5.6L IS II USM, and it's a fantastic lens for wildlife photography. The image quality and versatility are impressive.",
                         "metadata": {
                             "author": {
-                                "_id": "u38",
+                                "_id": "c6fa3bc0",
                                 "name": {
-                                    "firstName": "David",
-                                    "lastName": "Lewis"
+                                    "firstName": "Noah",
+                                    "lastName": "Parker"
                                 },
-                                "username": "davidlewis",
-                                "profilePictureURL": "https://example.com/david.jpg"
+                                "username": "noahparker"
                             },
                             "createdAt": "2023-06-19T10:15:00Z"
                         },
@@ -663,13 +655,12 @@
                 "content": "If you're looking for more reach, the Sigma 150-600mm f/5-6.3 DG OS HSM Contemporary is a budget-friendly option with good image quality.",
                 "metadata": {
                     "author": {
-                        "_id": "u39",
+                        "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Victoria",
-                            "lastName": "Bennett"
+                            "firstName": "John",
+                            "lastName": "Doe"
                         },
-                        "username": "victoriabennett",
-                        "profilePictureURL": "https://example.com/victoria.jpg"
+                        "username": "johndoe"
                     },
                     "createdAt": "2023-06-19T10:30:00Z"
                 },
@@ -690,13 +681,12 @@
         "metadata": {
             "tag": "Tips & Tricks",
             "author": {
-                "_id": "u40",
+                "_id": "a3c9b2f7",
                 "name": {
-                    "firstName": "Max",
-                    "lastName": "Turner"
+                    "firstName": "John",
+                    "lastName": "Doe"
                 },
-                "username": "maxturner",
-                "profilePictureURL": "https://example.com/max.jpg"
+                "username": "johndoe"
             },
             "createdAt": "2023-06-19T14:00:00Z"
         },
@@ -710,13 +700,13 @@
                 "content": "Macro photography is so fascinating! The level of detail you can capture is incredible.",
                 "metadata": {
                     "author": {
-                        "_id": "u41",
+                        "_id": "1234abcd",
                         "name": {
-                            "firstName": "Harper",
-                            "lastName": "Johnson"
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
                         },
-                        "username": "harperjohnson",
-                        "profilePictureURL": "https://example.com/harper.jpg"
+                        "username": "dhannn",
+                        "profilePictureURL": "/profilepictures/dp.jpg"
                     },
                     "createdAt": "2023-06-19T14:30:00Z"
                 },
@@ -730,13 +720,12 @@
                 "content": "I've been experimenting with macro photography lately, and it's been a challenging yet rewarding experience. The details you can capture are astonishing.",
                 "metadata": {
                     "author": {
-                        "_id": "u42",
+                        "_id": "e1f8d4b6",
                         "name": {
-                            "firstName": "Gabriel",
+                            "firstName": "Jane",
                             "lastName": "Smith"
                         },
-                        "username": "gabrielsmith",
-                        "profilePictureURL": "https://example.com/gabriel.jpg"
+                        "username": "janesmith"
                     },
                     "createdAt": "2023-06-19T15:00:00Z"
                 },
@@ -756,13 +745,12 @@
         "metadata": {
             "tag": "Discussion",
             "author": {
-                "_id": "u43",
+                "_id": "c6fa3bc0",
                 "name": {
-                    "firstName": "Emma",
-                    "lastName": "Hall"
+                    "firstName": "Noah",
+                    "lastName": "Parker"
                 },
-                "username": "emmahall",
-                "profilePictureURL": "https://example.com/emma.jpg"
+                "username": "noahparker"
             },
             "createdAt": "2023-06-19T16:30:00Z"
         },
@@ -776,13 +764,12 @@
                 "content": "Congratulations on your exhibition! I'll definitely try to visit and see your beautiful landscape photographs.",
                 "metadata": {
                     "author": {
-                        "_id": "u44",
+                        "_id": "a3c9b2f7",
                         "name": {
-                            "firstName": "Isabella",
-                            "lastName": "Young"
+                            "firstName": "John",
+                            "lastName": "Doe"
                         },
-                        "username": "isabellayoung",
-                        "profilePictureURL": "https://example.com/isabella.jpg"
+                        "username": "johndoe"
                     },
                     "createdAt": "2023-06-19T17:00:00Z"
                 },
@@ -796,13 +783,12 @@
                         "content": "That's great news! I'll mark the dates on my calendar. Looking forward to seeing your stunning photographs.",
                         "metadata": {
                             "author": {
-                                "_id": "u45",
+                                "_id": "e1f8d4b6",
                                 "name": {
-                                    "firstName": "James",
-                                    "lastName": "Allen"
+                                    "firstName": "Jane",
+                                    "lastName": "Smith"
                                 },
-                                "username": "jamesallen",
-                                "profilePictureURL": "https://example.com/james.jpg"
+                                "username": "janesmith"
                             },
                             "createdAt": "2023-06-19T17:15:00Z"
                         },
