@@ -23,7 +23,11 @@ export function Profile() {
         <>
             <NavBar/>
             <UserInfoComponent name={user.name} username={user.username} profilePictureURL={user.profilePictureURL} bio={user.bio!}/>
-            <PostList posts={posts}/>
+            <h1 style={{margin: '20vh 0vw -10vh 44vw', fontSize: '2.5rem'}}>{user.name.firstName}'s Posts</h1>
+            <div>
+
+            </div>
+            {posts?.length === 0? <p>Looks like {user.name.firstName} doesn't have any posts!</p>: <PostList posts={posts}/>}
             {/* <div>
                 <Avatar size='large' url={user.profilePictureURL}/>
                 <h1 style={{color: 'var(--black)'}}>{user.name.firstName} {user.name.lastName === undefined? '': user.name.lastName}</h1>

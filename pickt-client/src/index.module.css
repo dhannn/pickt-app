@@ -32,6 +32,10 @@ a {
     color: var(--lavender);
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    color: var(--black);
+}
+
 .small-font-size, .small-font-size * {
     font-size: var(--small-font-size);
 }

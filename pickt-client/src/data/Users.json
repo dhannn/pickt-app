@@ -11,7 +11,7 @@
         "password": "101122",
         "bio": "Beginner photographer looking to capture moments",
         "posts": [],
-        "photoURLs": [] 
+        "photoURLs": []
     },
     {
         "_id": "5678efga",
@@ -23,7 +23,126 @@
         "profilePictureURL": "/profilepictures/dp2.jpg",
         "password": "therebetterbeamirrorball",
         "bio": "Art is my passion; life is an endless series of photographs.",
-        "posts": [],
+        "posts": [
+            {
+                "_id": "af6d2e1b",
+                "content": {
+                    "title": "Landscape Photography Tips",
+                    "content": "I've been doing landscape photography for years, and here are some of my top tips:\n1. Wake up early to catch the golden hour light.\n2. Use a tripod for stability.\n3. Experiment with different angles and perspectives.\n4. Incorporate leading lines to create depth.\n5. Don't forget to post-process your photos to enhance colors and contrast.\nI hope you find these tips helpful!",
+                    "photoUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                },
+                "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                        "_id": "a3c9b2f7",
+                        "name": {
+                            "firstName": "Clarence"
+                        },
+                        "username": "rncs_21",
+                        "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-15T10:30:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 10,
+                    "downvotes": 2
+                }
+            }, 
+            {
+                "_id": "d7a4e2f1",
+                "content": {
+                    "title": "Photography Exhibition",
+                    "content": "I'm excited to announce that my photography exhibition will be held next month at the City Art Gallery. The exhibition will showcase a collection of my landscape and portrait photographs. If you're in town, I would love for you to drop by and experience the beauty of photography!"
+                },
+                "metadata": {
+                    "tag": "Discussion",
+                    "author": {
+                        "_id": "a3c9b2f7",
+                        "name": {
+                            "firstName": "Clarence"
+                        },
+                        "username": "rncs_21",
+                        "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-13T14:15:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 12,
+                    "downvotes": 3
+                }
+            },
+            {
+                "_id": "e4f1a2d3",
+                "content": {
+                    "title": "Camera Settings for Astrophotography",
+                    "content": "Astrophotography requires specific camera settings to capture stunning images of the night sky. Here are some recommended settings:\n- Use manual mode\n- Set a wide aperture (e.g., f/2.8)\n- Set a high ISO (e.g., ISO 3200)\n- Use a long exposure time (e.g., 20-30 seconds)\n- Use a tripod to avoid camera shake\n- Use a remote shutter release or timer\n\nWith these settings, you'll be able to capture breathtaking photos of stars, galaxies, and more!",
+                    "photoUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                },
+                "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                        "_id": "a3c9b2f7",
+                        "name": {
+                            "firstName": "Clarence"
+                        },
+                        "username": "rncs_21",
+                        "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-12T11:45:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 6,
+                    "downvotes": 2
+                }
+            },
+            {
+                "_id": "c1e7d9f2",
+                "content": {
+                    "title": "Need Feedback: Portrait Composition",
+                    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+                },
+                "metadata": {
+                    "tag": "Need Feedback",
+                    "author": {
+                        "_id": "a3c9b2f7",
+                        "name": {
+                            "firstName": "Clarence"
+                        },
+                        "username": "rncs_21",
+                        "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-11T17:10:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 7,
+                    "downvotes": 6
+                }
+            },
+            {
+                "_id": "f9a3b6c2",
+                "content": {
+                    "title": "Photography Gear Sale",
+                    "content": "I'm selling some of my photography gear:\n- Canon EOS 5D Mark IV\n- Canon EF 24-70mm f/2.8L II USM Lens\n- Manfrotto Tripod\n- Lee Filters\n\nAll items are in excellent condition. If you're interested, feel free to send me a message!"
+                },
+                "metadata": {
+                    "tag": "Others",
+                    "author": {
+                        "_id": "a3c9b2f7",
+                        "name": {
+                            "firstName": "Clarence"
+                        },
+                        "username": "rncs_21",
+                        "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-10T13:20:00Z"
+                },
+                "voteInfo": {
+                    "upvotes": 5,
+                    "downvotes": 1
+                }
+            }
+        ],
         "photoURLs": []
     },
     {
@@ -35,7 +154,7 @@
         "username": "johndoe",
         "email": "john.doe@gmail.com",
         "password": "0000"
-    }, 
+    },
     {
         "_id": "e1f8d4b6",
         "name": {

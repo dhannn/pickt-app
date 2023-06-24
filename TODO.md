@@ -1,5 +1,5 @@
 [x] Add Register page
-[ ] Add User page
+[X] Add User page
 [ ] Add comment feature
 [ ] Add delete options
 [ ] Fix README
