@@ -4,12 +4,12 @@ import globalStyles from './../../../index.module.css';
 import { Link } from 'react-router-dom';
 import { Input } from '../FormElements';
 import Avatar from '../Avatar/Avatar';
-import { useUserAuth } from '../../../hooks/useUserAuth';
+import { getUserAuthContext } from '../../../hooks/useUserAuth';
 import { LoginSignup } from '../Button/LoginSignup';
 import { User } from '../../../types/User';
 
 export function NavBar() {
-    const Context = useUserAuth();
+    const Context = getUserAuthContext();
     const userAuth = useContext(Context);
 
     return (

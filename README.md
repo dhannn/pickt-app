@@ -11,7 +11,7 @@ Pickt is a web forum application for photographers and photography enthusiasts.
     - Share your portfolio of works
 - **Improve your craft**
     - Search for exactly what you need
-    - Get featured on the front page
+    - Get featured on the front page with Daily Highlight
     
 
 # Running the App Locally

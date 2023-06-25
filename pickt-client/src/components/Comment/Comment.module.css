@@ -19,3 +19,33 @@
     position: relative;
     text-align: justify;
 }
+
+.edit-comment-form {
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--microinteraction-transition);
+    position: absolute;
+    display: none;
+}
+
+.edit-comment-form Button {
+    left: 5vw;
+}
+
+.active-edit-comment-form {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: var(--microinteraction-transition);
+    position: static;
+}
+
+.editbox {
+    margin-left: 5.5vw;
+    height: 8vh;
+}
+
+.content-editing {
+    visibility: hidden;
+    position: absolute;
+}

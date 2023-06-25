@@ -2,11 +2,12 @@ import { User } from "./User";
 import { Vote } from "./Vote";
 
 export type Comment = {
-    _id: string
+    _id: string,
     content: string,
     metadata: CommentMetadata,
     voteInfo: Vote,
-    replies?: Comment[]
+    replies?: Comment[],
+    isDeleted?: boolean
 };
 
 export type CommentMetadata = {

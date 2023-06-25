@@ -2,15 +2,19 @@ import React, { createContext, useContext } from "react";
 import { User } from "../types/User";
 
 
-type UserAuthState = {
+export type UserAuthState = {
     user: User | undefined,
     setUser: React.Dispatch<React.SetStateAction<User | undefined>>
 };
 
 const UserAuthContext = createContext<UserAuthState | undefined>(undefined);
 
-export function useUserAuth() {
+export function getUserAuthContext() {
     return UserAuthContext;
+}
+
+export function useUserAuth() {
+    return useContext(UserAuthContext);
 }
 
 export function UserAuthProvider(props: { children: React.ReactNode }) {

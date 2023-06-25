@@ -3,7 +3,7 @@ import { Home } from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Post } from "./pages/Post";
 import { User } from "./types/User";
-import { useUserAuth } from "./hooks/useUserAuth";
+import { getUserAuthContext } from "./hooks/useUserAuth";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Profile } from "./pages/Profile";
@@ -11,7 +11,7 @@ import { Profile } from "./pages/Profile";
 export function App() {
     
     const [ user, setUser ] = useState<User | undefined>(undefined);
-    const UserAuthContext = useUserAuth();
+    const UserAuthContext = getUserAuthContext();
 
     return (
         <BrowserRouter>

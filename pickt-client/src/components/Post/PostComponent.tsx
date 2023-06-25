@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { Post, PostContent, PostMetadata } from "../../types/Post";
 import { PostTag } from "./PostTag";
 
@@ -8,7 +8,7 @@ import { getRelativeDateTime, htmlify } from "../../utils/format";
 import { VoteComponent } from "../shared/Vote/VoteComponent";
 import { Link } from "react-router-dom";
 import { CommentList } from "../Comment/CommentList";
-import { UserAuthProvider, useUserAuth } from "../../hooks/useUserAuth";
+import { UserAuthProvider, getUserAuthContext } from "../../hooks/useUserAuth";
 import { TextArea } from "../shared/FormElements";
 import { LoginSignup } from "../shared/Button/LoginSignup";
 import Button from "../shared/Button/Button";
@@ -17,8 +17,10 @@ export function PostComponent(props: Post) {
     const { content, metadata, voteInfo, comments } = props;
     
     const contentComponents = renderContent(content, metadata);
-    const Context = useUserAuth();
+    const Context = getUserAuthContext();
     const userAuth = useContext(Context);
+
+    const postRef = useRef(props);
 
     return (
         <div>

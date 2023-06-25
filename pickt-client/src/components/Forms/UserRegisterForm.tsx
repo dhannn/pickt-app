@@ -3,7 +3,7 @@ import { Input, Label, TextArea } from "../shared/FormElements";
 import Button from "../shared/Button/Button";
 
 import formStyles from './Forms.module.css'
-import { useUserAuth } from "../../hooks/useUserAuth";
+import { getUserAuthContext } from "../../hooks/useUserAuth";
 import { emailExists, getUserByEmail, getUserByUsername, usernameExists, validatePassword } from "../../services/user/UserServices";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export function UserRegisterForm() {
     const textAreaInput = useRef<HTMLTextAreaElement>(null);
     const formElement = useRef<HTMLFormElement>(null);
 
-    const Context = useUserAuth();
+    const Context = getUserAuthContext();
     const userAuth = useContext(Context);
     const navigate = useNavigate();
     
