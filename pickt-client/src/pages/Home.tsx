@@ -4,6 +4,7 @@ import { NavBar } from '../components/shared/Layout/NavBar';
 import { CreatePostForm } from '../components/Forms';
 import { getUserAuthContext } from '../hooks/useUserAuth';
 import { LoginSignup } from '../components/shared/Button/LoginSignup';
+import { AddPicture } from '../components/Forms/AddPicture';
 
 export function Home() {
     const [ isFocused, setFocus ] = useState(false);
@@ -14,8 +15,9 @@ export function Home() {
 
     return (
         <>
+            {isFocused? <AddPicture isFocused={isFocused} setFocus={setFocus}/>: ''}
             <NavBar/>
-           { context?.user !== undefined? <CreatePostForm isFormFocused={ isFocused } setFocused={ setFocus }/> : renderLogInSignUp()}
+            { context?.user !== undefined? <CreatePostForm isFormFocused={ isFocused } setFocused={ setFocus }/> : renderLogInSignUp()}
             <PostList/>
         </>
     );

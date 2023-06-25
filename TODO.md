@@ -4,12 +4,15 @@
 [x] Add edit and delete options
 [ ] Fix README
 [x] Add conditional rendering on comments (whether user is signed in or not)
-[ ] Implement replies
-[ ] Add Collapsible search bar
-[ ] Add search bar functionality in front-end
 [ ] Add modals for user login and sign up
-[ ] Add 'Add Picture' feature for posts
+[x] Add 'Add Picture' feature for posts
+[ ] Implement replies
+[ ] Add search bar functionality in front-end
+[ ] Implement No User Found
+[ ] Implement No Post Found
 [ ] Populate About page
 [ ] Refactor useUserAuth hook
+[ ] Refactor AddPicture
 [ ] Refactor getting BG in login
 [ ] Daily Highlight
+[ ] Add Collapsible search bar

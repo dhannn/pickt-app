@@ -6,12 +6,12 @@ const unsplash = createApi({
 });
 
 export function getRandomPhoto(setBg: React.Dispatch<React.SetStateAction<string>>) {
-    unsplash.photos.getRandom({orientation: 'landscape', query: 'abstract'})
+    unsplash.photos.getRandom({orientation: 'landscape', query: 'abstract light'})
         .then((res) => {
             const response: Random[] | Random = res.response!;
             getAPIPhoto(setBg, (response as Random))
         })
-        .catch(() => { // means we have exhausted our 50 requests per hour
+        .catch(() => { // means we have exhausted our 50 requests per hour as per Unsplash API basic plan
             getLocalPhoto(setBg);
         });
 }
