@@ -94,7 +94,7 @@ The client application has the following directory:
 # Technologies Used
 ## Phase I: Client-Side App
 - React and React Router for the main app framework with routing
-- FontAwesome for icons
+- FontAwesome for icons and Babel for rendering the icons
 - Google Fonts for fonts
 - TypeScript for ease of development
 - Unsplash API and `unsplash-js` for generating random background images
