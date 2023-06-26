@@ -213,8 +213,14 @@
 }
 
 .add-photo-icon {
-    margin-top: 13vw;
+    margin-top: 11vw;
     color: var(--lavender);
-    transition: 0.4s;
 }
 
+.delete-add-picture {
+    color: var(--light-greenish-gray);
+    cursor: pointer;
+    position: absolute;
+    left: 1vw;
+    top: 1vw; 
+}

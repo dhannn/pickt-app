@@ -11,8 +11,8 @@ export function AddPicture({isFocused, setFocus}: { isFocused: boolean, setFocus
     function renderDefaultView() {
         return (
             <div className={formStyles['photo-input-preview-create-post']}>
-                <FontAwesomeIcon className={formStyles['add-photo-icon']} size='5x' icon={solid("image")} />
-                <p className='add-photo-instruction'>Drag and drop image or upload</p>
+                <FontAwesomeIcon className={formStyles['add-photo-icon']} size='8x' icon={solid("image")}/>
+                <p className={formStyles['add-photo-instruction']}>Drag and drop image or upload</p>
                 <input type="file" className={formStyles['photo-input']} accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
             </div>
         );
@@ -31,7 +31,7 @@ export function AddPicture({isFocused, setFocus}: { isFocused: boolean, setFocus
                 onChange={handleChange} />
             <FontAwesomeIcon
                 size='lg'
-                className='delete-add-picture'
+                className={`${formStyles['delete-add-picture']}`}
                 icon={solid("square-xmark")}
                 onClick={handleDelete} />
         </div>;
