@@ -7,6 +7,7 @@ import Avatar from '../Avatar/Avatar';
 import { getUserAuthContext } from '../../../hooks/useUserAuth';
 import { LoginSignup } from '../Button/LoginSignup';
 import { User } from '../../../types/User';
+import { SearchBar } from '../SearchBar/SearchBar';
 
 export function NavBar() {
     const Context = getUserAuthContext();
@@ -16,9 +17,8 @@ export function NavBar() {
         <div className={layoutStyles['navbar']}>
             <Link to={'/'} className={`${layoutStyles['site-name']}`}>Pickt</Link>
             <Link to={'/about'} className={`${layoutStyles['about-link']}`}>About</Link>
-            <div className={`${layoutStyles['search-bar']}`}>
-                <Input classNames={`${globalStyles['rounded-20px']}`} style={{width: '20vw'}}></Input>
-            </div>
+            
+            <SearchBar/>
 
             { userAuth!.user === undefined? renderLoginSignup(): renderAvatar(userAuth?.user!) }
         </div>

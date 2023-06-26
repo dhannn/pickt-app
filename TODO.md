@@ -2,7 +2,7 @@
 [X] Add User page
 [x] Add comment feature
 [x] Add edit and delete options
-[ ] Fix README
+[x] Fix README
 [x] Add conditional rendering on comments (whether user is signed in or not)
 [ ] Add modals for user login and sign up
 [x] Add 'Add Picture' feature for posts

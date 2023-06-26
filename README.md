@@ -76,8 +76,8 @@ I also identify some design considerations that I may work on before Phase II:
 - More visually appealing ways to inform user of errors in answering forms 
 (i.e. modals and dialogs)
 - Adding error pages for invalid users or posts
-- Making the search bar collapsible as a magnifying glass icon when not 
-in focused to minimize clutter
+- ~~Making the search bar collapsible as a magnifying glass icon when not 
+in focused to minimize clutter~~ 
 - Adding functionality that allows for infinite scroll
 - Consider adding safe markup functionality by importing third-party libraries 
 such as `Quill.js`

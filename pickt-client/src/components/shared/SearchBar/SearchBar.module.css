@@ -1,0 +1,29 @@
+
+.search-bar-icon {
+    color: var(--dirty-white);
+    cursor: pointer;
+    background-color: var(--lavender);
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: 4px;
+}
+
+.search-bar-container {
+    position: absolute;
+    top: 0.75vh;
+    right: 22vw;
+}
+
+.search-bar-input {
+    width: 0vw;
+    visibility: hidden;
+    transition: var(--microinteraction-transition);
+}
+
+.active {
+    width: 20vw;
+    visibility: visible;
+    transition: var(--microinteraction-transition);
+}
