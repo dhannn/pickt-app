@@ -23,7 +23,7 @@ export function Profile() {
         <>
             <NavBar/>
             <UserInfoComponent name={user.name} username={user.username} profilePictureURL={user.profilePictureURL} bio={user.bio!}/>
-            <h1 style={{margin: '20vh 0vw -10vh 44vw', fontSize: '2.5rem'}}>{user.name.firstName}'s Posts</h1>
+            <h1 style={{margin: '20vh 0vw -15vh 44vw', fontSize: '2.5rem'}}>{user.name.firstName}'s Posts</h1>
             
             {posts?.length === 0 || !posts? <p>Looks like {user.name.firstName} doesn't have any posts!</p>: <PostList posts={posts}/>}
         </>
