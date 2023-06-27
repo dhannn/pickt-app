@@ -8,15 +8,27 @@ type FormButtonProps = {
     value?: string,
     onClick: MouseEventHandler<HTMLButtonElement>
     style?: React.CSSProperties,
-    children?: string | JSX.Element | JSX.Element[]
+    children?: ReactNode
 };
 
 export default function Button(props: FormButtonProps) {
     const { classNames, value, onClick, type, style, children } = props;
 
-    const styleClass = `${btnStyles['button']} ${btnStyles[type + '-button']} ${styles['rounded-5px']}`;
+    const classes = [
+            classNames?? '', 
+            btnStyles['button'], 
+            btnStyles[type + '-button'], 
+            styles['rounded-5px']
+        ].join(' ');
 
     return (
-        <button style={style} className={classNames + ' ' + styleClass} value={value} onClick={onClick}>{children} {value}</button>
+        <button 
+            style={style} 
+            className={classes} 
+            value={value} 
+            onClick={onClick}
+        >
+            {children} {value}
+        </button>
     );
 }
