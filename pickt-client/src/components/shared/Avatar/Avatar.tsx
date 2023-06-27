@@ -12,16 +12,21 @@ type AvatarProps = {
 }
 
 export default function Avatar(props: AvatarProps) {
-    const {size, url, style} = props;
-    const avatarStyle = `${styles.avatar} ${styles[size]}`;
-    const defaultProfile = (<FontAwesomeIcon icon={solid("user")} className={styles[`default-${size}`]} />);
+    const { size, url, style } = props;
+    const sizeClass = url? size: `default-${size}`;
 
-    if (!url) {
-        console.log(url)
-        return defaultProfile;
-    }
+    const avatarStyle = [
+            styles['avatar'], 
+            styles[sizeClass]
+        ].join(' ');
+
+    const defaultProfile = (
+        <FontAwesomeIcon icon={solid("user")} className={avatarStyle}/>
+    );
+
+    if (!url) return defaultProfile;
 
     return (
-        <div className={avatarStyle} style={{...{backgroundImage: `url(${url})`, ...style}}}/>
+        <div className={avatarStyle} style={{ backgroundImage: `url(${url})`, ...style}}/>
     );
 }

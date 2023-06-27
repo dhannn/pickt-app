@@ -9,9 +9,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 export function SearchBar() {
 
     const searchBarRef = useRef<HTMLInputElement>(null);
-    searchBarRef.current?.addEventListener('keyup', (e) => {
-        if (e.key === 'Enter'){ return handleClick();}
-    })
     
     return (
         <div className={`${searchbarStyles['search-bar-container']}`}>
