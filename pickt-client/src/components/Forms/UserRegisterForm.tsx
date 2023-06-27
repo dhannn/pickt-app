@@ -45,9 +45,9 @@ export function UserRegisterForm() {
                 </div>
             </div>
             <Label style={{color: 'var(--black)'}} value='Username'/>
-            <Input required ref={ usernameInput } onChange={handleChangeUsername}/>
+            <Input required ref={ usernameInput } onBlur={handleChangeUsername}/>
             <Label style={{color: 'var(--black)'}} value='Email'/>
-            <Input onChange={handleChangeEmail} required ref={ emailInput } type='email'/>
+            <Input onBlur={handleChangeEmail} required ref={ emailInput } type='email'/>
             <Label style={{color: 'var(--black)'}} value='Password' />
             <Input required ref={ passwordInput } type='password'/>
             

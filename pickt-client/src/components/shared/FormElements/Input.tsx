@@ -7,17 +7,31 @@ type InputProps = {
     classNames?: string
     style?: React.CSSProperties
     onFocus?: FocusEventHandler<HTMLInputElement>,
-    onChange?: ChangeEventHandler<HTMLInputElement>,
+    onBlur?: ChangeEventHandler<HTMLInputElement>,
     placeholder?: string
     required?: boolean
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function (props: InputProps, ref) {
-    const { classNames, type, style, onFocus, onChange, placeholder, required } = props;
-    const css = `${globalStyles['rounded-5px']} ${formStyles['input']} ${formStyles['formElements']}`;
+    const { classNames, type, style, onFocus, onBlur, placeholder, required } = props;
+    const inputClasses = [
+        globalStyles['rounded-5px'],
+        formStyles['input'],
+        formStyles['formElements'],
+        classNames
+    ].join(' ');
 
     return (
-        <input onBlur={onChange} ref={ref} required={required} className={ classNames + ' ' + css} type={type === undefined? 'text': type} style={style} onFocus={onFocus} placeholder={placeholder}></input>
+        <input 
+            onBlur={ onBlur } 
+            ref={ ref } 
+            required={ required } 
+            className={ inputClasses } 
+            type={ type === undefined? 'text': type } 
+            style={ style } 
+            onFocus={ onFocus } 
+            placeholder={ placeholder }
+        />
     );
 });
 
