@@ -10,8 +10,8 @@ type LabelProps = {
 
 export default function Label(props: LabelProps) {
     const {  forId, value, style, classNames } = props;
+    const classes = `${styles['label']} ${classNames}`;
     return (
-        <label className={styles['label'] + ' ' + classNames} htmlFor={ forId } style={style}>{ value }</label>
+        <label className={ classes } htmlFor={ forId } style={ style }>{ value }</label>
     );
 }
-
