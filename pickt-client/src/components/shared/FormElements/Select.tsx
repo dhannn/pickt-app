@@ -15,12 +15,18 @@ export default function Select(props: SelectProps) {
     const { classNames, choices, style, required, ref } = props;
     const css = `${globalStyles['rounded-5px']} ${formStyles['select']} ${formStyles['formElements']}`;
 
-    const choiceHtml = choices.map(renderChoice);
+    const choiceElements = choices.map(renderChoice);
 
     return (
-        <select ref={ref} required={required} className={classNames + ' ' + css} style={style} defaultValue=''>
+        <select 
+            ref={ref} 
+            required={required} 
+            className={`${classNames} ${css}`} 
+            style={style} 
+            defaultValue=''
+        >
             <option value='' selected disabled hidden> </option>
-            {choiceHtml}
+            { choiceElements }
         </select>
     );
 
