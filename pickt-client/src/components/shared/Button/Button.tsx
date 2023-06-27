@@ -6,7 +6,7 @@ type FormButtonProps = {
     type: string,
     classNames?: string,
     value?: string,
-    onClick: MouseEventHandler<HTMLButtonElement>
+    onClick?: MouseEventHandler<HTMLButtonElement>
     style?: React.CSSProperties,
     children?: ReactNode
 };

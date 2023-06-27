@@ -5,18 +5,38 @@ import React, { CSSProperties } from "react";
 import buttonStyles from './Button.module.css'
 import globalStyles from './../../../index.module.css'
 
-export function LoginSignup(prop: { message?: string, style?: CSSProperties }) {
+type LoginSignupProperties = { 
+    message?: string, 
+    style?: CSSProperties 
+};
+
+export function LoginSignup(prop: LoginSignupProperties) {
     const { message, style } = prop;
+
+    const loginSignupClass = [ 
+        buttonStyles['login-signup'], 
+        globalStyles['rounded-10px'], 
+        globalStyles['small-font-size']
+    ].join(' ');
+
     return (
-        <div className={`${buttonStyles['login-signup']}  ${globalStyles['rounded-10px']}  ${globalStyles['small-font-size']}`} style={style}>
+        <div className={loginSignupClass} style={style}>
+
             <Link to='/user/login'>
-                <Button value='Log In' type='primary' onClick={() => {}}></Button>
+                <Button value='Log In' type='primary' />
             </Link>
-            { message !== undefined? 'or': '' }
+
+            { message !== undefined && 'or' }
+
             <Link to='/user/new'>
-            <Button style={{backgroundColor: 'var(--black)'}} value='Register' type='secondary' onClick={() => {}}></Button>
+                <Button 
+                    style={{backgroundColor: 'var(--black)'}} 
+                    value='Register' 
+                    type='secondary' 
+                />
             </Link> 
-            { message !== undefined? message: ''}
+
+            { message !== undefined && message }
         </div>
     );
 }
