@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "install": "npm install --prefix ./pickt-client/",
         "start": "cd ./pickt-client/ && npm start"
     }
 }
