@@ -1,5 +1,5 @@
-import { IconDefinition, faPenToSquare } from "@fortawesome/free-regular-svg-icons";
-import { faEllipsisVertical, faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "./Button";
 import { useRef } from "react";
@@ -25,24 +25,34 @@ export function OptionComponent(props: OptionProps) {
     return (
         
         <>
-            <Button classNames={buttonStyles['option-icon']} type='secondary' onClick={toggleOptionMenu}>
-                <FontAwesomeIcon icon={faEllipsisVertical} />
+            <Button 
+                classNames={ buttonStyles['option-icon'] } 
+                type='secondary' 
+                onClick={ toggleOptionMenu }
+            >
+                <FontAwesomeIcon icon={ faEllipsisVertical } />
             </Button>
             
-            <dialog className={buttonStyles['option-dialog']} ref={moreOptions}>
+            <dialog className={ buttonStyles['option-dialog'] } ref={ moreOptions }>
                 { optionComponents }
             </dialog>
         </>
     );
 
     function toggleOptionMenu() {
-        moreOptions.current?.checkVisibility()? moreOptions.current?.close(): moreOptions.current?.show()
+        moreOptions.current!.checkVisibility()? 
+            moreOptions.current!.close(): 
+            moreOptions.current!.show();
     }
 
     function renderOptionComponent(option: Option) {
         return (
-            <Button type='secondary' style={{ fontSize: 'var(--small-font-size)' }} value={option.name} onClick={() => onClickOption(option.onClick) }>
-                {option.icon? <FontAwesomeIcon icon={option.icon} />: <></>}
+            <Button 
+                type='secondary' 
+                style={{ fontSize: 'var(--small-font-size)' }} 
+                value={ option.name } 
+                onClick={ () => onClickOption(option.onClick) }>
+                { option.icon && <FontAwesomeIcon icon={option.icon} /> }
             </Button>
         );
     }
