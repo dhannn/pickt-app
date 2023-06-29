@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import layoutStyles from './Layout.module.css';
-import globalStyles from './../../../index.module.css';
 import { Link } from 'react-router-dom';
-import { Input } from '../FormElements';
 import Avatar from '../Avatar/Avatar';
 import { getUserAuthContext } from '../../../hooks/useUserAuth';
 import { LoginSignup } from '../Button/LoginSignup';
