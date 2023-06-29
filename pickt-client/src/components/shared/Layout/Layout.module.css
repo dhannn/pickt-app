@@ -23,3 +23,32 @@
     position: relative;
     left: 12.5vw;
 }
+
+.user-info-container {
+    position: absolute;
+    display: flex;
+    right: 12vw;
+    top: 1vh;
+    color: var(--light-greenish-gray);
+}
+
+.user-info {
+    margin-left: 1vw;
+    margin-top: 0vh;
+    display: block;
+}
+
+.user-info-name {
+    color: var(--dirty-white);
+}
+
+.user-info-username {
+    font-size: 0.8rem;
+}
+
+.login-signup {
+    float: right;
+    width: 12vw;
+    background-color: transparent;
+    margin-right: 10vw;
+}

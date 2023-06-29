@@ -20,7 +20,7 @@ export function NavBar() {
             
             <SearchBar/>
 
-            { userAuth!.user === undefined? renderLoginSignup(): renderAvatar(userAuth?.user!) }
+            { !userAuth!.user? renderLoginSignup(): renderAvatar(userAuth?.user!) }
         </div>
     );
 
@@ -28,11 +28,21 @@ export function NavBar() {
         const { profilePictureURL, name, username } = user;
 
         return (
-            <Link to={`/user/@${username}`}  style={{position: 'absolute', display: 'flex', right: '12vw', top: '1vh', color: 'var(--light-greenish-gray)'}}>
+            <Link to={`/user/@${ username }`} className={ layoutStyles['user-info-container'] }>
                 <Avatar size={'smaller'} url={ profilePictureURL }/>
                 <div>
-                    <Link to={`/user/@${username}`} style={{marginLeft: '1vw', marginTop: '0vh', display: 'block', color: 'var(--dirty-white)'}}>{`${name.firstName} ${name.lastName? name.lastName: ''}`}</Link>
-                    <Link to={`/user/@${username}`} style={{marginLeft: '1vw', marginTop: '0vh', fontSize: '0.8rem', display: 'block'}}>{`@${username}`}</Link>
+                    <Link 
+                        to={ `/user/@${username}` } 
+                        className={ `${layoutStyles['user-info']} ${layoutStyles['user-info-name']}` }
+                    >
+                        {`${name.firstName} ${name.lastName? name.lastName: ''}`}
+                    </Link>
+                    <Link 
+                        to={ `/user/@${username}` } 
+                        className={ `${layoutStyles['user-info']} ${layoutStyles['user-info-username']}` } 
+                    >
+                        { `@${username}` }
+                    </Link>
                 </div>
             </Link>
         );
@@ -40,7 +50,7 @@ export function NavBar() {
 
     function renderLoginSignup() {
         return (
-            <LoginSignup style={{float: 'right', width: '12vw', backgroundColor: 'transparent', marginRight: '10vw'}}/>
+            <LoginSignup className={ layoutStyles['login-signup'] }/>
         );
     }
 }

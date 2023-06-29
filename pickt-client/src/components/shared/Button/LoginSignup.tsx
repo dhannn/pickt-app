@@ -7,16 +7,18 @@ import globalStyles from './../../../index.module.css'
 
 type LoginSignupProperties = { 
     message?: string, 
-    style?: CSSProperties 
+    style?: CSSProperties,
+    className?: string
 };
 
 export function LoginSignup(prop: LoginSignupProperties) {
-    const { message, style } = prop;
+    const { message, style, className } = prop;
 
     const loginSignupClass = [ 
         buttonStyles['login-signup'], 
         globalStyles['rounded-10px'], 
-        globalStyles['small-font-size']
+        globalStyles['small-font-size'],
+        className? className: ''
     ].join(' ');
 
     return (
