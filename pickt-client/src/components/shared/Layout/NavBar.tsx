@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { CSSProperties, useContext } from 'react';
 import layoutStyles from './Layout.module.css';
 import { Link } from 'react-router-dom';
 import Avatar from '../Avatar/Avatar';
@@ -10,16 +10,18 @@ import { SearchBar } from '../SearchBar/SearchBar';
 export function NavBar() {
     const Context = getUserAuthContext();
     const userAuth = useContext(Context);
-
+    
     return (
+        <>
         <div className={layoutStyles['navbar']}>
             <Link to={'/'} className={`${layoutStyles['site-name']}`}>Pickt</Link>
             <Link to={'/about'} className={`${layoutStyles['about-link']}`}>About</Link>
             
             <SearchBar/>
 
-            { !userAuth!.user? renderLoginSignup(): renderAvatar(userAuth?.user!) }
+            { userAuth!.user === undefined? renderLoginSignup(): renderAvatar(userAuth?.user!) }
         </div>
+        </>
     );
 
     function renderAvatar(user: User) {
@@ -47,8 +49,15 @@ export function NavBar() {
     }
 
     function renderLoginSignup() {
+        const styles: CSSProperties = {
+            float: 'right',
+            width: '12vw',
+            backgroundColor: 'transparent',
+            marginRight: '10vw'
+        };
+        
         return (
-            <LoginSignup className={ layoutStyles['login-signup'] }/>
+            <LoginSignup style={styles}/>
         );
     }
 }

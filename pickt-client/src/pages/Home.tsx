@@ -11,8 +11,6 @@ export function Home() {
     const UserAuthContext = getUserAuthContext();
     const context = useContext(UserAuthContext);
 
-    console.log(context?.user);
-
     return (
         <>
             {isFocused? <AddPicture isFocused={isFocused} setFocus={setFocus}/>: ''}

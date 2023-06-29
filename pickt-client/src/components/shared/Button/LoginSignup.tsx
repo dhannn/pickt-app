@@ -18,8 +18,9 @@ export function LoginSignup(prop: LoginSignupProperties) {
         buttonStyles['login-signup'], 
         globalStyles['rounded-10px'], 
         globalStyles['small-font-size'],
-        className? className: ''
+        className
     ].join(' ');
+    console.log(loginSignupClass)
 
     return (
         <div className={loginSignupClass} style={style}>

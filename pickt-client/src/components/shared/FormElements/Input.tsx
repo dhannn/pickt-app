@@ -7,13 +7,14 @@ type InputProps = {
     classNames?: string
     style?: React.CSSProperties
     onFocus?: FocusEventHandler<HTMLInputElement>,
+    onChange?: ChangeEventHandler<HTMLInputElement>,
     onBlur?: ChangeEventHandler<HTMLInputElement>,
     placeholder?: string
     required?: boolean
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function (props: InputProps, ref) {
-    const { classNames, type, style, onFocus, onBlur, placeholder, required } = props;
+    const { classNames, type, style, onFocus, onBlur, placeholder, required, onChange } = props;
     const inputClasses = [
         globalStyles['rounded-5px'],
         formStyles['input'],
@@ -30,6 +31,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function (props: InputPro
             type={ type === undefined? 'text': type } 
             style={ style } 
             onFocus={ onFocus } 
+            onChange={ onChange }
             placeholder={ placeholder }
         />
     );
