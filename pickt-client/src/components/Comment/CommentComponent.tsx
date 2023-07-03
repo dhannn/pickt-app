@@ -1,19 +1,16 @@
 import React, { useRef, useState } from "react";
 import { Comment } from "../../types/Comment";
 import { VoteComponent } from "../shared/Vote/VoteComponent";
-import { Link } from "react-router-dom";
-import Avatar from "../shared/Avatar/Avatar";
 
 import commentStyles from './Comment.module.css'
-import { getRelativeDateTime } from "../../utils/format";
 import Button from "../shared/Button/Button";
-import { TextArea } from "../shared/FormElements";
 import { useUserAuth } from "../../hooks/useUserAuth";
 import { DeletedComment } from "./DeletedComment";
 import { EditDeleteOption } from "../shared/Button/EditDeleteOption";
 import { CommentMetadataComponent } from "./CommentMetadataComponent";
 import { EditComment } from "./EditComment";
 import { ContentComponent } from "./CommentContent";
+import { ReplyComment } from "./ReplyComment";
 
 type CommentProperty = {
     info: Comment,
@@ -56,12 +53,7 @@ export function CommentComponent(props: CommentProperty) {
     );
 
     const replyComponent = (
-        <EditComment 
-            comment={ info } 
-            editInputRef={ replyInputRef } 
-            handleEdit={ handleEdit } 
-            handleCancel={ handleCancel }
-        />
+        <ReplyComment level={level + 1} author={ user! } parent={ info } handleReply={ handleReply } handleCancel={ handleCancel }/>
     );
     
     const contentComponent = (
@@ -79,18 +71,19 @@ export function CommentComponent(props: CommentProperty) {
             />
         </>
     );
-    
 
     return (
-        <div className={`${commentStyles['comment']}`} style={getCommentDivStyle()}>
-            { isUserCommenterSame? editDeleteOptionComponent: <></> }
+        <>
+            <div className={`${commentStyles['comment']}`} style={getCommentDivStyle()}>
+                { isUserCommenterSame && editDeleteOptionComponent }
 
-            <VoteComponent classNames={ commentStyles['vote-info'] } voteInfo={voteInfo} />
-            <CommentMetadataComponent author={ author } createdAt={ createdAt }/>
+                <VoteComponent classNames={ commentStyles['vote-info'] } voteInfo={voteInfo} />
+                <CommentMetadataComponent author={ author } createdAt={ createdAt }/>
 
-            { state === 'reply'? replyComponent: <></> }
-            { state === 'edit'? editComponent: contentComponent }
-        </div>
+                { state === 'edit'? editComponent: contentComponent }
+            </div>
+            { state === 'reply' && replyComponent }
+        </>
     );
 
     function handleDeleteOption() {
@@ -104,6 +97,13 @@ export function CommentComponent(props: CommentProperty) {
 
     function handleReplyOption() {
         setState('reply');
+    }
+
+    function handleReply(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        e.preventDefault();
+        let newComment: Comment;
+
+        setState('display');
     }
 
     function handleCancel(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {

@@ -5,10 +5,12 @@ import Avatar from "../shared/Avatar/Avatar";
 import { getRelativeDateTime } from "../../utils/format";
 
 import commentStyles from './Comment.module.css';
+import Button from "../shared/Button";
+import { TextArea } from "../shared/FormElements";
 
 export function CommentMetadataComponent(props: CommentMetadata) {
     const { author: { username, profilePictureURL, fullName: { firstName, lastName } }, createdAt } = props;
-    const relativeDate = getRelativeDateTime(new Date(createdAt));
+    const relativeDate = getRelativeDateTime(new Date(createdAt!));
 
     return (
         <div className={`${commentStyles['metadata-container']}`}>
@@ -24,7 +26,7 @@ export function CommentMetadataComponent(props: CommentMetadata) {
                     { firstName } { lastName }
                 </Link>
                     
-                <p>{ relativeDate }</p>
+                <p>{ createdAt && relativeDate }</p>
             </div>
         </div>
     );

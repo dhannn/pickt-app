@@ -2,7 +2,7 @@ import { User } from "./User";
 import { Vote } from "./Vote";
 
 export type Comment = {
-    _id: string,
+    _id?: string,
     content: string,
     metadata: CommentMetadata,
     voteInfo: Vote,
@@ -12,5 +12,5 @@ export type Comment = {
 
 export type CommentMetadata = {
     author: User,
-    createdAt: Date,
+    createdAt?: Date,
 }
