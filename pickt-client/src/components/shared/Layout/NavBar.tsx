@@ -25,7 +25,7 @@ export function NavBar() {
     );
 
     function renderAvatar(user: User) {
-        const { profilePictureURL, name, username } = user;
+        const { profilePictureURL, fullName, username } = user;
 
         return (
             <Link to={`/user/@${ username }`} className={ layoutStyles['user-info-container'] }>
@@ -35,7 +35,7 @@ export function NavBar() {
                         to={ `/user/@${username}` } 
                         className={ `${layoutStyles['user-info']} ${layoutStyles['user-info-name']}` }
                     >
-                        {`${name.firstName} ${name.lastName? name.lastName: ''}`}
+                        {`${fullName.firstName} ${fullName.lastName? fullName.lastName: ''}`}
                     </Link>
                     <Link 
                         to={ `/user/@${username}` } 

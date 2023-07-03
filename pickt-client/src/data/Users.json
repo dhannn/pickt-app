@@ -1,7 +1,7 @@
 [
     {
         "_id": "1234abcd",
-        "name": {
+        "fullName": {
             "firstName": "Daniel",
             "lastName": "Ramos"
         },
@@ -21,7 +21,7 @@
                     "tag": "Question",
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -46,7 +46,7 @@
                     "tag": "Need Feedback",
                     "author": {
                         "_id": "1234abcd",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -70,7 +70,7 @@
                     "tag": "Question",
                     "author": {
                         "_id": "1234abcd",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -89,7 +89,7 @@
     },
     {
         "_id": "5678efga",
-        "name": {
+        "fullName": {
             "firstName": "Clarence"
         },
         "username": "rncs_21",
@@ -109,7 +109,7 @@
                     "tag": "Tips & Tricks",
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -132,7 +132,7 @@
                     "tag": "Discussion",
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -156,7 +156,7 @@
                     "tag": "Tips & Tricks",
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -179,7 +179,7 @@
                     "tag": "Others",
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -197,7 +197,7 @@
     },
     {
         "_id": "a3c9b2f7",
-        "name": {
+        "fullName": {
             "firstName": "John",
             "lastName": "Doe"
         },
@@ -216,7 +216,7 @@
                     "tag": "Tips & Tricks",
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -233,7 +233,7 @@
     },
     {
         "_id": "e1f8d4b6",
-        "name": {
+        "fullName": {
             "firstName": "Jane",
             "lastName": "Smith"
         },
@@ -251,7 +251,7 @@
                     "tag": "Question",
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Jane",
                             "lastName": "Smith"
                         },
@@ -268,7 +268,7 @@
     },
     {
         "_id": "c6fa3bc0",
-        "name": {
+        "fullName": {
             "firstName": "Noah",
             "lastName": "Parker"
         },
@@ -286,7 +286,7 @@
                     "tag": "Discussion",
                     "author": {
                         "_id": "c6fa3bc0",
-                        "name": {
+                        "fullName": {
                             "firstName": "Noah",
                             "lastName": "Parker"
                         },
@@ -311,7 +311,7 @@
                     "tag": "Tips & Tricks",
                     "author": {
                         "_id": "c6fa3bc0",
-                        "name": {
+                        "fullName": {
                             "firstName": "Noah",
                             "lastName": "Parker"
                         },
@@ -334,7 +334,7 @@
                     "tag": "Discussion",
                     "author": {
                         "_id": "c6fa3bc0",
-                        "name": {
+                        "fullName": {
                             "firstName": "Noah",
                             "lastName": "Parker"
                         },

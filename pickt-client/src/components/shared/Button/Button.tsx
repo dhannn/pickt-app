@@ -8,11 +8,12 @@ type FormButtonProps = {
     value?: string,
     onClick?: MouseEventHandler<HTMLButtonElement>
     style?: React.CSSProperties,
-    children?: ReactNode
+    children?: ReactNode,
+    disabled?: boolean
 };
 
 export default function Button(props: FormButtonProps) {
-    const { classNames, value, onClick, type, style, children } = props;
+    const { classNames, value, onClick, type, style, children, disabled } = props;
 
     const classes = [
             classNames?? '', 
@@ -27,6 +28,7 @@ export default function Button(props: FormButtonProps) {
             className={classes} 
             value={value} 
             onClick={onClick}
+            disabled={disabled}
         >
             {children} {value}
         </button>

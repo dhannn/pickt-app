@@ -1,0 +1,24 @@
+import React from "react";
+export function CommentMetadata({
+  username,
+  profilePictureURL,
+  relativeDate
+}) {
+  return <div className={`${commentStyles['metadata-container']}`}>
+                <Link style={{
+      position: 'relative',
+      left: '-1.5vw'
+    }} to={`/user/@${username}`}>
+                    <Avatar size='small' url={profilePictureURL} /> 
+                </Link>
+
+                <div>
+                    <Link to={`/user/@${username}`}>
+                        {fullName.firstName} {fullName.lastName}
+                    </Link>
+                    
+                    <p>{relativeDate}</p>
+                </div>
+            </div>;
+}
+  

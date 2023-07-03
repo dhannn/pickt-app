@@ -8,94 +8,123 @@ import commentStyles from './Comment.module.css'
 import { getRelativeDateTime } from "../../utils/format";
 import Button from "../shared/Button/Button";
 import { TextArea } from "../shared/FormElements";
-import { UserAuthState, useUserAuth } from "../../hooks/useUserAuth";
-import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDeleteLeft, faEllipsis, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
-import { OptionComponent } from "../shared/Button/OptionComponent";
+import { useUserAuth } from "../../hooks/useUserAuth";
 import { DeletedComment } from "./DeletedComment";
+import { EditDeleteOption } from "../shared/Button/EditDeleteOption";
+import { CommentMetadataComponent } from "./CommentMetadataComponent";
+import { EditComment } from "./EditComment";
+import { ContentComponent } from "./CommentContent";
 
 type CommentProperty = {
     info: Comment,
     level: number
 }
 
+type CommentState = 'display' | 'edit' | 'reply' | 'delete'
+
 export function CommentComponent(props: CommentProperty) {
-    const {info, level} = props;
-    const leftValue = level * 2;
+    const { info, level } = props;
+    const { content, metadata, voteInfo, isDeleted } = info;
+    const { author, createdAt } = metadata;
 
-    const [ deleted, setDeleted ] = useState(info.isDeleted);
+    const [ state, setState ] = useState<CommentState>(isDeleted? 'delete': 'display');
 
-    const { _id, content, metadata, voteInfo, isDeleted } = info;
-    const relativeDate = getRelativeDateTime(new Date(metadata.createdAt));
+    const editInputRef = useRef<HTMLTextAreaElement>(null);
+    const replyInputRef = useRef<HTMLTextAreaElement>(null);
 
-    const editTextArea = useRef<HTMLTextAreaElement>(null);
-    const editForm = useRef<HTMLFormElement>(null);
-    const contentRef = useRef<HTMLParagraphElement>(null);
+    const { user } = useUserAuth()!;
+    const isUserCommenterSame = user?.username === author.username;
 
-    const commentRef = useRef(info);
-
-    const userAuth = useUserAuth();
-    const options = [
-        {
-            name: 'Edit',
-            icon: faPenToSquare,
-            onClick: () => {
-                editForm.current!.classList.add(commentStyles['active-edit-comment-form']);
-                editTextArea.current!.innerText = contentRef.current?.textContent!
-                contentRef.current!.classList.add(commentStyles['content-editing']);
-            }
-        },
-        {
-            name: 'Delete',
-            icon: faDeleteLeft,
-            onClick: () => {
-                info.isDeleted = true;
-                setDeleted(() => true);
-            }
-        }
-    ]
-
-    if (deleted)
+    if (state === 'delete')
         return <DeletedComment level={ level }/>
+    
+    
+    const editDeleteOptionComponent = (
+        <EditDeleteOption 
+            handleDelete={handleDeleteOption}
+            handleEdit={handleEditOption}
+        />
+    );
+
+    const editComponent = (
+        <EditComment 
+            comment={ info } 
+            editInputRef={ editInputRef } 
+            handleEdit={ handleEdit } 
+            handleCancel={ handleCancel }
+        />
+    );
+
+    const replyComponent = (
+        <EditComment 
+            comment={ info } 
+            editInputRef={ replyInputRef } 
+            handleEdit={ handleEdit } 
+            handleCancel={ handleCancel }
+        />
+    );
+    
+    const contentComponent = (
+        <>
+            <ContentComponent 
+                level={ level } 
+                content={ content }
+            />
+        
+            <Button
+                classNames={commentStyles['reply-button']}
+                type='secondary'
+                value='Reply'
+                onClick={ handleReplyOption } 
+            />
+        </>
+    );
+    
 
     return (
-        <div className={`${commentStyles['comment']}`} style={{width: `${25 - leftValue}vw`, left: `${leftValue + 5}vw`}}>
-            <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '1.5vw'}}/>
+        <div className={`${commentStyles['comment']}`} style={getCommentDivStyle()}>
+            { isUserCommenterSame? editDeleteOptionComponent: <></> }
 
-            {userAuth!.user?.username === metadata.author.username?<OptionComponent options={options}/>: <></>}
-            
-            <div className={`${commentStyles['metadata-container']}`}>
-                <Link style={{position: 'relative', left: '-1.5vw'}} to={`/user/@${metadata.author.username}`}>
-                    <Avatar size='small' url={metadata.author.profilePictureURL}/> 
-                </Link>
+            <VoteComponent classNames={ commentStyles['vote-info'] } voteInfo={voteInfo} />
+            <CommentMetadataComponent author={ author } createdAt={ createdAt }/>
 
-                <div>
-                    <Link to={`/user/@${metadata.author.username}`}>
-                        { metadata.author.name.firstName } { metadata.author.name.lastName }
-                    </Link>
-                    
-                    <p>{ relativeDate }</p>
-                </div>
-            </div>
-
-            <form ref={editForm} className={commentStyles['edit-comment-form']}>
-                <TextArea classNames={commentStyles['editbox']} ref={editTextArea}/>
-                <Button type='primary' value='Edit' onClick={(e) => {
-                    e.preventDefault();
-                    contentRef.current!.innerText = editTextArea.current!.value;
-                    editForm.current!.classList.remove(commentStyles['active-edit-comment-form']);
-                    contentRef.current!.classList.remove(commentStyles['content-editing']);
-                }}/>
-                <Button type='secondary' value='Cancel' onClick={(e) => {
-                    e.preventDefault();
-                    editForm.current!.classList.remove(commentStyles['active-edit-comment-form']);
-                    contentRef.current!.classList.remove(commentStyles['content-editing']);
-                }}/>
-            </form>
-            
-            <p ref={contentRef} className={`${commentStyles['content']}`} style={{left: `${5.5}vw`, width: `${24 - leftValue}vw`}}>{content}</p>
-            <Button style={{left: '4.5vw', top: '1vh'}} type='secondary' value='Reply' onClick={() => {}}/>
+            { state === 'reply'? replyComponent: <></> }
+            { state === 'edit'? editComponent: contentComponent }
         </div>
     );
+
+    function handleDeleteOption() {
+        setState('delete');
+        info.isDeleted = true;
+    }
+
+    function handleEditOption() {
+        setState('edit');
+    }
+
+    function handleReplyOption() {
+        setState('reply');
+    }
+
+    function handleCancel(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        e.preventDefault();
+        setState('display');
+    }
+
+    function handleEdit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        e.preventDefault();
+        info.content = editInputRef.current?.value!;
+        setState('display');
+    }
+
+    function getCommentDivStyle() {
+        const leftPadding = level * 2;
+        const baseWidth = 25;
+        const basePadding = 5;
+
+        return ({
+            width: `${baseWidth - leftPadding}vw`, 
+            left: `${leftPadding + basePadding}vw`
+        });
+    }
 }

@@ -10,7 +10,7 @@
             "tag": "Tips & Tricks",
             "author": {
                 "_id": "a3c9b2f7",
-                "name": {
+                "fullName": {
                     "firstName": "Clarence"
                 },
                 "username": "rncs_21",
@@ -29,7 +29,7 @@
                 "metadata": {
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -49,7 +49,7 @@
                 "metadata": {
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -69,7 +69,7 @@
                         "metadata": {
                             "author": {
                                 "_id": "a3c9b2f7",
-                                "name": {
+                                "fullName": {
                                     "firstName": "Clarence"
                                 },
                                 "username": "rncs_21",
@@ -96,7 +96,7 @@
             "tag": "Question",
             "author": {
                 "_id": "e1f8d4b6",
-                "name": {
+                "fullName": {
                     "firstName": "Daniel",
                     "lastName": "Ramos"
                 },
@@ -116,7 +116,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -135,7 +135,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -160,7 +160,7 @@
             "tag": "Discussion",
             "author": {
                 "_id": "a3c9b2f7",
-                "name": {
+                "fullName": {
                     "firstName": "Clarence"
                 },
                 "username": "rncs_21",
@@ -179,7 +179,7 @@
                 "metadata": {
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -206,7 +206,7 @@
             "tag": "Tips & Tricks",
             "author": {
                 "_id": "a3c9b2f7",
-                "name": {
+                "fullName": {
                     "firstName": "Clarence"
                 },
                 "username": "rncs_21",
@@ -225,7 +225,7 @@
                 "metadata": {
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -252,7 +252,7 @@
             "tag": "Need Feedback",
             "author": {
                 "_id": "1234abcd",
-                "name": {
+                "fullName": {
                     "firstName": "Daniel",
                     "lastName": "Ramos"
                 },
@@ -272,7 +272,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -291,7 +291,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -316,7 +316,7 @@
             "tag": "Others",
             "author": {
                 "_id": "a3c9b2f7",
-                "name": {
+                "fullName": {
                     "firstName": "Clarence"
                 },
                 "username": "rncs_21",
@@ -335,7 +335,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -354,7 +354,7 @@
                 "metadata": {
                     "author": {
                         "_id": "1234abcd",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -380,7 +380,7 @@
             "tag": "Discussion",
             "author": {
                 "_id": "c6fa3bc0",
-                "name": {
+                "fullName": {
                     "firstName": "Noah",
                     "lastName": "Parker"
                 },
@@ -400,7 +400,7 @@
                 "metadata": {
                     "author": {
                         "_id": "5678efga",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -420,7 +420,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -445,7 +445,7 @@
             "tag": "Question",
             "author": {
                 "_id": "1234abcd",
-                "name": {
+                "fullName": {
                     "firstName": "Daniel",
                     "lastName": "Ramos"
                 },
@@ -465,7 +465,7 @@
                 "metadata": {
                     "author": {
                         "_id": "5678efga",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -484,7 +484,7 @@
                         "metadata": {
                             "author": {
                                 "_id": "a3c9b2f7",
-                                "name": {
+                                "fullName": {
                                     "firstName": "John",
                                     "lastName": "Doe"
                                 },
@@ -505,7 +505,7 @@
                 "metadata": {
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Jane",
                             "lastName": "Smith"
                         },
@@ -531,7 +531,7 @@
             "tag": "Tips & Tricks",
             "author": {
                 "_id": "c6fa3bc0",
-                "name": {
+                "fullName": {
                     "firstName": "Noah",
                     "lastName": "Parker"
                 },
@@ -550,7 +550,7 @@
                 "metadata": {
                     "author": {
                         "_id": "5678efga",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -570,7 +570,7 @@
                 "metadata": {
                     "author": {
                         "_id": "1234abcd",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -596,7 +596,7 @@
             "tag": "Question",
             "author": {
                 "_id": "e1f8d4b6",
-                "name": {
+                "fullName": {
                     "firstName": "Jane",
                     "lastName": "Smith"
                 },
@@ -615,7 +615,7 @@
                 "metadata": {
                     "author": {
                         "_id": "5678efga",
-                        "name": {
+                        "fullName": {
                             "firstName": "Clarence"
                         },
                         "username": "rncs_21",
@@ -635,7 +635,7 @@
                         "metadata": {
                             "author": {
                                 "_id": "c6fa3bc0",
-                                "name": {
+                                "fullName": {
                                     "firstName": "Noah",
                                     "lastName": "Parker"
                                 },
@@ -656,7 +656,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -682,7 +682,7 @@
             "tag": "Tips & Tricks",
             "author": {
                 "_id": "a3c9b2f7",
-                "name": {
+                "fullName": {
                     "firstName": "John",
                     "lastName": "Doe"
                 },
@@ -701,7 +701,7 @@
                 "metadata": {
                     "author": {
                         "_id": "1234abcd",
-                        "name": {
+                        "fullName": {
                             "firstName": "Daniel",
                             "lastName": "Ramos"
                         },
@@ -721,7 +721,7 @@
                 "metadata": {
                     "author": {
                         "_id": "e1f8d4b6",
-                        "name": {
+                        "fullName": {
                             "firstName": "Jane",
                             "lastName": "Smith"
                         },
@@ -746,7 +746,7 @@
             "tag": "Discussion",
             "author": {
                 "_id": "c6fa3bc0",
-                "name": {
+                "fullName": {
                     "firstName": "Noah",
                     "lastName": "Parker"
                 },
@@ -765,7 +765,7 @@
                 "metadata": {
                     "author": {
                         "_id": "a3c9b2f7",
-                        "name": {
+                        "fullName": {
                             "firstName": "John",
                             "lastName": "Doe"
                         },
@@ -784,7 +784,7 @@
                         "metadata": {
                             "author": {
                                 "_id": "e1f8d4b6",
-                                "name": {
+                                "fullName": {
                                     "firstName": "Jane",
                                     "lastName": "Smith"
                                 },

@@ -2,7 +2,7 @@ import { Post } from "./Post"
 
 export type User = {
     _id: string
-    name: {
+    fullName: {
         firstName: string
         lastName?: string
     },

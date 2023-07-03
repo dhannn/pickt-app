@@ -11,21 +11,19 @@
 .metadata-container {
     display: flex;
     position: relative;
-    left: 2.5vw;
+    left: 2.5vw; 
+    /* left: -1.5vw; */
+}
+
+.metadata-profile-picture {
+    position: relative;
+    left: -1.5vw;
 }
 
 .content {
     line-height: 1.5rem;
-    position: relative;
     text-align: justify;
-}
-
-.edit-comment-form {
-    visibility: hidden;
-    opacity: 0;
-    transition: var(--microinteraction-transition);
-    position: absolute;
-    display: none;
+    margin-left: 5.5vw;
 }
 
 .edit-comment-form Button {
@@ -34,10 +32,6 @@
 
 .active-edit-comment-form {
     display: block;
-    visibility: visible;
-    opacity: 1;
-    transition: var(--microinteraction-transition);
-    position: static;
 }
 
 .editbox {
@@ -49,3 +43,13 @@
     visibility: hidden;
     position: absolute;
 }
+
+.vote-info {
+    position: absolute; 
+    left: 1.5vw;
+}
+
+.reply-button {
+    left: 4.5vw;
+    top:  1vh;
+ }
