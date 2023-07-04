@@ -1,6 +1,0 @@
-{
-    "scripts": {
-        "install": "npm install --prefix ./pickt-client/ --legacy-peer-deps",
-        "start": "npm start --prefix ./pickt-client/"
-    }
-}
