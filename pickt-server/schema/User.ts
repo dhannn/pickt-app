@@ -1,7 +1,4 @@
-import { Post } from "./Post"
-
-export type User = {
-    _id: string
+export interface User {
     fullName: {
         firstName: string
         lastName?: string
@@ -13,6 +10,5 @@ export type User = {
     bio?: string,
     profilePictureURL: string,
 
-    posts?: Post[],
     photoURLs?: string[]
 }

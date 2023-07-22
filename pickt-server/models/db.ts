@@ -1,27 +1,19 @@
-import { MongoClient } from 'mongodb';
+import mongoose from 'mongoose';
 
 const mongoURI = process.env.MONGO_URI;
+const dbName = process.env.DB_NAME
 
-const client = new MongoClient(mongoURI || '');
+mongoose.connect(mongoURI || '', { dbName: dbName });
 
-export function connectToMongo(callback: Function) {
-    client.connect()
-        .then(() => {
-            return callback();
-        })
-        .catch((err) => {
-            callback(err);
-        })
-}
-
-export function getDb() {
-    return client.db(process.env.DB_NAME);
+export function connectToMongo() {
+    const db = mongoose.connection;
+    db.on('error', console.error.bind(console, 'Connection error:'));
+    db.once('open', () => console.log('Connected to MongoDB client'));
 }
 
 
 function handleSignal(): void {
     console.log('Closing MongoDB connection');
-    client.close();
     process.exit();
 }
 

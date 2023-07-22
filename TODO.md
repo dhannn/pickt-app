@@ -16,3 +16,5 @@
 [ ] Refactor getting BG in login
 [ ] Daily Highlight
 [ ] Add Collapsible search bar
+
+https://www.section.io/engineering-education/uploading-files-using-multer-nodejs/

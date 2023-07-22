@@ -2,24 +2,25 @@ import { Comment } from "./Comment";
 import { User } from "./User";
 import { Vote } from "./Vote";
 
-export type Post = {
-    _id: string
+export interface Post extends Document {
+    _id: String,
     content: PostContent,
     metadata: PostMetadata,
     voteInfo: Vote,
-    comments?: Comment[]
+    comments?: Comment[],
+    isDeleted: boolean
 };
 
-export type PostContent = {
+export interface PostContent {
     title: string,
     content: string,
     photoUrl?: string,
 }
 
-export type PostMetadata = {
+export interface PostMetadata  {
     tag: PostTag,
     author: User,
-    createdAt: Date,
+    createdAt: Date
 }
 
 export type PostTag = 'Need Feedback' | 'Discussion' | 'Question' | 'Tips & Tricks' | 'Others';
