@@ -126,7 +126,13 @@ function getComment(comments: Comment[], commentId: string) {
 
 export interface ContentInsert {
     content: PostContent | string,
-    author: User,
+    author: {    
+        fullName: {
+            firstName: string
+            lastName?: string
+        },
+        username: string
+    },
 };
 
 export interface PostInsert extends ContentInsert {

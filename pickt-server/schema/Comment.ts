@@ -11,6 +11,12 @@ export type Comment = {
 };
 
 export type CommentMetadata = {
-    author: User,
+    author: {    
+        fullName: {
+            firstName: string
+            lastName?: string
+        },
+        username: string
+    },
     createdAt?: Date,
 }
