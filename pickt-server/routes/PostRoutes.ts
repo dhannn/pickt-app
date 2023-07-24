@@ -47,7 +47,6 @@ export const router = express.Router();
  */
 
 router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({ extended: true }));
 
 /**
  * Routes for GET requests

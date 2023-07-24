@@ -13,4 +13,5 @@ export type Comment = {
 export type CommentMetadata = {
     author: User,
     createdAt?: Date,
+    lastModified?: Date
 }

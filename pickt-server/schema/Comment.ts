@@ -19,4 +19,5 @@ export type CommentMetadata = {
         username: string
     },
     createdAt?: Date,
+    lastModified?: Date
 }

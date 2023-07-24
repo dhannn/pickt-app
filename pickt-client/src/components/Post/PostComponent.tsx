@@ -12,16 +12,18 @@ import { UserAuthProvider, getUserAuthContext } from "../../hooks/useUserAuth";
 import { TextArea } from "../shared/FormElements";
 import { LoginSignup } from "../shared/Button/LoginSignup";
 import Button from "../shared/Button/Button";
+import { Comment } from "../../types/Comment";
+import { addComment } from "../../services/post/PostServices";
 
 export function PostComponent(props: Post) {
-    const { content, metadata, voteInfo, comments } = props;
+    const { content, metadata, voteInfo, comments, _id } = props;
     
     const contentComponents = renderContent(content, metadata);
     const Context = getUserAuthContext();
     const userAuth = useContext(Context);
 
     const postRef = useRef(props);
-
+    const commentRef = useRef<HTMLTextAreaElement>(null);
     return (
         <div>
             <VoteComponent voteInfo={voteInfo} styles={{position: 'absolute', left: '3vw', top: '20vh'}}/>
@@ -29,7 +31,7 @@ export function PostComponent(props: Post) {
             <div style={{paddingBottom: '10vh'}}>
                 <h1 style={{margin: '10vh 0vw 5vh 5vw'}}>Comments</h1>
                 {userAuth?.user? renderCommentTextArea(): renderLoginSignupButton()}
-                <CommentList comments={comments!}/>
+                <CommentList postId={_id} comments={comments!}/>
             </div>
         </div>
     );
@@ -37,8 +39,8 @@ export function PostComponent(props: Post) {
     function renderCommentTextArea() {
         return(
             <form>
-                <TextArea required style={{width: '35vw', margin: '0vh 0vw 5vh 5vw', height: '10vh'}}/>
-                <Button style={{left: '-6vw'}} value='Comment'type='primary' onClick={(e) => {e.preventDefault()}}/>
+                <TextArea ref={ commentRef } required style={{width: '35vw', margin: '0vh 0vw 5vh 5vw', height: '10vh'}}/>
+                <Button style={{left: '-6vw'}} value='Comment'type='primary' onClick={ handleComment }/>
             </form>
         );
     }
@@ -68,5 +70,24 @@ export function PostComponent(props: Post) {
                 </div>
             </>
         );
+    }
+
+    function handleComment(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        e.preventDefault();
+        console.log(commentRef.current?.value);
+        
+        
+        let newComment: Comment = {
+            content: commentRef.current?.value!,
+            metadata: {
+                author: userAuth?.user!
+            },
+            voteInfo: {
+                upvotes: 0,
+                downvotes: 0
+            }
+        };
+
+        addComment(newComment, _id);
     }
 }

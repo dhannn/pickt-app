@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, now } from "mongoose";
 import { Post, PostContent, PostTag } from "../schema/Post";
 import { User } from "../schema/User";
 import { Comment } from "../schema/Comment";
@@ -9,7 +9,8 @@ const postSchema = new Schema<Post>({
     metadata: {
         tag: { type: String, required: true },
         author: { type: Object, required: true },
-        createdAt: { type: Date, required: true }
+        createdAt: { type: Date, required: true },
+        lastModified: { type: Date }
     },
     voteInfo: {
         upvotes: { type: Number, required: true },
@@ -21,7 +22,7 @@ const postSchema = new Schema<Post>({
 
 const PostModel = mongoose.model<Post>('Post', postSchema);
 
-const POST_PER_PAGE = 2;
+const POST_PER_PAGE = 15;
 
 export type PostQuery = {
     page?: number, 
@@ -63,9 +64,6 @@ export async function findPosts({ page, attr }: PostQuery = { page: 1, attr: {}}
             .sort('metadata.createdAt')
             .skip(page! * POST_PER_PAGE - POST_PER_PAGE)
             .limit(POST_PER_PAGE);
-        
-
-        console.log('Successfully finds posts from database');
         
         return posts;
     } catch (error) {
@@ -126,13 +124,7 @@ function getComment(comments: Comment[], commentId: string) {
 
 export interface ContentInsert {
     content: PostContent | string,
-    author: {    
-        fullName: {
-            firstName: string
-            lastName?: string
-        },
-        username: string
-    },
+    author: User,
 };
 
 export interface PostInsert extends ContentInsert {
@@ -187,12 +179,14 @@ export async function insertComment(data: CommentInsert) {
     let post = await PostModel.findById(postId);
     let comments = post?.comments;
 
+    console.log(data);
+    
     if (post === null) {
         return null;
     }
 
     let comment = {
-        _id: `${postId}-${commentId || 0}-${post.comments?.length || 0}`,
+        _id: `${postId}-c-${now().toISOString()}`,
         content: content as string,
         metadata: {
             author: author,
@@ -312,6 +306,7 @@ export async function updateComment(data: CommentUpdate) {
     
     if (content !== undefined) {
         comment.content = content;
+        comment.metadata.lastModified = new Date();
     }
 
     if (vote !== undefined) {

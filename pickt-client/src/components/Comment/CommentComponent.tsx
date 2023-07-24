@@ -11,18 +11,20 @@ import { CommentMetadataComponent } from "./CommentMetadataComponent";
 import { EditComment } from "./EditComment";
 import { ContentComponent } from "./CommentContent";
 import { ReplyComment } from "./ReplyComment";
+import { addComment, deleteComment, editComment } from "../../services/post/PostServices";
 
 type CommentProperty = {
     info: Comment,
-    level: number
+    level: number,
+    postId: string
 }
 
 type CommentState = 'display' | 'edit' | 'reply' | 'delete'
 
 export function CommentComponent(props: CommentProperty) {
-    const { info, level } = props;
-    const { content, metadata, voteInfo, isDeleted } = info;
-    const { author, createdAt } = metadata;
+    const { info, level, postId } = props;
+    const { content, metadata, voteInfo, isDeleted, _id } = info;
+    const { author, createdAt, lastModified } = metadata;
 
     const [ state, setState ] = useState<CommentState>(isDeleted? 'delete': 'display');
 
@@ -30,6 +32,7 @@ export function CommentComponent(props: CommentProperty) {
     const replyInputRef = useRef<HTMLTextAreaElement>(null);
 
     const { user } = useUserAuth()!;
+    
     const isUserCommenterSame = user?.username === author.username;
 
     if (state === 'delete')
@@ -53,7 +56,7 @@ export function CommentComponent(props: CommentProperty) {
     );
 
     const replyComponent = (
-        <ReplyComment level={level + 1} author={ user! } parent={ info } handleReply={ handleReply } handleCancel={ handleCancel }/>
+        <ReplyComment replyInputRef={ replyInputRef } level={level + 1} author={ user! } parent={ info } handleReply={ handleReply } handleCancel={ handleCancel }/>
     );
     
     const contentComponent = (
@@ -63,12 +66,12 @@ export function CommentComponent(props: CommentProperty) {
                 content={ content }
             />
         
-            <Button
+            {user !== undefined && <Button
                 classNames={commentStyles['reply-button']}
                 type='secondary'
                 value='Reply'
                 onClick={ handleReplyOption } 
-            />
+            />}
         </>
     );
 
@@ -78,7 +81,7 @@ export function CommentComponent(props: CommentProperty) {
                 { isUserCommenterSame && editDeleteOptionComponent }
 
                 <VoteComponent classNames={ commentStyles['vote-info'] } voteInfo={voteInfo} />
-                <CommentMetadataComponent author={ author } createdAt={ createdAt }/>
+                <CommentMetadataComponent author={ author } createdAt={ createdAt } lastModified={ lastModified }/>
 
                 { state === 'edit'? editComponent: contentComponent }
             </div>
@@ -88,7 +91,7 @@ export function CommentComponent(props: CommentProperty) {
 
     function handleDeleteOption() {
         setState('delete');
-        info.isDeleted = true;
+        deleteComment(postId!, _id!);
     }
 
     function handleEditOption() {
@@ -101,19 +104,46 @@ export function CommentComponent(props: CommentProperty) {
 
     function handleReply(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
-        let newComment: Comment;
-
+        const content = replyInputRef.current?.value;
+        
+        let newComment: Comment = {
+            content: content!,
+            metadata: {
+                author: user!
+            },
+            voteInfo: {
+                upvotes: 0,
+                downvotes: 0
+            }
+        };
+        
+        addComment(newComment, postId, _id!);
         setState('display');
     }
 
     function handleCancel(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
+
+        if (editInputRef.current)
+            editInputRef.current.value = '';
+
+        if (replyInputRef.current)
+            replyInputRef.current.value = '';
+
         setState('display');
     }
 
     function handleEdit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
-        info.content = editInputRef.current?.value!;
+        
+        let data = {
+            content: editInputRef.current?.value!.trim()!
+        }
+
+        if (data.content !== content) {
+            editComment(data, postId, info._id!);
+        }
+        
         setState('display');
     }
 

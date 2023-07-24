@@ -1,7 +1,7 @@
 import { Post } from "./Post"
 
 export type User = {
-    _id: string
+    _id?: string
     fullName: {
         firstName: string
         lastName?: string

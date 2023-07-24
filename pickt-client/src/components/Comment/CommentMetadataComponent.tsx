@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CommentMetadata } from "../../types/Comment";
 import Avatar from "../shared/Avatar/Avatar";
@@ -9,8 +9,17 @@ import Button from "../shared/Button";
 import { TextArea } from "../shared/FormElements";
 
 export function CommentMetadataComponent(props: CommentMetadata) {
-    const { author: { username, profilePictureURL, fullName: { firstName, lastName } }, createdAt } = props;
-    const relativeDate = getRelativeDateTime(new Date(createdAt!));
+    const { author: { username, profilePictureURL, fullName: { firstName, lastName } }, createdAt, lastModified, } = props;
+    const [ relativeCreatedAt, setRelativeCreatedAt ] =  useState('');
+    const [ relativeLastModified, setRelativeLastModified ] =  useState('');
+
+    useEffect(() => {
+        const relativeCreativeAt = getRelativeDateTime(new Date(createdAt!));
+        setRelativeCreatedAt(relativeCreativeAt);
+        const relativeLastModified = getRelativeDateTime(new Date(lastModified!));
+        setRelativeLastModified(relativeLastModified);
+    }, [lastModified]);
+
 
     return (
         <div className={`${commentStyles['metadata-container']}`}>
@@ -26,7 +35,10 @@ export function CommentMetadataComponent(props: CommentMetadata) {
                     { firstName } { lastName }
                 </Link>
                     
-                <p>{ createdAt && relativeDate }</p>
+                <div>
+                    <p style={{display: "inline"}}>{ createdAt !== undefined && relativeCreatedAt }</p>
+                    <p style={{display: "inline", color: 'gray', marginLeft: '10px', fontSize: '0.8em'}}>{ lastModified !== undefined && 'Edited ' + relativeLastModified }</p>
+                </div>
             </div>
         </div>
     );

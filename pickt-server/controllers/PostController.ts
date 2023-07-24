@@ -6,8 +6,9 @@ import { PostInsert, PostQuery, findPostById, findPosts, insertPost, findComment
 export async function getPosts(req: Request, res: Response) {
     const query = parsePageQuery(req.query);
     let posts = await findPosts(query as PostQuery);
-    
-    res.status(200).json(posts);
+
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    return res.status(200).json(posts);
 }
 
 export async function getPostById(req: Request, res: Response) {
@@ -20,6 +21,7 @@ export async function getPostById(req: Request, res: Response) {
         });
     }
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(post);
 }
 
@@ -32,6 +34,7 @@ export async function getComments(req: Request, res: Response) {
         })
     }
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(comments);
 }
 
@@ -53,19 +56,23 @@ export async function getCommentById(req: Request, res: Response) {
         });
     }
     
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(comment);
 }
 
 export async function createPost(req: Request, res: Response) {
-    const data: PostInsert = parseCreatePostBody(req.body);
+    const data: PostInsert = req.body;
     const post = await insertPost(data);
+
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(201).json(post);
 }
 
 export async function createComment(req: Request, res: Response) {
-    const data = parseCommentBody(req.body, req.params);
-    const comment = await insertComment(data);
+    const data = parseCommentBody(req.body, req.params);    
+    const comment = await insertComment(data);    
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(201).json(comment);
 }
 
@@ -80,12 +87,15 @@ export async function editPost(req: Request, res: Response) {
 
     const post = await updatePost(data);
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(post);
 }
 
 export async function editComment(req: Request, res: Response) {
     const data = parseEditCommentBody(req.body, req.params);
     
+    res.setHeader("Access-Control-Allow-Origin", "*");
+
     if (!await findPostById(req.params.postId)) {
         return res.status(404).json({
             message: 'Cannot find post'
@@ -107,6 +117,7 @@ export async function votePost(req: Request, res: Response) {
     const data = { id: req.params.postId, vote: Number(req.params.vote) };
     const post = await updatePost(data);
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(post);
 }
 
@@ -119,6 +130,7 @@ export async function voteComment(req: Request, res: Response) {
     
     const comment = await updateComment(data);
     
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(comment);
 }
 
@@ -126,6 +138,7 @@ export async function deletePost(req: Request, res: Response) {
     const data = { id: req.params.postId, isDeleted: true };
     const post = await updatePost(data);
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(post);
 }
 
@@ -138,6 +151,7 @@ export async function deleteComment(req: Request, res: Response) {
     
     const post = await updateComment(data);
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(post);
 }
 
@@ -188,15 +202,8 @@ function parseEditCommentBody(body: any, params: any) {
 
 function parseCommentBody(body: any, params: any) {
     return {
-        content: body['content'], 
-        author: {
-            fullName: {
-                firstName: body['firstname'],
-                lastName: body['lastname']
-            }, 
-            username: body['username'],
-            profilePictureURL: body['profile-picture-url']
-        },
+        content: body.content,
+        author: body.metadata.author,
         postId: params.postId,
         commentId: params.commentId
     };
