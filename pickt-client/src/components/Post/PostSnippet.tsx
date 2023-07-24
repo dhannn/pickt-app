@@ -8,9 +8,10 @@ import postStyles from './Post.module.css'
 import globalStyles from './../../index.module.css'
 import { getRelativeDateTime } from '../../utils/format';
 import { Link } from 'react-router-dom';
+import { Comment } from '../../types/Comment';
 
 export function PostSnippet(props: Post) {
-    const { _id, content, voteInfo, metadata } = props;
+    const { _id, content, voteInfo, metadata, comments } = props;
     const voteComponent = renderVoteComponent(voteInfo, content.photoUrl !== undefined);
     const contentComponent = renderContent(content, metadata);
 
@@ -28,15 +29,39 @@ export function PostSnippet(props: Post) {
         <div className={cssClasses} style={customStyles}>
             { voteComponent }
             <Link to={`/post/${_id}`}>
-                    { contentComponent }
+                { contentComponent }
             </Link>
         </div>
     );
 
+    function getCommentCount() {
+        let stack: Comment[] = [];
+
+        comments?.forEach((c) => {
+            stack.push(c);
+        });        
+
+        let count = 0;
+
+        while (stack.length !== 0) {
+            let comment = stack.pop();
+            
+            if(comment?.replies) {
+                comment.replies.forEach((c) => {
+                    stack.push(c);
+                });
+            }
+
+            count++;
+        }
+
+        return count;
+    }
+
     function renderVoteComponent(voteInfo: Vote, darkBg: boolean = false) {
         const style: CSSProperties = {float: 'left', padding: '7vh 3vw 10vh'};
 
-        return <VoteComponent voteInfo={voteInfo} styles={ style } darkBg={darkBg} />;
+        return <VoteComponent postId={_id} voteInfo={voteInfo} styles={ style } darkBg={darkBg} />;
     }
     
     function renderContent(postContent: PostContent, postMetadata: PostMetadata) {
@@ -46,13 +71,16 @@ export function PostSnippet(props: Post) {
 
         const truncatedContent = truncatePost(content);
 
+        const commentCount = getCommentCount();
         return (
             <div className={`${postStyles['content-container']} ${globalStyles['rounded-10px']}`}>
                 <p> <PostTag tag={tag}/>      </p>
                 <h1 className={`${postStyles['title']}`}>{ title }       </h1>
                 <Link to={`/user/@${author.username}`} className={`${globalStyles['inline']} ${postStyles['author']}`}> @{ author.username } </Link>
-            <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
+                <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
                 <p className={postStyles['content']} dangerouslySetInnerHTML={{ __html: truncatedContent }}/>
+                
+                <p style={{color: 'var(--greenish-gray)', fontSize: 'var(--small-font-size)', marginTop: '1vh'}}>{ `${commentCount} comment${commentCount > 1? 's': ''}` }</p>
             </div>
         );
     }

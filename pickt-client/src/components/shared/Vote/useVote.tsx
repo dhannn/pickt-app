@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import buttonStyle from './Vote.module.css';
+import { voteComment } from "../../../services/post/PostServices";
 
 
-export default function useVote(initialNetVotes: number, darkBg: boolean = false) {
+export default function useVote(initialNetVotes: number, darkBg: boolean = false, postId: string, commentId?: string) {
     const [ vote, setVote ] = useState(0);
     const [ netVotes, setNetVotes ] = useState(initialNetVotes);
     
@@ -20,11 +21,12 @@ export default function useVote(initialNetVotes: number, darkBg: boolean = false
     const voteButtonClass = buttonStyle[voteClassName];
     const activeButtonClass = buttonStyle[activeClassName]; 
 
-    useEffect(updateStyle, [vote])
+    useEffect(updateStyle, [vote]);
     
     return { handleVote, netVotes, upvoteElement, downvoteElement };
 
     function handleVote(myVote: number) {
+
         if (vote === myVote)
             return removeVote();
 

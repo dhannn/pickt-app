@@ -2,6 +2,7 @@
 import { Request } from 'express';
 import { Response } from 'express';
 import { PostInsert, PostQuery, findPostById, findPosts, insertPost, findComments, findCommentById, insertComment, PostUpdate, updatePost, updateComment } from '../models/PostDB';
+import { Post } from '../schema/Post';
 
 export async function getPosts(req: Request, res: Response) {
     const query = parsePageQuery(req.query);
@@ -61,7 +62,9 @@ export async function getCommentById(req: Request, res: Response) {
 }
 
 export async function createPost(req: Request, res: Response) {
-    const data: PostInsert = req.body;
+    const data: Post = req.body;
+    console.log(data);
+    
     const post = await insertPost(data);
 
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -125,7 +128,8 @@ export async function voteComment(req: Request, res: Response) {
     const data = { 
         postId: req.params.postId,
         commentId: req.params.commentId, 
-        vote: Number(req.params.vote) 
+        upvote: Number(req.params.upvote),
+        downvote: Number(req.params.downvote) 
     };
     
     const comment = await updateComment(data);

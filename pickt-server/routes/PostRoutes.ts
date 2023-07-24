@@ -70,7 +70,7 @@ router.post('/:postId/comments/:commentId', createComment);
 router.patch('/:postId', editPost);
 router.patch('/:postId/comments/:commentId', editComment);
 router.patch('/:postId/votes/:vote', votePost);
-router.patch('/:postId/comments/:commentId/votes/:vote', voteComment);
+router.patch('/:postId/comments/:commentId/votes/:upvote/:downvote', voteComment);
 
 /**
  * Routes for DELETE requests

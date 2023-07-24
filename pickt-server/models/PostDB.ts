@@ -61,7 +61,7 @@ export async function findPosts({ page, attr }: PostQuery = { page: 1, attr: {}}
         const attrObj = restructureAttr(attr);
 
         const posts = await PostModel.find(attrObj)
-            .sort('metadata.createdAt')
+            .sort([['metadata.createdAt', -1]])
             .skip(page! * POST_PER_PAGE - POST_PER_PAGE)
             .limit(POST_PER_PAGE);
         
@@ -136,8 +136,9 @@ export interface CommentInsert extends ContentInsert {
     commentId?: string
 }
 
-export async function insertPost(data: PostInsert) {
-    const { content, author, tag } = data;
+export async function insertPost(data: Post) {
+    const { content, metadata: { author, tag }} = data;
+    
     const id = generateSlug((content as PostContent).title);
 
     const metadata = {
@@ -284,11 +285,12 @@ export interface CommentUpdate {
     commentId: string,
     isDeleted?: boolean
     content?: string,
-    vote?: number
+    upvote?: number
+    downvote?: number
 }
 
 export async function updateComment(data: CommentUpdate) {
-    const { postId, commentId, isDeleted, content, vote } = data;
+    const { postId, commentId, isDeleted, content, upvote, downvote } = data;
     let post = await findPostById(postId);
     let comments = post!.comments;
     let comment = getComment(comments!, commentId);
@@ -309,12 +311,12 @@ export async function updateComment(data: CommentUpdate) {
         comment.metadata.lastModified = new Date();
     }
 
-    if (vote !== undefined) {
-        if (vote === 1) {
-            comment.voteInfo.upvotes++;
-        } else if (vote === -1) {
-            comment.voteInfo.downvotes++;
-        }
+    if (upvote !== undefined) {
+        comment.voteInfo.upvotes === upvote;
+    }
+
+    if (downvote !== undefined) {
+        comment.voteInfo.downvotes === downvote;
     }
 
     post.markModified('comments');

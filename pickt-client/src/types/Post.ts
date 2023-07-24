@@ -7,7 +7,8 @@ export type Post = {
     content: PostContent,
     metadata: PostMetadata,
     voteInfo: Vote,
-    comments?: Comment[]
+    comments?: Comment[],
+    isDeleted?: boolean
 };
 
 export type PostContent = {

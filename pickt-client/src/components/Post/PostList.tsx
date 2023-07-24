@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import { PostSnippet } from './PostSnippet';
 import { getPosts } from '../../services/post/PostServices';
 import postStyles from './Post.module.css'
 import { Post } from '../../types/Post';
 
 type PostListProps = {
-    posts?: Post[]
+    posts?: Post[],
+    style?: CSSProperties
 }
 
 export function PostList(props: PostListProps) {
@@ -18,14 +19,15 @@ export function PostList(props: PostListProps) {
             const posts = await getPosts();
             setPosts(posts);
         }
-    }, []);
+    });
 
     const postComponents = posts.map((post: Post) => {
-        return <PostSnippet key={ post._id } _id={ post._id } content={ post.content } metadata={ post.metadata } voteInfo={ post.voteInfo }/>
+        if (!post.isDeleted)
+            return <PostSnippet key={ post._id } _id={ post._id } content={ post.content } metadata={ post.metadata } voteInfo={ post.voteInfo } comments={ post.comments }/>
     });
 
     return (
-        <div className={postStyles['post-list']}>
+        <div className={postStyles['post-list']} style={props.style}>
             { postComponents }
         </div>
     );

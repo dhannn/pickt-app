@@ -6,6 +6,8 @@ import buttonStyles from './Vote.module.css'
 import { Vote } from "../../../types/Vote";
 
 type VoteProps = {
+    postId: string,
+    commentId?: string,
     voteInfo: Vote,
     styles?: CSSProperties,
     darkBg?: boolean,
@@ -13,11 +15,11 @@ type VoteProps = {
 }
 
 export function VoteComponent(props: VoteProps) {
-    const { voteInfo, styles, darkBg, classNames } = props;
+    const { voteInfo, styles, darkBg, classNames, postId, commentId } = props;
     const { upvotes, downvotes } = voteInfo;
     const initialNetVotes = upvotes - downvotes;
 
-    const { netVotes, handleVote, upvoteElement, downvoteElement } = useVote(initialNetVotes, darkBg);
+    const { netVotes, handleVote, upvoteElement, downvoteElement } = useVote(initialNetVotes, darkBg, postId, commentId);
 
     return (
         <div className={`${buttonStyles['vote']} ${classNames}`} style={styles}>

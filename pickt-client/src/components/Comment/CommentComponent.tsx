@@ -11,7 +11,7 @@ import { CommentMetadataComponent } from "./CommentMetadataComponent";
 import { EditComment } from "./EditComment";
 import { ContentComponent } from "./CommentContent";
 import { ReplyComment } from "./ReplyComment";
-import { addComment, deleteComment, editComment } from "../../services/post/PostServices";
+import { createComment, deleteComment, editComment } from "../../services/post/PostServices";
 
 type CommentProperty = {
     info: Comment,
@@ -19,7 +19,7 @@ type CommentProperty = {
     postId: string
 }
 
-type CommentState = 'display' | 'edit' | 'reply' | 'delete'
+type CommentState = 'display' | 'edit' | 'reply' | 'delete';
 
 export function CommentComponent(props: CommentProperty) {
     const { info, level, postId } = props;
@@ -80,7 +80,7 @@ export function CommentComponent(props: CommentProperty) {
             <div className={`${commentStyles['comment']}`} style={getCommentDivStyle()}>
                 { isUserCommenterSame && editDeleteOptionComponent }
 
-                <VoteComponent classNames={ commentStyles['vote-info'] } voteInfo={voteInfo} />
+                <VoteComponent postId={postId} commentId={_id} classNames={ commentStyles['vote-info'] } voteInfo={voteInfo} />
                 <CommentMetadataComponent author={ author } createdAt={ createdAt } lastModified={ lastModified }/>
 
                 { state === 'edit'? editComponent: contentComponent }
@@ -117,7 +117,7 @@ export function CommentComponent(props: CommentProperty) {
             }
         };
         
-        addComment(newComment, postId, _id!);
+        createComment(newComment, postId, _id!);
         setState('display');
     }
 
