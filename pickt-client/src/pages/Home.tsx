@@ -23,7 +23,7 @@ export function Home() {
 
     function renderLogInSignUp() {
         return (
-            <LoginSignup message='to create a post.' style={{width: '45vw', position: 'relative', left: '44vw', top: '12vh'}}/>
+            <LoginSignup message='to create a post.' style={{width: '45vw', position: 'relative', left: '44vw', top: '16vh'}}/>
         );
     }
 }

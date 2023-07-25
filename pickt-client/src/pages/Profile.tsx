@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getPostsByUser, getUserByUsername } from '../services/user/UserServices';
+import { getUserByUsername } from '../services/user/UserServices';
 import { NavBar } from '../components/shared/Layout/NavBar';
 import { UserInfoComponent } from '../components/User/UserInfoComponent';
 import { PostList } from '../components/Post/PostList';
@@ -9,10 +9,13 @@ import { useUserAuth } from '../hooks/useUserAuth';
 import { CreatePostForm } from '../components/Forms';
 import { faBolt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { getPostsByUser } from '../services/post/PostServices';
+import { Post } from '../types/Post';
 
 export function Profile() {
     const { formattedUsername } = useParams();
     const [ user, setUser ] = useState<User>();
+    const [ posts, setPosts ] = useState<Post[]>();
     const username = formattedUsername?.slice(1);
     const userAuth = useUserAuth()!;
 
@@ -21,17 +24,18 @@ export function Profile() {
 
         async function fetch() {
             const user = await getUserByUsername(username!);
-            if (user.message) {
+            if (!user) {
                 setUser(undefined);
                 return;
             }
 
             setUser(user);
+            getPostsByUser(username!).then(
+                (postsResponse) => {setPosts(postsResponse);
+                }
+            )
         }
-    }, [])
-
-    console.log();
-    
+    }, []);
 
     if (!user) {
         return <>
@@ -45,8 +49,6 @@ export function Profile() {
             </div>
         </>;
     }
-
-    const posts = getPostsByUser(username!);
 
     const emptyPosts = userAuth.user !== undefined && user.username === userAuth.user.username?
         <>

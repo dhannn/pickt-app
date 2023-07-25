@@ -18,8 +18,25 @@ export async function getPosts() {
     
 }
 
-export async function createPost(data: Post) {
+export async function getPostsByUser(username: string) {
+    try {
+        
+        const response = await fetch(`http://localhost:3001/posts?username=${username}`, {
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                "Content-Type": "application/json"
+            },
+            mode: "cors"
+        });
     
+        return response.json();
+    } catch(error) {
+        console.error(error);
+    }
+}
+
+export async function createPost(data: Post) {
     try {
         const response = await fetch(`http://localhost:3001/posts/`, {
             method: "POST",

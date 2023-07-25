@@ -10,16 +10,19 @@ type PostListProps = {
 }
 
 export function PostList(props: PostListProps) {
-    const [ posts, setPosts ] = useState([]);
+    const [ posts, setPosts ] = useState<Post[]>([]);
 
     useEffect(() => {
-        fetchPosts();
+        if (!props.posts)
+            fetchPosts();
+        else
+            setPosts(props.posts);
 
         async function fetchPosts() {
             const posts = await getPosts();
             setPosts(posts);
         }
-    });
+    }, []);
 
     const postComponents = posts.map((post: Post) => {
         if (!post.isDeleted)

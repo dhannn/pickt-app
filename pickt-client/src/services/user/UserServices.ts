@@ -85,7 +85,10 @@ export async function getUserByUsername(username: string) {
             },
             mode: "cors"
         });
-    
+
+        if (!response.ok)
+            return false;
+
         return await response.json();
     } catch(error) {
         console.error(error);
@@ -107,16 +110,6 @@ export async function deleteUser(username: string) {
     } catch(error) {
         console.error(error);
     }
-}
-
-export function getPostsByUser(username: string) {
-    for (let i in usersJSON) {
-        if (usersJSON[i].username === username) {
-            return usersJSON[i].posts;
-        }
-    }
-
-    return undefined;
 }
 
 export async function loginUser(username: string, password: string) {

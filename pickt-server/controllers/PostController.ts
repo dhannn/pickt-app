@@ -160,13 +160,20 @@ export async function deleteComment(req: Request, res: Response) {
 }
 
 function parsePageQuery(query: any) {
-    return {
+    let obj: Record<string, any> = {
         page: query.page,
-        attr: {
-            tag: query.tag,
-            username: query.username
-        }
+        attr: {}
     };
+
+    if (query.tag !== undefined) {
+        obj.attr.tag = query.tag;
+    }
+
+    if (query.username !== undefined) {
+        obj.attr.username = query.username;
+    }
+    
+    return obj;
 }
 
 function parseCreatePostBody(body: any) {

@@ -56,9 +56,9 @@ export async function cleanData() {
     await PostModel.insertMany(newPosts);
 }
 
-export async function findPosts({ page, attr }: PostQuery = { page: 1, attr: {}}) {
+export async function findPosts({ page, attr }: PostQuery) {    
     try {
-        const attrObj = restructureAttr(attr);
+        const attrObj = restructureAttr(attr);        
 
         const posts = await PostModel.find(attrObj)
             .sort([['metadata.createdAt', -1]])
@@ -74,7 +74,7 @@ export async function findPosts({ page, attr }: PostQuery = { page: 1, attr: {}}
     function restructureAttr(attr: any) {
         let obj: Record<string, any> = {};
 
-        if (attr.tag) {
+        if (attr.tag) { 
             obj['metadata.tag'] = attr.tag;
         }
 
