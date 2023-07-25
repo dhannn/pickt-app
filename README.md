@@ -23,14 +23,27 @@ a community of passionate photographers.
 
 ## Installation
 1. Clone this repository.
-2. Install the necessary dependencies.
+2. Install the necessary dependencies. 
+    ```
+    npm install
+    ```
 3. If you want to generate background images, you need to use the Unsplash API.
-    1. Create a developer account in [Unsplash]
-    (https://unsplash.com/oauth/applications).
+    1. Create a developer account in [Unsplash](https://unsplash.com/oauth/applications).
     2. Create an application and complete the details.
     4. Create a `.env` file in the `pickt-client/` directory.
     3. Copy the access key and the secret key, and paste them as values for 
     `REACT_APP_ACCESS_KEY` and `REACT_APP_SECRET_KEY` respectively.
+4. Set up the database.
+    1. Using MongoDBCompass, create a connection in `localhost:27017`.
+    2. Create a database using the name `pickt-db` or choose a name.
+    3. The server will initialize the sample data.
+5. Setup your environment variables in the `pickt-server` dircetory.
+    ```
+    SERVER_PORT=3001
+    MONGO_URI=mongodb://127.0.0.1:27017/
+    DB_NAME=<pickt-db | or your own name>
+    SECRET_KEY=<a long key string for authentication>
+    ```
 4. Run `npm start` in the root directory.
 5. Go to `localhost:3000/` in your browser.
 

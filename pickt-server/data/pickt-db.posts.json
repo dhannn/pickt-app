@@ -1,0 +1,1905 @@
+[{
+  "_id": "landscape-photography-tips",
+  "content": {
+    "title": "Landscape Photography Tips",
+    "content": "I've been doing landscape photography for years, and here are some of my top tips:\n1. Wake up early to catch the golden hour light.\n2. Use a tripod for stability.\n3. Experiment with different angles and perspectives.\n4. Incorporate leading lines to create depth.\n5. Don't forget to post-process your photos to enhance colors and contrast.\nI hope you find these tips helpful!",
+    "photoUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+  },
+  "metadata": {
+    "tag": "Tips & Tricks",
+    "author": {
+      "_id": "a3c9b2f7",
+      "fullName": {
+        "firstName": "Clarence"
+      },
+      "username": "rncs_21",
+      "profilePictureURL": "https://example.com/profile_picture.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-15T10:30:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 13,
+    "downvotes": 6
+  },
+  "comments": [
+    {
+      "_id": "c5a7d3f9",
+      "content": "Great tips! I'll definitely try them out. Thanks for sharing!",
+      "metadata": {
+        "author": {
+          "_id": "e1f8d4b6",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-15T11:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 5,
+        "downvotes": 0
+      }
+    },
+    {
+      "_id": "d2e4f1a3",
+      "content": "I have a question regarding post-processing. Do you recommend any specific software?",
+      "metadata": {
+        "author": {
+          "_id": "e1f8d4b6",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-16T09:45:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 3,
+        "downvotes": 1
+      },
+      "replies": [
+        {
+          "_id": "f3a1d4e2",
+          "content": "I personally use Adobe Lightroom for post-processing. It's a powerful tool with lots of editing options.",
+          "metadata": {
+            "author": {
+              "_id": "a3c9b2f7",
+              "fullName": {
+                "firstName": "Clarence"
+              },
+              "username": "rncs_21",
+              "profilePictureURL": "/profilepictures/dp2.jpg"
+            },
+            "createdAt": "2023-06-16T10:00:00Z"
+          },
+          "voteInfo": {
+            "upvotes": 2,
+            "downvotes": 0
+          },
+          "replies": [
+            {
+              "_id": "landscape-photography-tips-f3a1d4e2-2",
+              "content": "Thank you so much! I sent you a DM if you don't mind 😅",
+              "metadata": {
+                "author": {
+                  "fullName": {
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
+                  },
+                  "username": "dhannn",
+                  "profilePictureURL": null
+                },
+                "createdAt": {
+                  "$date": "2023-07-11T10:28:04.887Z"
+                }
+              },
+              "voteInfo": {
+                "upvotes": 0,
+                "downvotes": 0
+              },
+              "replies": [],
+              "isDeleted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "landscape-photography-tips-0-2",
+      "content": "DEAR JOHNNNN I SEE IT ALL NOW THAT UR GONNEEEEEEE",
+      "metadata": {
+        "author": {
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": null
+        },
+        "createdAt": {
+          "$date": "2023-07-11T10:29:55.864Z"
+        }
+      },
+      "voteInfo": {
+        "upvotes": 0,
+        "downvotes": 0
+      },
+      "replies": [],
+      "isDeleted": false
+    }
+  ],
+  "__v": 6
+},
+{
+  "_id": "camera-recommendation",
+  "content": {
+    "title": "Camera Recommendation",
+    "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+  },
+  "metadata": {
+    "tag": "Question",
+    "author": {
+      "_id": "e1f8d4b6",
+      "fullName": {
+        "firstName": "Daniel",
+        "lastName": "Ramos"
+      },
+      "username": "dhannn",
+      "profilePictureURL": "/profilepictures/dp2.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-14T16:20:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 8,
+    "downvotes": 4
+  },
+  "comments": [
+    {
+      "_id": "e2f4a1b3",
+      "content": "I highly recommend the Nikon D850. It's an excellent camera for wildlife photography and falls within your budget.",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "profilePictureURL": "/profilepictures/dp2.jpg"
+        },
+        "createdAt": "2023-06-14T17:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 6,
+        "downvotes": 0
+      }
+    },
+    {
+      "_id": "c6b2d9e8",
+      "content": "If you prefer Canon, the EOS 90D is a great choice for wildlife photography. It has advanced autofocus and burst shooting capabilities.",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "John",
+            "lastName": "Doe"
+          },
+          "username": "johndoe"
+        },
+        "createdAt": "2023-06-15T09:30:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 4,
+        "downvotes": 2
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "photography-exhibition",
+  "content": {
+    "title": "Photography Exhibition",
+    "content": "I'm excited to announce that my photography exhibition will be held next month at the City Art Gallery. The exhibition will showcase a collection of my landscape and portrait photographs. If you're in town, I would love for you to drop by and experience the beauty of photography!"
+  },
+  "metadata": {
+    "tag": "Discussion",
+    "author": {
+      "_id": "a3c9b2f7",
+      "fullName": {
+        "firstName": "Clarence"
+      },
+      "username": "rncs_21",
+      "profilePictureURL": "https://example.com/profile_picture.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-13T14:15:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 12,
+    "downvotes": 3
+  },
+  "comments": [
+    {
+      "_id": "f2d1e3c4",
+      "content": "Congratulations on your upcoming exhibition! I'll make sure to visit and show support for your incredible work.",
+      "metadata": {
+        "author": {
+          "_id": "e1f8d4b6",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-13T15:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 9,
+        "downvotes": 1
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "camera-settings-for-astrophotography",
+  "content": {
+    "title": "Camera Settings for Astrophotography",
+    "content": "Astrophotography requires specific camera settings to capture stunning images of the night sky. Here are some recommended settings:\n- Use manual mode\n- Set a wide aperture (e.g., f/2.8)\n- Set a high ISO (e.g., ISO 3200)\n- Use a long exposure time (e.g., 20-30 seconds)\n- Use a tripod to avoid camera shake\n- Use a remote shutter release or timer\n\nWith these settings, you'll be able to capture breathtaking photos of stars, galaxies, and more!",
+    "photoUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+  },
+  "metadata": {
+    "tag": "Tips & Tricks",
+    "author": {
+      "_id": "a3c9b2f7",
+      "fullName": {
+        "firstName": "Clarence"
+      },
+      "username": "rncs_21",
+      "profilePictureURL": "https://example.com/profile_picture.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-12T11:45:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 6,
+    "downvotes": 2
+  },
+  "comments": [
+    {
+      "_id": "b7c9d3e1",
+      "content": "Thank you for sharing these settings! I've always wanted to try astrophotography, and this will definitely help me get started!",
+      "metadata": {
+        "author": {
+          "_id": "e1f8d4b6",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-12T12:00:00Z",
+        "lastModified": {
+          "$date": "2023-07-24T06:57:59.019Z"
+        }
+      },
+      "voteInfo": {
+        "upvotes": 4,
+        "downvotes": 0
+      }
+    }
+  ],
+  "__v": 2
+},
+{
+  "_id": "need-feedback-portrait-composition",
+  "content": {
+    "title": "Need Feedback: Portrait Composition",
+    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+  },
+  "metadata": {
+    "tag": "Need Feedback",
+    "author": {
+      "_id": "1234abcd",
+      "fullName": {
+        "firstName": "Daniel",
+        "lastName": "Ramos"
+      },
+      "username": "dhannn",
+      "profilePictureURL": "/profilepictures/dp.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-11T17:10:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 7,
+    "downvotes": 6
+  },
+  "comments": [
+    {
+      "_id": "d8e6f5a4",
+      "content": "I think the composition is great! The subject is well-positioned, and the lighting adds a nice touch to the overall mood. Well done! 😉😉😉",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "profilePictureURL": "/profilepictures/dp2.jpg"
+        },
+        "createdAt": "2023-06-11T17:30:00Z",
+        "lastModified": {
+          "$date": "2023-07-24T06:22:25.847Z"
+        }
+      },
+      "voteInfo": {
+        "upvotes": 8,
+        "downvotes": 0
+      },
+      "replies": [
+        {
+          "_id": "need-feedback-portrait-composition-c-2023-07-24T05:43:08.663Z",
+          "content": "Thank you so much!",
+          "metadata": {
+            "author": {
+              "_id": "1234abcd",
+              "fullName": {
+                "firstName": "Daniel",
+                "lastName": "Ramos"
+              },
+              "username": "dhannn",
+              "email": "dhannn.r@gmail.com",
+              "profilePictureURL": "/profilepictures/dp.jpg",
+              "password": "101122",
+              "bio": "Beginner photographer looking to capture moments",
+              "posts": [
+                {
+                  "_id": "b9d8c7a6",
+                  "content": {
+                    "title": "Camera Recommendation",
+                    "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+                  },
+                  "metadata": {
+                    "tag": "Question",
+                    "author": {
+                      "_id": "e1f8d4b6",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp2.jpg"
+                    },
+                    "createdAt": "2023-06-14T16:20:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 8,
+                    "downvotes": 4
+                  }
+                },
+                {
+                  "_id": "c1e7d9f2",
+                  "content": {
+                    "title": "Need Feedback: Portrait Composition",
+                    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+                  },
+                  "metadata": {
+                    "tag": "Need Feedback",
+                    "author": {
+                      "_id": "1234abcd",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-11T17:10:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 7,
+                    "downvotes": 6
+                  }
+                },
+                {
+                  "_id": "f6e5d4",
+                  "content": {
+                    "title": "Beginner Camera Recommendations",
+                    "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+                  },
+                  "metadata": {
+                    "tag": "Question",
+                    "author": {
+                      "_id": "1234abcd",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-18T10:00:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 18,
+                    "downvotes": 4
+                  }
+                }
+              ],
+              "photoURLs": []
+            },
+            "createdAt": {
+              "$date": "2023-07-24T05:43:08.663Z"
+            }
+          },
+          "voteInfo": {
+            "upvotes": 0,
+            "downvotes": 0
+          },
+          "replies": [
+            {
+              "_id": "need-feedback-portrait-composition-c-2023-07-24T05:57:03.292Z",
+              "content": "No problem! Always happy to help a beginner out 🤗 💖",
+              "metadata": {
+                "author": {
+                  "_id": "5678efga",
+                  "fullName": {
+                    "firstName": "Clarence"
+                  },
+                  "username": "rncs_21",
+                  "email": "rncs.21@gmail.com",
+                  "profilePictureURL": "/profilepictures/dp2.jpg",
+                  "password": "therebetterbeamirrorball",
+                  "bio": "Art is my passion; life is an endless series of photographs.",
+                  "posts": [
+                    {
+                      "_id": "af6d2e1b",
+                      "content": {
+                        "title": "Landscape Photography Tips",
+                        "content": "I've been doing landscape photography for years, and here are some of my top tips:\n1. Wake up early to catch the golden hour light.\n2. Use a tripod for stability.\n3. Experiment with different angles and perspectives.\n4. Incorporate leading lines to create depth.\n5. Don't forget to post-process your photos to enhance colors and contrast.\nI hope you find these tips helpful!",
+                        "photoUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                      },
+                      "metadata": {
+                        "tag": "Tips & Tricks",
+                        "author": {
+                          "_id": "a3c9b2f7",
+                          "fullName": {
+                            "firstName": "Clarence"
+                          },
+                          "username": "rncs_21",
+                          "profilePictureURL": "https://example.com/profile_picture.jpg"
+                        },
+                        "createdAt": "2023-06-15T10:30:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 10,
+                        "downvotes": 2
+                      }
+                    },
+                    {
+                      "_id": "d7a4e2f1",
+                      "content": {
+                        "title": "Photography Exhibition",
+                        "content": "I'm excited to announce that my photography exhibition will be held next month at the City Art Gallery. The exhibition will showcase a collection of my landscape and portrait photographs. If you're in town, I would love for you to drop by and experience the beauty of photography!"
+                      },
+                      "metadata": {
+                        "tag": "Discussion",
+                        "author": {
+                          "_id": "a3c9b2f7",
+                          "fullName": {
+                            "firstName": "Clarence"
+                          },
+                          "username": "rncs_21",
+                          "profilePictureURL": "https://example.com/profile_picture.jpg"
+                        },
+                        "createdAt": "2023-06-13T14:15:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 12,
+                        "downvotes": 3
+                      }
+                    },
+                    {
+                      "_id": "e4f1a2d3",
+                      "content": {
+                        "title": "Camera Settings for Astrophotography",
+                        "content": "Astrophotography requires specific camera settings to capture stunning images of the night sky. Here are some recommended settings:\n- Use manual mode\n- Set a wide aperture (e.g., f/2.8)\n- Set a high ISO (e.g., ISO 3200)\n- Use a long exposure time (e.g., 20-30 seconds)\n- Use a tripod to avoid camera shake\n- Use a remote shutter release or timer\n\nWith these settings, you'll be able to capture breathtaking photos of stars, galaxies, and more!",
+                        "photoUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                      },
+                      "metadata": {
+                        "tag": "Tips & Tricks",
+                        "author": {
+                          "_id": "a3c9b2f7",
+                          "fullName": {
+                            "firstName": "Clarence"
+                          },
+                          "username": "rncs_21",
+                          "profilePictureURL": "https://example.com/profile_picture.jpg"
+                        },
+                        "createdAt": "2023-06-12T11:45:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 6,
+                        "downvotes": 2
+                      }
+                    },
+                    {
+                      "_id": "f9a3b6c2",
+                      "content": {
+                        "title": "Photography Gear Sale",
+                        "content": "I'm selling some of my photography gear:\n- Canon EOS 5D Mark IV\n- Canon EF 24-70mm f/2.8L II USM Lens\n- Manfrotto Tripod\n- Lee Filters\n\nAll items are in excellent condition. If you're interested, feel free to send me a message!"
+                      },
+                      "metadata": {
+                        "tag": "Others",
+                        "author": {
+                          "_id": "a3c9b2f7",
+                          "fullName": {
+                            "firstName": "Clarence"
+                          },
+                          "username": "rncs_21",
+                          "profilePictureURL": "https://example.com/profile_picture.jpg"
+                        },
+                        "createdAt": "2023-06-10T13:20:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 5,
+                        "downvotes": 1
+                      }
+                    }
+                  ],
+                  "photoURLs": []
+                },
+                "createdAt": {
+                  "$date": "2023-07-24T05:57:03.292Z"
+                },
+                "lastModified": {
+                  "$date": "2023-07-24T06:31:10.423Z"
+                }
+              },
+              "voteInfo": {
+                "upvotes": 0,
+                "downvotes": 0
+              },
+              "replies": [],
+              "isDeleted": false
+            }
+          ],
+          "isDeleted": false
+        },
+        {
+          "_id": "need-feedback-portrait-composition-c-2023-07-24T08:10:46.506Z",
+          "content": "Hi",
+          "metadata": {
+            "author": {
+              "_id": "1234abcd",
+              "fullName": {
+                "firstName": "Daniel",
+                "lastName": "Ramos"
+              },
+              "username": "dhannn",
+              "email": "dhannn.r@gmail.com",
+              "profilePictureURL": "/profilepictures/dp.jpg",
+              "password": "101122",
+              "bio": "Beginner photographer looking to capture moments",
+              "posts": [
+                {
+                  "_id": "b9d8c7a6",
+                  "content": {
+                    "title": "Camera Recommendation",
+                    "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+                  },
+                  "metadata": {
+                    "tag": "Question",
+                    "author": {
+                      "_id": "e1f8d4b6",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp2.jpg"
+                    },
+                    "createdAt": "2023-06-14T16:20:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 8,
+                    "downvotes": 4
+                  }
+                },
+                {
+                  "_id": "c1e7d9f2",
+                  "content": {
+                    "title": "Need Feedback: Portrait Composition",
+                    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+                  },
+                  "metadata": {
+                    "tag": "Need Feedback",
+                    "author": {
+                      "_id": "1234abcd",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-11T17:10:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 7,
+                    "downvotes": 6
+                  }
+                },
+                {
+                  "_id": "f6e5d4",
+                  "content": {
+                    "title": "Beginner Camera Recommendations",
+                    "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+                  },
+                  "metadata": {
+                    "tag": "Question",
+                    "author": {
+                      "_id": "1234abcd",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-18T10:00:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 18,
+                    "downvotes": 4
+                  }
+                }
+              ],
+              "photoURLs": []
+            },
+            "createdAt": {
+              "$date": "2023-07-24T08:10:46.506Z"
+            }
+          },
+          "voteInfo": {
+            "upvotes": 0,
+            "downvotes": 0
+          },
+          "replies": [],
+          "isDeleted": true
+        },
+        {
+          "_id": "need-feedback-portrait-composition-c-2023-07-24T08:11:15.296Z",
+          "content": "HIIII",
+          "metadata": {
+            "author": {
+              "_id": "1234abcd",
+              "fullName": {
+                "firstName": "Daniel",
+                "lastName": "Ramos"
+              },
+              "username": "dhannn",
+              "email": "dhannn.r@gmail.com",
+              "profilePictureURL": "/profilepictures/dp.jpg",
+              "password": "101122",
+              "bio": "Beginner photographer looking to capture moments",
+              "posts": [
+                {
+                  "_id": "b9d8c7a6",
+                  "content": {
+                    "title": "Camera Recommendation",
+                    "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+                  },
+                  "metadata": {
+                    "tag": "Question",
+                    "author": {
+                      "_id": "e1f8d4b6",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp2.jpg"
+                    },
+                    "createdAt": "2023-06-14T16:20:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 8,
+                    "downvotes": 4
+                  }
+                },
+                {
+                  "_id": "c1e7d9f2",
+                  "content": {
+                    "title": "Need Feedback: Portrait Composition",
+                    "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                    "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+                  },
+                  "metadata": {
+                    "tag": "Need Feedback",
+                    "author": {
+                      "_id": "1234abcd",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-11T17:10:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 7,
+                    "downvotes": 6
+                  }
+                },
+                {
+                  "_id": "f6e5d4",
+                  "content": {
+                    "title": "Beginner Camera Recommendations",
+                    "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+                  },
+                  "metadata": {
+                    "tag": "Question",
+                    "author": {
+                      "_id": "1234abcd",
+                      "fullName": {
+                        "firstName": "Daniel",
+                        "lastName": "Ramos"
+                      },
+                      "username": "dhannn",
+                      "profilePictureURL": "/profilepictures/dp.jpg"
+                    },
+                    "createdAt": "2023-06-18T10:00:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 18,
+                    "downvotes": 4
+                  }
+                }
+              ],
+              "photoURLs": []
+            },
+            "createdAt": {
+              "$date": "2023-07-24T08:11:15.296Z"
+            }
+          },
+          "voteInfo": {
+            "upvotes": 0,
+            "downvotes": 0
+          },
+          "replies": [],
+          "isDeleted": true
+        }
+      ]
+    },
+    {
+      "_id": "a6b2c3d4",
+      "content": "I think the background is a bit distracting. Maybe you could try a shallower depth of field to blur it out more and make the subject stand out.",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "John",
+            "lastName": "Doe"
+          },
+          "username": "johndoe"
+        },
+        "createdAt": "2023-06-12T08:45:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 3,
+        "downvotes": 2
+      }
+    },
+    {
+      "_id": "need-feedback-portrait-composition-c-2023-07-24T13:10:12.404Z",
+      "content": "Test",
+      "metadata": {
+        "author": {
+          "_id": "1234abcd",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "email": "dhannn.r@gmail.com",
+          "profilePictureURL": "/profilepictures/dp.jpg",
+          "password": "101122",
+          "bio": "Beginner photographer looking to capture moments",
+          "posts": [
+            {
+              "_id": "b9d8c7a6",
+              "content": {
+                "title": "Camera Recommendation",
+                "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+              },
+              "metadata": {
+                "tag": "Question",
+                "author": {
+                  "_id": "e1f8d4b6",
+                  "fullName": {
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
+                  },
+                  "username": "dhannn",
+                  "profilePictureURL": "/profilepictures/dp2.jpg"
+                },
+                "createdAt": "2023-06-14T16:20:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 8,
+                "downvotes": 4
+              }
+            },
+            {
+              "_id": "c1e7d9f2",
+              "content": {
+                "title": "Need Feedback: Portrait Composition",
+                "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+              },
+              "metadata": {
+                "tag": "Need Feedback",
+                "author": {
+                  "_id": "1234abcd",
+                  "fullName": {
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
+                  },
+                  "username": "dhannn",
+                  "profilePictureURL": "/profilepictures/dp.jpg"
+                },
+                "createdAt": "2023-06-11T17:10:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 7,
+                "downvotes": 6
+              }
+            },
+            {
+              "_id": "f6e5d4",
+              "content": {
+                "title": "Beginner Camera Recommendations",
+                "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+              },
+              "metadata": {
+                "tag": "Question",
+                "author": {
+                  "_id": "1234abcd",
+                  "fullName": {
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
+                  },
+                  "username": "dhannn",
+                  "profilePictureURL": "/profilepictures/dp.jpg"
+                },
+                "createdAt": "2023-06-18T10:00:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 18,
+                "downvotes": 4
+              }
+            }
+          ],
+          "photoURLs": []
+        },
+        "createdAt": {
+          "$date": "2023-07-24T13:10:12.404Z"
+        }
+      },
+      "voteInfo": {
+        "upvotes": 0,
+        "downvotes": 0
+      },
+      "replies": [],
+      "isDeleted": true
+    }
+  ],
+  "__v": 14
+},
+{
+  "_id": "photography-gear-sale",
+  "content": {
+    "title": "Photography Gear Sale",
+    "content": "I'm selling some of my photography gear:\n- Canon EOS 5D Mark IV\n- Canon EF 24-70mm f/2.8L II USM Lens\n- Manfrotto Tripod\n- Lee Filters\n\nAll items are in excellent condition. If you're interested, feel free to send me a message!"
+  },
+  "metadata": {
+    "tag": "Others",
+    "author": {
+      "_id": "a3c9b2f7",
+      "fullName": {
+        "firstName": "Clarence"
+      },
+      "username": "rncs_21",
+      "profilePictureURL": "https://example.com/profile_picture.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-10T13:20:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 5,
+    "downvotes": 1
+  },
+  "comments": [
+    {
+      "_id": "b8c9d4e1",
+      "content": "Could you please provide more details about the Canon EOS 5D Mark IV? How old is it, and does it come with any accessories?",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "John",
+            "lastName": "Doe"
+          },
+          "username": "johndoe"
+        },
+        "createdAt": "2023-06-10T14:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 5,
+        "downvotes": 0
+      },
+      "replies": [
+        {
+          "_id": "photography-gear-sale-c-2023-07-24T06:03:28.132Z",
+          "content": "Oof... Unfortunately, all my goods are sold 😅",
+          "metadata": {
+            "author": {
+              "_id": "5678efga",
+              "fullName": {
+                "firstName": "Clarence"
+              },
+              "username": "rncs_21",
+              "email": "rncs.21@gmail.com",
+              "profilePictureURL": "/profilepictures/dp2.jpg",
+              "password": "therebetterbeamirrorball",
+              "bio": "Art is my passion; life is an endless series of photographs.",
+              "posts": [
+                {
+                  "_id": "af6d2e1b",
+                  "content": {
+                    "title": "Landscape Photography Tips",
+                    "content": "I've been doing landscape photography for years, and here are some of my top tips:\n1. Wake up early to catch the golden hour light.\n2. Use a tripod for stability.\n3. Experiment with different angles and perspectives.\n4. Incorporate leading lines to create depth.\n5. Don't forget to post-process your photos to enhance colors and contrast.\nI hope you find these tips helpful!",
+                    "photoUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  },
+                  "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-15T10:30:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 10,
+                    "downvotes": 2
+                  }
+                },
+                {
+                  "_id": "d7a4e2f1",
+                  "content": {
+                    "title": "Photography Exhibition",
+                    "content": "I'm excited to announce that my photography exhibition will be held next month at the City Art Gallery. The exhibition will showcase a collection of my landscape and portrait photographs. If you're in town, I would love for you to drop by and experience the beauty of photography!"
+                  },
+                  "metadata": {
+                    "tag": "Discussion",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-13T14:15:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 12,
+                    "downvotes": 3
+                  }
+                },
+                {
+                  "_id": "e4f1a2d3",
+                  "content": {
+                    "title": "Camera Settings for Astrophotography",
+                    "content": "Astrophotography requires specific camera settings to capture stunning images of the night sky. Here are some recommended settings:\n- Use manual mode\n- Set a wide aperture (e.g., f/2.8)\n- Set a high ISO (e.g., ISO 3200)\n- Use a long exposure time (e.g., 20-30 seconds)\n- Use a tripod to avoid camera shake\n- Use a remote shutter release or timer\n\nWith these settings, you'll be able to capture breathtaking photos of stars, galaxies, and more!",
+                    "photoUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  },
+                  "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-12T11:45:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 6,
+                    "downvotes": 2
+                  }
+                },
+                {
+                  "_id": "f9a3b6c2",
+                  "content": {
+                    "title": "Photography Gear Sale",
+                    "content": "I'm selling some of my photography gear:\n- Canon EOS 5D Mark IV\n- Canon EF 24-70mm f/2.8L II USM Lens\n- Manfrotto Tripod\n- Lee Filters\n\nAll items are in excellent condition. If you're interested, feel free to send me a message!"
+                  },
+                  "metadata": {
+                    "tag": "Others",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-10T13:20:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 5,
+                    "downvotes": 1
+                  }
+                }
+              ],
+              "photoURLs": []
+            },
+            "createdAt": {
+              "$date": "2023-07-24T06:03:28.132Z"
+            }
+          },
+          "voteInfo": {
+            "upvotes": 0,
+            "downvotes": 0
+          },
+          "replies": [],
+          "isDeleted": false
+        }
+      ]
+    },
+    {
+      "_id": "c2d3e4f1",
+      "content": "I'm interested in the Canon EF 24-70mm f/2.8L II USM Lens. Is it still available? 😅",
+      "metadata": {
+        "author": {
+          "_id": "1234abcd",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-10T16:30:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 3,
+        "downvotes": 1
+      },
+      "replies": [
+        {
+          "_id": "photography-gear-sale-c-2023-07-24T06:02:08.506Z",
+          "content": "Yes! It's very much available! Sent you a DM 😉",
+          "metadata": {
+            "author": {
+              "_id": "5678efga",
+              "fullName": {
+                "firstName": "Clarence"
+              },
+              "username": "rncs_21",
+              "email": "rncs.21@gmail.com",
+              "profilePictureURL": "/profilepictures/dp2.jpg",
+              "password": "therebetterbeamirrorball",
+              "bio": "Art is my passion; life is an endless series of photographs.",
+              "posts": [
+                {
+                  "_id": "af6d2e1b",
+                  "content": {
+                    "title": "Landscape Photography Tips",
+                    "content": "I've been doing landscape photography for years, and here are some of my top tips:\n1. Wake up early to catch the golden hour light.\n2. Use a tripod for stability.\n3. Experiment with different angles and perspectives.\n4. Incorporate leading lines to create depth.\n5. Don't forget to post-process your photos to enhance colors and contrast.\nI hope you find these tips helpful!",
+                    "photoUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  },
+                  "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-15T10:30:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 10,
+                    "downvotes": 2
+                  }
+                },
+                {
+                  "_id": "d7a4e2f1",
+                  "content": {
+                    "title": "Photography Exhibition",
+                    "content": "I'm excited to announce that my photography exhibition will be held next month at the City Art Gallery. The exhibition will showcase a collection of my landscape and portrait photographs. If you're in town, I would love for you to drop by and experience the beauty of photography!"
+                  },
+                  "metadata": {
+                    "tag": "Discussion",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-13T14:15:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 12,
+                    "downvotes": 3
+                  }
+                },
+                {
+                  "_id": "e4f1a2d3",
+                  "content": {
+                    "title": "Camera Settings for Astrophotography",
+                    "content": "Astrophotography requires specific camera settings to capture stunning images of the night sky. Here are some recommended settings:\n- Use manual mode\n- Set a wide aperture (e.g., f/2.8)\n- Set a high ISO (e.g., ISO 3200)\n- Use a long exposure time (e.g., 20-30 seconds)\n- Use a tripod to avoid camera shake\n- Use a remote shutter release or timer\n\nWith these settings, you'll be able to capture breathtaking photos of stars, galaxies, and more!",
+                    "photoUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  },
+                  "metadata": {
+                    "tag": "Tips & Tricks",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-12T11:45:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 6,
+                    "downvotes": 2
+                  }
+                },
+                {
+                  "_id": "f9a3b6c2",
+                  "content": {
+                    "title": "Photography Gear Sale",
+                    "content": "I'm selling some of my photography gear:\n- Canon EOS 5D Mark IV\n- Canon EF 24-70mm f/2.8L II USM Lens\n- Manfrotto Tripod\n- Lee Filters\n\nAll items are in excellent condition. If you're interested, feel free to send me a message!"
+                  },
+                  "metadata": {
+                    "tag": "Others",
+                    "author": {
+                      "_id": "a3c9b2f7",
+                      "fullName": {
+                        "firstName": "Clarence"
+                      },
+                      "username": "rncs_21",
+                      "profilePictureURL": "https://example.com/profile_picture.jpg"
+                    },
+                    "createdAt": "2023-06-10T13:20:00Z"
+                  },
+                  "voteInfo": {
+                    "upvotes": 5,
+                    "downvotes": 1
+                  }
+                }
+              ],
+              "photoURLs": []
+            },
+            "createdAt": {
+              "$date": "2023-07-24T06:02:08.506Z"
+            }
+          },
+          "voteInfo": {
+            "upvotes": 0,
+            "downvotes": 0
+          },
+          "replies": [
+            {
+              "_id": "photography-gear-sale-c-2023-07-24T06:58:21.774Z",
+              "content": "Thank you very much! 😅",
+              "metadata": {
+                "author": {
+                  "_id": "1234abcd",
+                  "fullName": {
+                    "firstName": "Daniel",
+                    "lastName": "Ramos"
+                  },
+                  "username": "dhannn",
+                  "email": "dhannn.r@gmail.com",
+                  "profilePictureURL": "/profilepictures/dp.jpg",
+                  "password": "101122",
+                  "bio": "Beginner photographer looking to capture moments",
+                  "posts": [
+                    {
+                      "_id": "b9d8c7a6",
+                      "content": {
+                        "title": "Camera Recommendation",
+                        "content": "I'm planning to upgrade my camera. Can anyone recommend a good DSLR for wildlife photography? My budget is around $2000."
+                      },
+                      "metadata": {
+                        "tag": "Question",
+                        "author": {
+                          "_id": "e1f8d4b6",
+                          "fullName": {
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
+                          },
+                          "username": "dhannn",
+                          "profilePictureURL": "/profilepictures/dp2.jpg"
+                        },
+                        "createdAt": "2023-06-14T16:20:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 8,
+                        "downvotes": 4
+                      }
+                    },
+                    {
+                      "_id": "c1e7d9f2",
+                      "content": {
+                        "title": "Need Feedback: Portrait Composition",
+                        "content": "I recently captured this portrait and would appreciate some feedback on the composition. What do you think?",
+                        "photoUrl": "https://images.unsplash.com/photo-1519895609939-d2a6491c1196?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+                      },
+                      "metadata": {
+                        "tag": "Need Feedback",
+                        "author": {
+                          "_id": "1234abcd",
+                          "fullName": {
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
+                          },
+                          "username": "dhannn",
+                          "profilePictureURL": "/profilepictures/dp.jpg"
+                        },
+                        "createdAt": "2023-06-11T17:10:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 7,
+                        "downvotes": 6
+                      }
+                    },
+                    {
+                      "_id": "f6e5d4",
+                      "content": {
+                        "title": "Beginner Camera Recommendations",
+                        "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+                      },
+                      "metadata": {
+                        "tag": "Question",
+                        "author": {
+                          "_id": "1234abcd",
+                          "fullName": {
+                            "firstName": "Daniel",
+                            "lastName": "Ramos"
+                          },
+                          "username": "dhannn",
+                          "profilePictureURL": "/profilepictures/dp.jpg"
+                        },
+                        "createdAt": "2023-06-18T10:00:00Z"
+                      },
+                      "voteInfo": {
+                        "upvotes": 18,
+                        "downvotes": 4
+                      }
+                    }
+                  ],
+                  "photoURLs": []
+                },
+                "createdAt": {
+                  "$date": "2023-07-24T06:58:21.774Z"
+                },
+                "lastModified": {
+                  "$date": "2023-07-24T07:00:34.835Z"
+                }
+              },
+              "voteInfo": {
+                "upvotes": 0,
+                "downvotes": 0
+              },
+              "replies": [],
+              "isDeleted": false
+            }
+          ],
+          "isDeleted": false
+        }
+      ]
+    }
+  ],
+  "__v": 38
+},
+{
+  "_id": "editing-software-comparison",
+  "content": {
+    "title": "Editing Software Comparison",
+    "content": "I'm looking for advice on choosing the right editing software. I mainly shoot landscapes and want to enhance the colors and details in my photos. Any recommendations?"
+  },
+  "metadata": {
+    "tag": "Discussion",
+    "author": {
+      "_id": "c6fa3bc0",
+      "fullName": {
+        "firstName": "Noah",
+        "lastName": "Parker"
+      },
+      "username": "noahparker",
+      "profilePictureURL": "https://example.com/noah.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-17T14:30:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 12,
+    "downvotes": 9
+  },
+  "comments": [
+    {
+      "_id": "c22",
+      "content": "For enhancing colors and details in landscape photos, Adobe Lightroom is a popular choice among photographers. It offers powerful editing tools and a user-friendly interface.",
+      "metadata": {
+        "author": {
+          "_id": "5678efga",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "email": "rncs.21@gmail.com",
+          "profilePictureURL": "/profilepictures/dp2.jpg"
+        },
+        "createdAt": "2023-06-17T15:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 11,
+        "downvotes": 3
+      },
+      "isDeleted": true
+    },
+    {
+      "_id": "c23",
+      "content": "Another option you can consider is Capture One. It provides excellent color grading tools and advanced image processing capabilities.",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "John",
+            "lastName": "Doe"
+          },
+          "username": "johndoe"
+        },
+        "createdAt": "2023-06-17T15:15:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 9,
+        "downvotes": 5
+      }
+    },
+    {
+      "_id": "editing-software-comparison-c-2023-07-24T06:51:38.766Z",
+      "content": "For enhancing colors and details in landscape photos, Adobe Lightroom is a popular choice among photographers. It offers powerful editing tools and a user-friendly interface.",
+      "metadata": {
+        "author": {
+          "_id": "5678efga",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "email": "rncs.21@gmail.com",
+          "profilePictureURL": "/profilepictures/dp2.jpg",
+          "password": "therebetterbeamirrorball",
+          "bio": "Art is my passion; life is an endless series of photographs.",
+          "posts": [
+            {
+              "_id": "af6d2e1b",
+              "content": {
+                "title": "Landscape Photography Tips",
+                "content": "I've been doing landscape photography for years, and here are some of my top tips:\n1. Wake up early to catch the golden hour light.\n2. Use a tripod for stability.\n3. Experiment with different angles and perspectives.\n4. Incorporate leading lines to create depth.\n5. Don't forget to post-process your photos to enhance colors and contrast.\nI hope you find these tips helpful!",
+                "photoUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              },
+              "metadata": {
+                "tag": "Tips & Tricks",
+                "author": {
+                  "_id": "a3c9b2f7",
+                  "fullName": {
+                    "firstName": "Clarence"
+                  },
+                  "username": "rncs_21",
+                  "profilePictureURL": "https://example.com/profile_picture.jpg"
+                },
+                "createdAt": "2023-06-15T10:30:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 10,
+                "downvotes": 2
+              }
+            },
+            {
+              "_id": "d7a4e2f1",
+              "content": {
+                "title": "Photography Exhibition",
+                "content": "I'm excited to announce that my photography exhibition will be held next month at the City Art Gallery. The exhibition will showcase a collection of my landscape and portrait photographs. If you're in town, I would love for you to drop by and experience the beauty of photography!"
+              },
+              "metadata": {
+                "tag": "Discussion",
+                "author": {
+                  "_id": "a3c9b2f7",
+                  "fullName": {
+                    "firstName": "Clarence"
+                  },
+                  "username": "rncs_21",
+                  "profilePictureURL": "https://example.com/profile_picture.jpg"
+                },
+                "createdAt": "2023-06-13T14:15:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 12,
+                "downvotes": 3
+              }
+            },
+            {
+              "_id": "e4f1a2d3",
+              "content": {
+                "title": "Camera Settings for Astrophotography",
+                "content": "Astrophotography requires specific camera settings to capture stunning images of the night sky. Here are some recommended settings:\n- Use manual mode\n- Set a wide aperture (e.g., f/2.8)\n- Set a high ISO (e.g., ISO 3200)\n- Use a long exposure time (e.g., 20-30 seconds)\n- Use a tripod to avoid camera shake\n- Use a remote shutter release or timer\n\nWith these settings, you'll be able to capture breathtaking photos of stars, galaxies, and more!",
+                "photoUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              },
+              "metadata": {
+                "tag": "Tips & Tricks",
+                "author": {
+                  "_id": "a3c9b2f7",
+                  "fullName": {
+                    "firstName": "Clarence"
+                  },
+                  "username": "rncs_21",
+                  "profilePictureURL": "https://example.com/profile_picture.jpg"
+                },
+                "createdAt": "2023-06-12T11:45:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 6,
+                "downvotes": 2
+              }
+            },
+            {
+              "_id": "f9a3b6c2",
+              "content": {
+                "title": "Photography Gear Sale",
+                "content": "I'm selling some of my photography gear:\n- Canon EOS 5D Mark IV\n- Canon EF 24-70mm f/2.8L II USM Lens\n- Manfrotto Tripod\n- Lee Filters\n\nAll items are in excellent condition. If you're interested, feel free to send me a message!"
+              },
+              "metadata": {
+                "tag": "Others",
+                "author": {
+                  "_id": "a3c9b2f7",
+                  "fullName": {
+                    "firstName": "Clarence"
+                  },
+                  "username": "rncs_21",
+                  "profilePictureURL": "https://example.com/profile_picture.jpg"
+                },
+                "createdAt": "2023-06-10T13:20:00Z"
+              },
+              "voteInfo": {
+                "upvotes": 5,
+                "downvotes": 1
+              }
+            }
+          ],
+          "photoURLs": []
+        },
+        "createdAt": {
+          "$date": "2023-07-24T06:51:38.766Z"
+        }
+      },
+      "voteInfo": {
+        "upvotes": 0,
+        "downvotes": 0
+      },
+      "replies": [],
+      "isDeleted": false
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": "beginner-camera-recommendations",
+  "content": {
+    "title": "Beginner Camera Recommendations",
+    "content": "I'm new to photography and looking for a good beginner camera. My budget is around $500. Any suggestions?"
+  },
+  "metadata": {
+    "tag": "Question",
+    "author": {
+      "_id": "1234abcd",
+      "fullName": {
+        "firstName": "Daniel",
+        "lastName": "Ramos"
+      },
+      "username": "dhannn",
+      "profilePictureURL": "/profilepictures/dp.jpg"
+    },
+    "createdAt": {
+      "$date": "2023-06-18T10:00:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 18,
+    "downvotes": 4
+  },
+  "comments": [
+    {
+      "_id": "c24",
+      "content": "For a beginner camera under $500, you can consider the Nikon D3500 or the Canon EOS Rebel T7. Both are great entry-level DSLRs with good image quality.",
+      "metadata": {
+        "author": {
+          "_id": "5678efga",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "profilePictureURL": "/profilepictures/dp2.jpg"
+        },
+        "createdAt": "2023-06-18T10:30:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 20,
+        "downvotes": 2
+      },
+      "replies": [
+        {
+          "_id": "c25",
+          "content": "I second the recommendation for the Nikon D3500. It's a reliable and user-friendly camera for beginners.",
+          "metadata": {
+            "author": {
+              "_id": "a3c9b2f7",
+              "fullName": {
+                "firstName": "John",
+                "lastName": "Doe"
+              },
+              "username": "johndoe"
+            },
+            "createdAt": "2023-06-18T10:45:00Z"
+          },
+          "voteInfo": {
+            "upvotes": 15,
+            "downvotes": 1
+          }
+        }
+      ]
+    },
+    {
+      "_id": "c26",
+      "content": "Consider mirrorless options as well. The Sony Alpha a6000 is a popular choice for beginners due to its compact size and excellent image quality.",
+      "metadata": {
+        "author": {
+          "_id": "e1f8d4b6",
+          "fullName": {
+            "firstName": "Jane",
+            "lastName": "Smith"
+          },
+          "username": "janesmith"
+        },
+        "createdAt": "2023-06-18T11:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 16,
+        "downvotes": 3
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "black-and-white-photography-tips",
+  "content": {
+    "title": "Black and White Photography Tips",
+    "content": "Black and white photography can be incredibly expressive. Here are some tips:\n1. Look for strong contrasts in your subjects.\n2. Pay attention to textures and patterns.\n3. Experiment with different lighting conditions.",
+    "photoUrl": "https://images.unsplash.com/photo-1563643520035-5926c12692e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+  },
+  "metadata": {
+    "tag": "Tips & Tricks",
+    "author": {
+      "_id": "c6fa3bc0",
+      "fullName": {
+        "firstName": "Noah",
+        "lastName": "Parker"
+      },
+      "username": "noahparker"
+    },
+    "createdAt": {
+      "$date": "2023-06-18T15:30:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 25,
+    "downvotes": 12
+  },
+  "comments": [
+    {
+      "_id": "c27",
+      "content": "I love shooting in black and white. It really brings out the emotion and mood in a photograph.",
+      "metadata": {
+        "author": {
+          "_id": "5678efga",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "email": "rncs.21@gmail.com",
+          "profilePictureURL": "/profilepictures/dp2.jpg"
+        },
+        "createdAt": "2023-06-18T16:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 20,
+        "downvotes": 5
+      }
+    },
+    {
+      "_id": "c28",
+      "content": "Thanks for the tips! I'll definitely try them out in my next black and white photoshoot.",
+      "metadata": {
+        "author": {
+          "_id": "1234abcd",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-18T16:15:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 18,
+        "downvotes": 2
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "lens-recommendations-for-wildlife-photography",
+  "content": {
+    "title": "Lens Recommendations for Wildlife Photography",
+    "content": "I'm planning to venture into wildlife photography and need recommendations for a good telephoto lens. What focal length would be ideal? Any specific lens suggestions?"
+  },
+  "metadata": {
+    "tag": "Question",
+    "author": {
+      "_id": "e1f8d4b6",
+      "fullName": {
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
+      "username": "janesmith"
+    },
+    "createdAt": {
+      "$date": "2023-06-19T09:30:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 14,
+    "downvotes": 6
+  },
+  "comments": [
+    {
+      "_id": "c29",
+      "content": "For wildlife photography, a telephoto lens with a focal length of at least 300mm is recommended to capture distant subjects. The Canon EF 100-400mm f/4.5-5.6L IS II USM and the Nikon AF-S 200-500mm f/5.6E ED VR are popular choices among wildlife photographers.",
+      "metadata": {
+        "author": {
+          "_id": "5678efga",
+          "fullName": {
+            "firstName": "Clarence"
+          },
+          "username": "rncs_21",
+          "email": "rncs.21@gmail.com",
+          "profilePictureURL": "/profilepictures/dp2.jpg"
+        },
+        "createdAt": "2023-06-19T10:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 12,
+        "downvotes": 3
+      },
+      "replies": [
+        {
+          "_id": "c30",
+          "content": "I have the Canon EF 100-400mm f/4.5-5.6L IS II USM, and it's a fantastic lens for wildlife photography. The image quality and versatility are impressive.",
+          "metadata": {
+            "author": {
+              "_id": "c6fa3bc0",
+              "fullName": {
+                "firstName": "Noah",
+                "lastName": "Parker"
+              },
+              "username": "noahparker"
+            },
+            "createdAt": "2023-06-19T10:15:00Z"
+          },
+          "voteInfo": {
+            "upvotes": 10,
+            "downvotes": 1
+          }
+        }
+      ]
+    },
+    {
+      "_id": "c31",
+      "content": "If you're looking for more reach, the Sigma 150-600mm f/5-6.3 DG OS HSM Contemporary is a budget-friendly option with good image quality.",
+      "metadata": {
+        "author": {
+          "_id": "a3c9b2f7",
+          "fullName": {
+            "firstName": "John",
+            "lastName": "Doe"
+          },
+          "username": "johndoe"
+        },
+        "createdAt": "2023-06-19T10:30:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 8,
+        "downvotes": 4
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "macro-photography-tips",
+  "content": {
+    "title": "Macro Photography Tips",
+    "content": "Macro photography allows you to capture the intricate details of small subjects. Here are some tips:\n1. Use a macro lens or extension tubes for close-up shots.\n2. Look for interesting textures and patterns.\n3. Use a tripod to ensure sharpness.",
+    "photoUrl": "https://images.unsplash.com/photo-1589144669495-b5905b68ea9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"
+  },
+  "metadata": {
+    "tag": "Tips & Tricks",
+    "author": {
+      "_id": "a3c9b2f7",
+      "fullName": {
+        "firstName": "John",
+        "lastName": "Doe"
+      },
+      "username": "johndoe"
+    },
+    "createdAt": {
+      "$date": "2023-06-19T14:00:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 22,
+    "downvotes": 8
+  },
+  "comments": [
+    {
+      "_id": "c32",
+      "content": "Macro photography is so fascinating! The level of detail you can capture is incredible.",
+      "metadata": {
+        "author": {
+          "_id": "1234abcd",
+          "fullName": {
+            "firstName": "Daniel",
+            "lastName": "Ramos"
+          },
+          "username": "dhannn",
+          "profilePictureURL": "/profilepictures/dp.jpg"
+        },
+        "createdAt": "2023-06-19T14:30:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 20,
+        "downvotes": 6
+      }
+    },
+    {
+      "_id": "c33",
+      "content": "I've been experimenting with macro photography lately, and it's been a challenging yet rewarding experience. The details you can capture are astonishing.",
+      "metadata": {
+        "author": {
+          "_id": "e1f8d4b6",
+          "fullName": {
+            "firstName": "Jane",
+            "lastName": "Smith"
+          },
+          "username": "janesmith"
+        },
+        "createdAt": "2023-06-19T15:00:00Z"
+      },
+      "voteInfo": {
+        "upvotes": 18,
+        "downvotes": 4
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "photography-exhibition-announcement",
+  "content": {
+    "title": "Photography Exhibition Announcement",
+    "content": "I'm excited to announce my upcoming photography exhibition, showcasing a collection of my landscape photographs. The exhibition will be held at the XYZ Gallery from July 1st to July 31st. I would be thrilled to have you all attend!"
+  },
+  "metadata": {
+    "tag": "Discussion",
+    "author": {
+      "_id": "c6fa3bc0",
+      "fullName": {
+        "firstName": "Noah",
+        "lastName": "Parker"
+      },
+      "username": "noahparker"
+    },
+    "createdAt": {
+      "$date": "2023-06-19T16:30:00.000Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 32,
+    "downvotes": 6
+  },
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": "favorite-photographer",
+  "content": {
+    "title": "Favorite Photographer?",
+    "content": "Mine personally is Sean Tucker. His street photography is always moving. This is one of his works."
+  },
+  "metadata": {
+    "tag": "Discussion",
+    "author": {
+      "fullName": {
+        "firstName": "Daniel",
+        "lastName": "Ramos"
+      },
+      "_id": "64be9624df9648c772099f1b",
+      "username": "dhannn",
+      "email": "dann.ramm@gmail.com",
+      "password": "$2b$10$HVsPqMaSYFA/i0cjZhz7QunkCbZwFUmf334TbPcvu9Df.DVfDeRdK",
+      "bio": "Rookie photographer",
+      "profilePictureURI": "data:image/jpeg;base64,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",
+      "__v": 0
+    },
+    "createdAt": {
+      "$date": "2023-07-25T07:43:24.286Z"
+    }
+  },
+  "voteInfo": {
+    "upvotes": 0,
+    "downvotes": 0
+  },
+  "comments": [],
+  "__v": 0
+}]

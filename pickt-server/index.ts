@@ -16,8 +16,8 @@ const corsOptions ={
     credentials:true,
     optionSuccessStatus:200
 }
-app.use(cors(corsOptions));
 
+app.use(cors(corsOptions));
 
 app.use('/posts/', PostRouter);
 app.use('/users/', UserRouter);

@@ -2,6 +2,8 @@ import mongoose, { Schema, now } from "mongoose";
 import { Post, PostContent, PostTag } from "../schema/Post";
 import { User } from "../schema/User";
 import { Comment } from "../schema/Comment";
+import * as fs from 'fs';
+
 
 const postSchema = new Schema<Post>({
     _id: { type: String },
@@ -29,31 +31,9 @@ export type PostQuery = {
     attr: any
 }
 
-export async function cleanData() {
-    let posts: (mongoose.Document<unknown, {}, Post> & Omit<Post & Required<{
-        _id: String;
-    }>, never>)[] = [];
-
-    try {
-        posts = await PostModel.find({});
-    } catch(error) {
-        console.error(error);
-    }
-
-    let newPosts: Post[] = [];
-
-    posts.forEach(
-        async (post) => {
-            let np = post.toObject();
-            np._id = generateSlug(np.content.title);
-            let cloned = new PostModel(np);
-            newPosts.push(cloned);
-
-            await PostModel.deleteOne({ _id: post._id });
-        } 
-    )
-
-    await PostModel.insertMany(newPosts);
+export async function initializePost() {
+    const file = fs.readFileSync('./data/pickt-db.posts.json');
+    PostModel.insertMany(JSON.parse(file.toString()));
 }
 
 export async function findPosts({ page, attr }: PostQuery) {    

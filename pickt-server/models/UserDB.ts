@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import { User, UserInsert, UserUpdate } from "../schema/User";
-import bcrypt from 'bcrypt';
+import * as fs from 'fs';
 
 const UserSchema = new Schema<User>({
     username: {
@@ -35,6 +35,12 @@ const UserSchema = new Schema<User>({
 });
 
 const UserModel = mongoose.model<User>('User', UserSchema);
+
+export async function initializeUsers() {
+    const file = fs.readFileSync('./data/pickt-db.users.json');
+    UserModel.insertMany(JSON.parse(file.toString()));
+}
+
 
 export async function findUsers(obj: any = {}) {
     const users = await UserModel.find(obj);
