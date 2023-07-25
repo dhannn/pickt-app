@@ -6,8 +6,6 @@ import * as bcrypt from 'bcrypt';
 export async function login(req: any, res: Response) {
     const { username, password } = req.body;
 
-    console.log(req.body);
-
     try {
         const user = await findUserByUsername(username);
         if (!user || !await bcrypt.compare(password, user.password)) {
@@ -15,7 +13,7 @@ export async function login(req: any, res: Response) {
         }
 
         req.session.user = user;
-        return res.status(200).json({ message: 'Login successful', user });
+        return res.status(200).json(user);
     } catch(error) {
         console.error(error);
         return res.status(500).json({ message: 'Server error' });
@@ -42,10 +40,6 @@ export async function createUser(req: Request, res: Response) {
     } catch (error) {
         return res.status(500).json({ message: 'Server error' });
     }
-
-    function saveImageToFile(base64: string) {
-        fs.writeFileSync('user.jpg', base64);
-    }
 }
 
 export async function getUsers(req: Request, res: Response) {
@@ -60,20 +54,9 @@ export async function getUserByUsername(req: Request, res: Response) {
 
 export async function editUserInfo(req: Request, res: Response) {
     const body = req.body;
-    const data = {
-        username: req.params.username,
-        newUsername: body['username'],
-        fullName: {
-            firstName: body['first-name'],
-            lastName: body['last-name']
-        }, 
-        email: body['email'],
-        password: body['password'],
-        bio: body['bio'],
-        profilePictureURI: body['profile-picture']
-    }
-
-    const user = await updateUser(data);
+    console.log(body);
+    
+    const user = await updateUser(body);
 
     res.status(200).json(user);
 }

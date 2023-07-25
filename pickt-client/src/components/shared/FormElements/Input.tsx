@@ -11,10 +11,11 @@ type InputProps = {
     onBlur?: ChangeEventHandler<HTMLInputElement>,
     placeholder?: string
     required?: boolean
+    text?: string
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function (props: InputProps, ref) {
-    const { classNames, type, style, onFocus, onBlur, placeholder, required, onChange } = props;
+    const { classNames, type, style, onFocus, onBlur, placeholder, required, onChange, text } = props;
     const inputClasses = [
         globalStyles['rounded-5px'],
         formStyles['input'],
@@ -33,6 +34,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function (props: InputPro
             onFocus={ onFocus } 
             onChange={ onChange }
             placeholder={ placeholder }
+            value={text}
         />
     );
 });

@@ -92,6 +92,23 @@ export async function getUserByUsername(username: string) {
     }
 }
 
+export async function deleteUser(username: string) {
+    try {
+        const response = await fetch(`http://localhost:3001/users/${username}`, {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                "Content-Type": "application/json"
+            },
+            mode: "cors"
+        });
+    
+        return await response.json();
+    } catch(error) {
+        console.error(error);
+    }
+}
+
 export function getPostsByUser(username: string) {
     for (let i in usersJSON) {
         if (usersJSON[i].username === username) {
@@ -114,10 +131,59 @@ export async function loginUser(username: string, password: string) {
         });
 
         if (response.ok) {
-            const user = await response.json();
-            document.cookie = `user=${JSON.stringify(user)}`;
+            let user = await response.json();
+            let username = user.username;        
+            
+            const expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 14)
+            
+            console.log(expiryDate);
+            
+            document.cookie = `user=${JSON.stringify({username: username})}; expires=${expiryDate.toUTCString()}; path=/`;
 
             return true
+        } else {
+            return false
+        }
+
+    } catch(err) {
+        console.log(err); 
+    }
+}
+
+export async function logoutUser() {
+    try {
+        const response = await fetch('http://localhost:3001/users/logout', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+        });
+
+        document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        return await response.json();
+    } catch(err) {
+        console.log(err); 
+    }
+    
+}
+
+export async function editUserInfo(modified: any) {
+    try {
+        const response = await fetch(`http://localhost:3001/users/${modified.username}`, {
+            method: 'PATCH',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(modified)
+        });
+
+        if (response.ok) {
+            const user = await response.json();
+
+            return user;
         } else {
             return false
         }

@@ -34,4 +34,15 @@ router.patch('/:username', doesUsernameExist, editUser);
 
 router.delete('/:username', doesUsernameExist, deactivateUser);
 
+
 router.post('/login', login)
+router.post('/logout', (req, res) => {
+    // Clear the session and remove the user data
+    req.session.destroy((err) => {
+        if (err) {
+            console.error(err);
+        }
+    });
+    return res.status(200).json({ message: 'Logout successful' });
+});
+  

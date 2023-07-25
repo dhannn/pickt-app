@@ -2,10 +2,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 
     width: 41vw;
-    top: 15vh;
+    top: 16vh;
     left: 44vw;
 
     box-shadow: 0px 0px 50px #373b4800;

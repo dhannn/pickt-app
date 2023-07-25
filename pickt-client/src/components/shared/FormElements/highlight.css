@@ -1,0 +1,128 @@
+.daily-highlight-container {
+    width: 30vw;
+    height: 60vh;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--black);
+    background-blend-mode: multiply;
+    border-radius: 10px;
+
+    z-index: 2;
+
+    left: 10vw;
+    top: 16vh;
+
+    transition: 0.6s;
+    backdrop-filter: opacity(20%);
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    transition: 0.6s;
+    background-size: cover;
+    background-color: #373b4800;
+}
+
+.full .daily-highlight-header {
+    transition: 0.6s;
+    font-size: 3em;
+    top: 15vh;
+    left: 10vh;
+}
+
+.full .daily-highlight-description {
+    transition: 0.6s;
+    font-size: 1em;
+
+    backdrop-filter: blur(10px);
+    background-color: #373b4840;
+    border-radius: 20px;
+    color: var(--white);
+    width: 30vw;
+
+    bottom: 10vh;
+    right: 5vh;
+}
+
+.full .daily-highlight-hover {
+    transition: 0.6s;
+    font-size: 0.2em;
+    opacity: 0;
+    transition-delay: 0.4s;
+}
+
+.daily-highlight-header {
+    color: var(--dirty-white);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+
+    transition: 0.6s;
+}
+
+.daily-highlight-description {
+    color: var(--lavender);
+    backdrop-filter: blur(0px);
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    
+    padding: 2vw 5vh;
+
+    position: absolute;
+
+    width: 20vw;
+    bottom: 2vh;
+    right: 2vh;
+
+    transition: 0.6s;
+}
+
+.full {
+    color: var(--lavender);
+    transition: 0.6s;
+    font-weight: bold;
+}
+
+.highlight-hidden {
+    animation: fade-out 0.4s forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        visibility: inherit;
+        opacity: 1;
+    }
+
+    50% {
+        visibility: inherit;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        visibility: none;
+        opacity: 0;
+    }
+
+    50% {
+        visibility: inherit;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: inherit;
+        opacity: 1;
+    }
+}

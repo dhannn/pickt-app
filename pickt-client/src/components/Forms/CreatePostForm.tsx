@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Input, Label, Select, TextArea } from '../shared/FormElements';
 import formStyles from './Forms.module.css'
 import globalStyles from './../../index.module.css'
@@ -7,6 +7,7 @@ import { createPost } from '../../services/post/PostServices';
 import { useUserAuth } from '../../hooks/useUserAuth';
 import { Post, PostTag } from '../../types/Post';
 import { redirect } from 'react-router-dom';
+import { AddPicture } from './AddPicture';
 
 type CreatePostProperties = {
     isFormFocused: boolean,
@@ -17,6 +18,7 @@ export default function CreatePostForm(props: CreatePostProperties) {
     const formTags = ['Need Feedback','Discussion', 'Question', 'Tips & Tricks', 'Others'];
 
     const { isFormFocused, setFocused } = props;
+    const [ profilePictureBase64, setProfilePicture ] = useState<string>('');
     const form = useRef<HTMLFormElement>(null);
     const userAuth = useUserAuth();
     const titleRef = useRef<HTMLInputElement>(null);
@@ -29,6 +31,7 @@ export default function CreatePostForm(props: CreatePostProperties) {
     function renderActiveForm() {
         return (
             <form ref={form} className={`${formStyles['form']} ${formStyles['active-form']}`}>   
+                <AddPicture isFocused={isFormFocused} setFocus={() => {}}/>
                 <div className={formStyles['post-title'] + ' ' + globalStyles['rounded-10px'] + ' ' + formStyles['formInput']}>
                     <Label classNames={formStyles['post-title-label']} value='Title'/>
                     <Input ref={titleRef} required classNames={`${globalStyles['rounded-10px']} ${formStyles['post-title-input']}`} style={{padding: '10px', background: 'none', borderColor: 'white'}} />
@@ -71,8 +74,8 @@ export default function CreatePostForm(props: CreatePostProperties) {
                 }
             };
 
-            redirect('/');
             createPost(post);
+            window.location.reload();
         } else {
             form.current?.reportValidity()
         }

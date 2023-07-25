@@ -19,12 +19,12 @@
 .post-list {
     width: 45vw;
     display: flex;
-    /* position: absolute; */
+    position: absolute;
     flex-direction: column;
 
     padding-bottom: 20vh;
     margin-top: 18vh;
-    margin-left: calc(100% - 10vw - 45vw);
+    left: calc(100% - 10vw - 45vw);
     gap: 5vh;
 }
 

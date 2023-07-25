@@ -10,6 +10,7 @@ export type UserAuthState = {
 const UserAuthContext = createContext<UserAuthState | undefined>(undefined);
 
 export function getUserAuthContext() {
+
     return UserAuthContext;
 }
 

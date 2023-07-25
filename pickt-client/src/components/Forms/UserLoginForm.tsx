@@ -44,8 +44,6 @@ export function UserLoginForm() {
         const isUsername = await usernameExists(usernameEmail!);
         const isEmail = emailExists(usernameEmail!);
         
-        console.log(isUsername);
-        
         
         if (!isUsername && !isEmail) {
             return alert('The email or username does not exist.');
@@ -58,6 +56,7 @@ export function UserLoginForm() {
         const user = isUsername? await getUserByUsername(usernameEmail!): await getUserByEmail(usernameEmail!);
         userAuth?.setUser(user!);
         
+
         alert('Login Successful!');
         navigate(-1);
         

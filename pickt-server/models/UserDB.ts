@@ -104,7 +104,6 @@ export async function updateUser(data: UserUpdate) {
 export async function deleteUser(username: string) {
     const user = await UserModel.findOne({ username: username });
     await UserModel.deleteOne({ username: username });
-    console.log(username);
     
     return user;
 }
