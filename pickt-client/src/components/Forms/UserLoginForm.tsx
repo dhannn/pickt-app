@@ -4,7 +4,7 @@ import Button from "../shared/Button/Button";
 
 import formStyles from './Forms.module.css'
 import { getUserAuthContext } from "../../hooks/useUserAuth";
-import { emailExists, getUserByEmail, getUserByUsername, usernameExists, validatePassword } from "../../services/user/UserServices";
+import { emailExists, getUserByEmail, getUserByUsername, loginUser, usernameExists, validatePassword } from "../../services/user/UserServices";
 import { useNavigate } from "react-router-dom";
 
 export function UserLoginForm() {
@@ -30,7 +30,7 @@ export function UserLoginForm() {
         </form>
     );
 
-    function login(e: MouseEvent) {
+    async function login(e: MouseEvent) {
         e.preventDefault();
 
         const form = formElement.current;
@@ -41,18 +41,21 @@ export function UserLoginForm() {
         
         const usernameEmail = usernameEmailInput.current?.value;
         const password = passwordInput.current?.value;
-        const isUsername = usernameExists(usernameEmail!);
+        const isUsername = await usernameExists(usernameEmail!);
         const isEmail = emailExists(usernameEmail!);
+        
+        console.log(isUsername);
+        
         
         if (!isUsername && !isEmail) {
             return alert('The email or username does not exist.');
         }
 
-        if (!validatePassword(usernameEmail!, password!)) {
+        if (!await loginUser(usernameEmail!, password!)) {
             return alert('Your password is incorrect!');
         }
         
-        const user = isUsername? getUserByUsername(usernameEmail!): getUserByEmail(usernameEmail!);
+        const user = isUsername? await getUserByUsername(usernameEmail!): await getUserByEmail(usernameEmail!);
         userAuth?.setUser(user!);
         
         alert('Login Successful!');

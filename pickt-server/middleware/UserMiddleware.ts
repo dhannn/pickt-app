@@ -4,6 +4,9 @@ import { findUserByUsername } from '../models/UserDB';
 
 export async function hashPassword(req: Request, res: Response, next: NextFunction) {
     const SALT_ROUNDS = 10;
+
+    console.log(req.body);
+    
     const hashed = await bcrypt.hash(req.body.password, SALT_ROUNDS);
     
     req.body.password = hashed;

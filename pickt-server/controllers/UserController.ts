@@ -1,25 +1,46 @@
 import { Request, Response } from "express";
 import { deleteUser, findUserByUsername, findUsers, insertUser, updateUser } from "../models/UserDB";
 import * as fs from 'fs';
+import * as bcrypt from 'bcrypt';
+
+export async function login(req: any, res: Response) {
+    const { username, password } = req.body;
+
+    console.log(req.body);
+
+    try {
+        const user = await findUserByUsername(username);
+        if (!user || !await bcrypt.compare(password, user.password)) {
+            return res.status(401).json({ message: 'Invalid credentials' });
+        }
+
+        req.session.user = user;
+        return res.status(200).json({ message: 'Login successful', user });
+    } catch(error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Server error' });
+    }
+}
+
+
+export async function logout(req:Request, res: Response) {      
+    req.session.destroy((err) => {
+        if (err) {
+            console.error(err);
+        }
+    });
+
+    return res.status(200).json({ message: 'Logout successful' });
+}
 
 export async function createUser(req: Request, res: Response) {
-    const data = parseBody(req.body);
-    const user = await insertUser(data);
-    
-    res.status(200).json(user);
-    
-    function parseBody(body: any) {
-        return {
-            fullName: {
-                firstName: body['first-name'],
-                lastName: body['last-name'],
-            },
-            username: body['username'],
-            email: body['email'],
-            password: body['password'],
-            bio: body['bio'],
-            profilePictureURI: body['profile-picture']
-        }
+    const data = req.body;
+
+    try {
+        const user = await insertUser(data);
+        return res.status(200).json(user);
+    } catch (error) {
+        return res.status(500).json({ message: 'Server error' });
     }
 
     function saveImageToFile(base64: string) {
@@ -28,7 +49,7 @@ export async function createUser(req: Request, res: Response) {
 }
 
 export async function getUsers(req: Request, res: Response) {
-    const users = await findUsers();
+    const users = await findUsers(req.params.email);
     res.status(200).json(users);
 }
 

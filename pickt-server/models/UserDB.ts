@@ -36,8 +36,8 @@ const UserSchema = new Schema<User>({
 
 const UserModel = mongoose.model<User>('User', UserSchema);
 
-export async function findUsers() {
-    const users = await UserModel.find({});
+export async function findUsers(obj: any = {}) {
+    const users = await UserModel.find(obj);
     return users;
 }
 
@@ -48,7 +48,7 @@ export async function insertUser(data: UserInsert) {
         email: data.email,
         password: data.password,
         bio: data.bio,
-        profilePictureURI: data.profilePictureURI
+        profilePictureURI: data.profilePictureURL
     });
 
     await user.save()

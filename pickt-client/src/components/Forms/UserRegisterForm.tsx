@@ -5,15 +5,17 @@ import Button from "../shared/Button/Button";
 import formStyles from './Forms.module.css'
 import globalStyles from './../../index.module.css'
 import { getUserAuthContext } from "../../hooks/useUserAuth";
-import { emailExists, getUserByEmail, getUserByUsername, usernameExists, validatePassword } from "../../services/user/UserServices";
+import { addUser, emailExists, getUserByEmail, getUserByUsername, usernameExists, validatePassword } from "../../services/user/UserServices";
 import { redirect, useNavigate } from "react-router-dom";
+import { User } from "../../types/User";
 
 export function UserRegisterForm() {
     const usernameInput = useRef<HTMLInputElement>(null);
     const emailInput = useRef<HTMLInputElement>(null);
+    const firstNameInput = useRef<HTMLInputElement>(null);
+    const lastNameInput = useRef<HTMLInputElement>(null);
     const passwordInput = useRef<HTMLInputElement>(null);
-    const textAreaInput = useRef<HTMLTextAreaElement>(null);
-    const formElement = useRef<HTMLFormElement>(null);
+    const bioInput = useRef<HTMLTextAreaElement>(null);
 
     const firstPage = useRef<HTMLFormElement>(null);
     const secondPage = useRef<HTMLFormElement>(null);
@@ -37,15 +39,15 @@ export function UserRegisterForm() {
             <div className={`${formStyles['register-name']}`}>
                 <div>
                     <Label style={{color: 'var(--black)'}} value='First Name'/>
-                    <Input required ref={ passwordInput } type='text'/>
+                    <Input required ref={ firstNameInput } type='text'/>
                 </div>
                 <div>
                     <Label style={{color: 'var(--black)'}} value='Last Name'/>
-                    <Input ref={ passwordInput } type='text'/>
+                    <Input ref={ lastNameInput } type='text'/>
                 </div>
             </div>
             <Label style={{color: 'var(--black)'}} value='Username'/>
-            <Input required ref={ usernameInput } onBlur={handleChangeUsername}/>
+            <Input required ref={ usernameInput } onBlur={() => handleChangeUsername}/>
             <Label style={{color: 'var(--black)'}} value='Email'/>
             <Input onBlur={handleChangeEmail} required ref={ emailInput } type='email'/>
             <Label style={{color: 'var(--black)'}} value='Password' />
@@ -74,7 +76,7 @@ export function UserRegisterForm() {
             </div>
 
             <Label style={{color: 'var(--black)'}} value='Bio'/>
-            <TextArea ref={ textAreaInput }  style={{width: '18.5vw', height: '10vh'}}/>
+            <TextArea ref={ bioInput }  style={{width: '18.5vw', height: '10vh'}}/>
 
             <div className={formStyles['buttons']}>
                 <Button style={{backgroundColor: 'var(--black)'}} type='primary' value='Register' onClick={register}/>
@@ -105,13 +107,26 @@ export function UserRegisterForm() {
         if (!second?.checkValidity()) {
             return second?.reportValidity();
         }
+        
+        const user: User = {
+            fullName: {
+                firstName: firstNameInput.current?.value!,
+                lastName: lastNameInput.current?.value
+            },
+            password: passwordInput.current?.value,
+            email: emailInput.current?.value,
+            username: usernameInput.current?.value!,
+            profilePictureURL: "",
+            bio: bioInput.current?.value
+        };
 
+        addUser(user);
         navigate(-1);
     }
 
-    function handleChangeUsername() {
+    async function handleChangeUsername() {
         const username = usernameInput.current;
-        if (usernameExists(username!.value!)) {
+        if (await usernameExists(username!.value!)) {
             alert('Username exists! Choose another username.');
         }
     }

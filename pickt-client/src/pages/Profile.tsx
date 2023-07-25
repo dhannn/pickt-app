@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getPostsByUser, getUserByUsername } from '../services/user/UserServices';
 import Avatar from '../components/shared/Avatar/Avatar';
 import { NavBar } from '../components/shared/Layout/NavBar';
 import { UserInfoComponent } from '../components/User/UserInfoComponent';
 import { PostList } from '../components/Post/PostList';
+import { User } from '../types/User';
 
 export function Profile() {
     const { formattedUsername } = useParams();
+    const [ user, setUser ] = useState<User>();
     const username = formattedUsername?.slice(1);
 
-    const user = getUserByUsername(username!);
+    useEffect(() => {
+        fetch();
 
-    if (user === null) {
+        async function fetch() {
+            const user = await getUserByUsername(username!);
+            setUser(user);
+        }
+    }, [])
+
+    if (!user) {
         return;
     }
 
