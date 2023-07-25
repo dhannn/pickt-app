@@ -11,7 +11,7 @@ export type User = {
     password?: string,
 
     bio?: string,
-    profilePictureURL: string,
+    profilePictureURI: string,
 
     posts?: Post[],
     photoURLs?: string[]

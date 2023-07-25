@@ -24,8 +24,10 @@ export default function Avatar(props: AvatarProps) {
         <FontAwesomeIcon icon={solid("user")} className={avatarStyle}/>
     );
 
+    console.log(url);
     if (!url) return defaultProfile;
 
+    
     return (
         <div className={avatarStyle} style={{ backgroundImage: `url(${url})`, ...style}}/>
     );

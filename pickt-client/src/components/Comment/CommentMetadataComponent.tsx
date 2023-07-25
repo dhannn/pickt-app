@@ -9,7 +9,7 @@ import Button from "../shared/Button";
 import { TextArea } from "../shared/FormElements";
 
 export function CommentMetadataComponent(props: CommentMetadata) {
-    const { author: { username, profilePictureURL, fullName: { firstName, lastName } }, createdAt, lastModified, } = props;
+    const { author: { username, profilePictureURI: profilePictureURL, fullName: { firstName, lastName } }, createdAt, lastModified, } = props;
     const [ relativeCreatedAt, setRelativeCreatedAt ] =  useState('');
     const [ relativeLastModified, setRelativeLastModified ] =  useState('');
 

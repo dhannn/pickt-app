@@ -8,6 +8,7 @@ import { getUserAuthContext } from "../../hooks/useUserAuth";
 import { addUser, emailExists, getUserByEmail, getUserByUsername, usernameExists, validatePassword } from "../../services/user/UserServices";
 import { redirect, useNavigate } from "react-router-dom";
 import { User } from "../../types/User";
+import { convertImageToBase64 } from "../../utils/uploadPhoto";
 
 export function UserRegisterForm() {
     const usernameInput = useRef<HTMLInputElement>(null);
@@ -24,7 +25,8 @@ export function UserRegisterForm() {
     const userAuth = useContext(Context);
     const navigate = useNavigate();
 
-    const [ profilePicture, setProfilePicture ] = useState('');
+    const [ profilePictureBase64, setProfilePictureBase64 ] = useState('');
+    
 
     return(
         <>
@@ -71,7 +73,7 @@ export function UserRegisterForm() {
 
             <Label style={{color: 'var(--black)', alignSelf: 'center'}} value='Profile Picture'/>
             <p style={{alignSelf: 'center'}}><strong>Drag and drop or click to upload.</strong></p>
-            <div className={formStyles['photo-input-preview']} onDrop={handleDrop} style={{backgroundImage: `url(${profilePicture})`, alignSelf: 'center'}}>
+            <div className={formStyles['photo-input-preview']} onDrop={handleDrop} style={{backgroundImage: `url(${profilePictureBase64})`, alignSelf: 'center'}}>
                 <input className={`${formStyles['photo-input']}`} type='file' accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
             </div>
 
@@ -116,7 +118,7 @@ export function UserRegisterForm() {
             password: passwordInput.current?.value,
             email: emailInput.current?.value,
             username: usernameInput.current?.value!,
-            profilePictureURL: "",
+            profilePictureURI: profilePictureBase64,
             bio: bioInput.current?.value
         };
 
@@ -144,12 +146,21 @@ export function UserRegisterForm() {
 
         if(!file.type.match('image*')) return;
         
-        setProfilePicture(URL.createObjectURL(file));
+        // setProfilePictureBase64(URL.createObjectURL(file));
+        convertImageToBase64(file)
+            .then((dat) => {
+                setProfilePictureBase64(dat);
+            })
     }
 
     function handleChange(e: ChangeEvent<HTMLInputElement>): void {
         if (e.target.files && e.target.files[0]) {
-            setProfilePicture(URL.createObjectURL(e.target.files[0]));
+            // setProfilePictureBase64(URL.createObjectURL(e.target.files[0]));
+            convertImageToBase64(e.target.files[0])
+                .then((dat) => {
+                    setProfilePictureBase64(dat);
+                })
+            // convertImageToBase64(e.target.files[0]).then((dat) => console.log(dat));
         }
     }
 }
