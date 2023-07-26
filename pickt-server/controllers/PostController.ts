@@ -4,7 +4,7 @@ import { Response } from 'express';
 import { PostInsert, PostQuery, findPostById, findPosts, insertPost, findComments, findCommentById, insertComment, PostUpdate, updatePost, updateComment } from '../models/PostDB';
 import { Post } from '../schema/Post';
 
-export async function getPosts(req: any, res: any) {
+export async function getPosts(req: Request, res: Response) {
     const query = parsePageQuery(req.query);
     let posts = await findPosts(query as PostQuery);
 
@@ -12,7 +12,7 @@ export async function getPosts(req: any, res: any) {
     return res.status(200).json(posts);
 }
 
-export async function getPostById(req: any, res: any) {
+export async function getPostById(req: Request, res: Response) {
     const postId = req.params.postId;
     const post = await findPostById(postId);
 
@@ -26,7 +26,7 @@ export async function getPostById(req: any, res: any) {
     res.status(200).json(post);
 }
 
-export async function getComments(req: any, res: any) {
+export async function getComments(req: Request, res: Response) {
     const postId = req.params.postId;
     let comments = await findComments(postId);
     if (!comments) {
@@ -39,7 +39,7 @@ export async function getComments(req: any, res: any) {
     res.status(200).json(comments);
 }
 
-export async function getCommentById(req: any, res: any) {
+export async function getCommentById(req: Request, res: Response) {
     const postId = req.params.postId;
     const commentId = req.params.commentId;
 
@@ -61,7 +61,7 @@ export async function getCommentById(req: any, res: any) {
     res.status(200).json(comment);
 }
 
-export async function createPost(req: any, res: any) {
+export async function createPost(req: Request, res: Response) {
     const data: Post = req.body;
     console.log(data);
     
@@ -71,7 +71,7 @@ export async function createPost(req: any, res: any) {
     res.status(201).json(post);
 }
 
-export async function createComment(req: any, res: any) {
+export async function createComment(req: Request, res: Response) {
     const data = parseCommentBody(req.body, req.params);    
     const comment = await insertComment(data);    
 
@@ -79,7 +79,7 @@ export async function createComment(req: any, res: any) {
     res.status(201).json(comment);
 }
 
-export async function editPost(req: any, res: any) {
+export async function editPost(req: Request, res: Response) {
     const data = parseEditPostBody(req.body, req.params);
 
     if (!await findPostById(req.params.postId)) {
@@ -94,7 +94,7 @@ export async function editPost(req: any, res: any) {
     res.status(200).json(post);
 }
 
-export async function editComment(req: any, res: any) {
+export async function editComment(req: Request, res: Response) {
     const data = parseEditCommentBody(req.body, req.params);
     
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -116,7 +116,7 @@ export async function editComment(req: any, res: any) {
     res.status(200).json(comment);
 }
 
-export async function votePost(req: any, res: any) {
+export async function votePost(req: Request, res: Response) {
     const data = { id: req.params.postId, vote: Number(req.params.vote) };
     const post = await updatePost(data);
 
@@ -124,7 +124,7 @@ export async function votePost(req: any, res: any) {
     res.status(200).json(post);
 }
 
-export async function voteComment(req: any, res: any) {
+export async function voteComment(req: Request, res: Response) {
     const data = { 
         postId: req.params.postId,
         commentId: req.params.commentId, 
@@ -138,7 +138,7 @@ export async function voteComment(req: any, res: any) {
     res.status(200).json(comment);
 }
 
-export async function deletePost(req: any, res: any) {
+export async function deletePost(req: Request, res: Response) {
     const data = { id: req.params.postId, isDeleted: true };
     const post = await updatePost(data);
 
@@ -146,7 +146,7 @@ export async function deletePost(req: any, res: any) {
     res.status(200).json(post);
 }
 
-export async function deleteComment(req: any, res: any) {
+export async function deleteComment(req: Request, res: Response) {
     const data = { 
         postId: req.params.postId, 
         commentId: req.params.commentId, 
