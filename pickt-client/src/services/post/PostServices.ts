@@ -6,7 +6,7 @@ import object from './../../data/Posts.json';
 let postsJSON: Post[];
 postsJSON = object;
 
-const SERVER_PORT = process.env.SERVER_PORT;
+const SERVER_PORT = 'pick-api.onrender.com';
 
 export async function getPosts() {
     const response = await fetch(`https://${SERVER_PORT}/posts/`);

@@ -1,6 +1,6 @@
 import { User } from '../../types/User';
 
-const SERVER_PORT = process.env.SERVER_PORT;
+const SERVER_PORT = 'pick-api.onrender.com';
 
 export async function addUser(user: User) {
     try {
