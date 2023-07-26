@@ -4,8 +4,9 @@
   "description": "Backend for Pickt, a web forum application for photographers",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "tsc --build"
   },
   "author": "",
   "license": "ISC",
