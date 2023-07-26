@@ -4,7 +4,7 @@ const SERVER_PORT = process.env.SERVER_PORT;
 
 export async function addUser(user: User) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/`, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -23,7 +23,7 @@ export async function addUser(user: User) {
 
 export async function usernameExists(username: string) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/${username}`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/${username}/`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -52,7 +52,7 @@ export async function validatePassword(emailUsername: string, password: string) 
 
 export async function getUserByEmail(email: string) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users?email=${email}`, {
+        const response = await fetch(`https://${SERVER_PORT}/users?email=${email}/`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -69,7 +69,7 @@ export async function getUserByEmail(email: string) {
 
 export async function getUserByUsername(username: string) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/${username}`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/${username}/`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -89,7 +89,7 @@ export async function getUserByUsername(username: string) {
 
 export async function deleteUser(username: string) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/${username}`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/${username}/`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',
@@ -106,7 +106,7 @@ export async function deleteUser(username: string) {
 
 export async function loginUser(username: string, password: string) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/login`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/login/`, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -138,7 +138,7 @@ export async function loginUser(username: string, password: string) {
 
 export async function logoutUser() {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/logout`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/logout/`, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -156,7 +156,7 @@ export async function logoutUser() {
 
 export async function editUserInfo(modified: any) {
     try {
-        const response = await fetch(`http://${SERVER_PORT}/users/${modified.username}`, {
+        const response = await fetch(`https://${SERVER_PORT}/users/${modified.username}/`, {
             method: 'PATCH',
             headers: {
               'Accept': 'application/json',
