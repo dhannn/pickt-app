@@ -12,7 +12,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 import cors from 'cors';
 const corsOptions ={
-    origin:'https://pickt-7bql.onrender.com/', 
+    origin:'https://pickt-7bql.onrender.com', 
     credentials:true,
     optionSuccessStatus:200
 }
