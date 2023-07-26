@@ -6,7 +6,7 @@ import { router as UserRouter } from './routes/UserRoutes';
 import { connectToMongo } from './models/db';
 const app = express();
 
-app.listen(process.env.SERVER_PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Server running');
 });
 
