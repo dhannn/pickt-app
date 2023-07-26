@@ -9,7 +9,6 @@ mongoose.connect(mongoURI || '', { dbName: dbName });
 
 export function connectToMongo() {
     const db = mongoose.connection;
-    console.log(db.collections['posts'] === undefined);
 
     if (db.collections['posts'] === undefined) {
         db.createCollection('posts');
