@@ -3,6 +3,9 @@ import { PostSnippet } from './PostSnippet';
 import { getPosts } from '../../services/post/PostServices';
 import postStyles from './Post.module.css'
 import { Post } from '../../types/Post';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLoading } from '../../hooks/useLoading';
 
 type PostListProps = {
     posts?: Post[],
@@ -11,6 +14,9 @@ type PostListProps = {
 
 export function PostList(props: PostListProps) {
     const [ posts, setPosts ] = useState<Post[]>([]);
+    // const [ isLoading, setIsLoading ] = useState(true);
+
+    const { isLoading, setLoading, loadingIcon } = useLoading();
 
     useEffect(() => {
         if (!props.posts)
@@ -21,8 +27,13 @@ export function PostList(props: PostListProps) {
         async function fetchPosts() {
             const posts = await getPosts();
             setPosts(posts);
+            setLoading(false);
         }
     }, []);
+
+    if (isLoading) {
+        return loadingIcon;
+    }
 
     const postComponents = posts.map((post: Post) => {
         if (!post.isDeleted)

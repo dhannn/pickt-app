@@ -11,6 +11,7 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getPostsByUser } from '../services/post/PostServices';
 import { Post } from '../types/Post';
+import { useLoading } from '../hooks/useLoading';
 
 export function Profile() {
     const { formattedUsername } = useParams();
@@ -18,24 +19,31 @@ export function Profile() {
     const [ posts, setPosts ] = useState<Post[]>();
     const username = formattedUsername?.slice(1);
     const userAuth = useUserAuth()!;
+    const { isLoading, setLoading, loadingIcon } = useLoading();
 
     useEffect(() => {
         fetch();
-
         async function fetch() {
             const user = await getUserByUsername(username!);
             if (!user) {
                 setUser(undefined);
+                setLoading(false);
                 return;
             }
 
             setUser(user);
             getPostsByUser(username!).then(
-                (postsResponse) => {setPosts(postsResponse);
+                (postsResponse) => {
+                    setLoading(false);
+                    setPosts(postsResponse);
                 }
-            )
+            );
         }
     }, []);
+
+    if (isLoading) {
+        return loadingIcon;
+    }
 
     if (!user) {
         return <>

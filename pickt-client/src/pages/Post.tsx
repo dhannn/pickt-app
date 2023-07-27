@@ -5,18 +5,25 @@ import { PostComponent } from '../components/Post/PostComponent';
 import { NavBar } from '../components/shared/Layout/NavBar';
 import { faBolt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLoading } from '../hooks/useLoading';
 
 export function Post() {
     const { postId } = useParams();
     const [ post, setPost ] = useState();
+    const { isLoading, setLoading, loadingIcon } = useLoading();
 
     useEffect(() => {
         fetchPost();
         async function fetchPost() {
             const post = await getPostById(postId!);
             setPost(post);
+            setLoading(false);
         }
     });
+
+    if (isLoading) {
+        return loadingIcon;
+    }
 
     
     if (!post) {
