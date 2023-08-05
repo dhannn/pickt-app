@@ -35,8 +35,9 @@ export function Profile() {
             
             const postResponse = await getPostsByUser(username!);
             
-            setPosts(() => postResponse);
-            setLoading(() => false);
+            setPosts(postResponse);
+            setUser(user);
+            setLoading(false);
             console.log(postResponse);
             console.log(postResponse + ':' + isLoading);
         }
