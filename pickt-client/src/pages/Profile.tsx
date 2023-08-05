@@ -17,11 +17,11 @@ export function Profile() {
     const { formattedUsername } = useParams();
     const [ user, setUser ] = useState<User>();
     const [ posts, setPosts ] = useState<Post[]>();
-    const { isLoading, setLoading, loadingIcon } = useLoading();
-
+    
     const username = formattedUsername?.slice(1);
     const userAuth = useUserAuth()!;
-
+    const { isLoading, setLoading, loadingIcon } = useLoading();
+    
     useEffect(() => {
         fetch();
 
@@ -37,8 +37,8 @@ export function Profile() {
 
             getPostsByUser(username!)
                 .then((postResponse) => {
-                    setPosts(postResponse);
                     setLoading(false);
+                    setPosts(postResponse);
                 });
         }
     }, []);
