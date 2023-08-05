@@ -31,10 +31,10 @@ export function Profile() {
             }
             
             setUser(user);
+            console.log(username);
             getPostsByUser(username!).then(
                 (postsResponse) => {
                     setLoading(false);
-                    console.log(username);
                     
                     setPosts(postsResponse);
                 }
