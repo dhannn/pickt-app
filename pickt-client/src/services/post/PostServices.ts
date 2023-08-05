@@ -31,10 +31,10 @@ export async function getPostsByUser(username: string) {
             mode: "cors"
         });
     
-        console.log(await response.json());
+        const posts = await response.json();
+        console.log(posts);
         
-
-        return response.json();
+        return posts;
     } catch(error) {
         console.error(error);
     }

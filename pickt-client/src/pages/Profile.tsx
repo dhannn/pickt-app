@@ -27,14 +27,15 @@ export function Profile() {
             const user = await getUserByUsername(username!);
             if (!user) {
                 setUser(undefined);
-                setLoading(false);
                 return;
             }
-
+            
             setUser(user);
             getPostsByUser(username!).then(
                 (postsResponse) => {
                     setLoading(false);
+                    console.log(postsResponse);
+                    
                     setPosts(postsResponse);
                 }
             );
