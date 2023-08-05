@@ -22,7 +22,8 @@ export function Profile() {
     const userAuth = useUserAuth()!;
     const { isLoading, setLoading, loadingIcon } = useLoading();
     
-    setLoading(false);
+    if (isLoading)
+        setLoading(false);
     useEffect(() => {
         fetch();
 
