@@ -34,9 +34,10 @@ export function Profile() {
             }
             
             setUser(user);
+            setLoading(false);
+            
             getPostsByUser(username!)
                 .then((postResponse) => {
-                    setLoading(false);
                     setPosts(postResponse);
                 });
         }
