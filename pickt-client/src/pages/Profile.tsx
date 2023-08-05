@@ -42,8 +42,13 @@ export function Profile() {
         async function fetch() {
             const postResponse = await getPostsByUser(username!);
             
+            
             setPosts(postResponse);
             setLoading(false);
+
+            console.log(postResponse);
+            console.log(posts);
+            console.log(isLoading);
         }
     }, []);
 
