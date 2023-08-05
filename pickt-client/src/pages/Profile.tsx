@@ -33,12 +33,12 @@ export function Profile() {
             
             setUser(user);
             
-            const posts = await getPostsByUser(username!);
-            console.log(posts);
-            console.log(posts + ':' + isLoading);
+            const postResponse = await getPostsByUser(username!);
             
-            setPosts(posts);
+            setPosts(postResponse);
             setLoading(false);
+            console.log(postResponse);
+            console.log(postResponse + ':' + isLoading);
         }
     }, []);
 
