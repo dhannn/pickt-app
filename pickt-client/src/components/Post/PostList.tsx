@@ -21,8 +21,10 @@ export function PostList(props: PostListProps) {
     useEffect(() => {
         if (!props.posts)
             fetchPosts();
-        else
+        else {
+            setLoading(false);
             setPosts(props.posts);
+        }
 
         async function fetchPosts() {
             const posts = await getPosts();
