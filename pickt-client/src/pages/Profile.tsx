@@ -24,22 +24,21 @@ export function Profile() {
 
     useEffect(() => {
         fetch();
-        async function fetch() {
-            getUserByUsername(username!)
-                .then((user) => {
-                    if (!user) {
-                        setLoading(false);
-                        setUser(undefined);
-                        return;
-                    }
-                    
-                    setUser(user);
 
-                    getPostsByUser(username!)
-                        .then((postResponse) => {
-                            setPosts(postResponse);
-                            setLoading(false);
-                        });
+        async function fetch() {
+            const user = await getUserByUsername(username!);
+            if (!user) {
+                setLoading(false);
+                setUser(undefined);
+                return;
+            }
+            
+            setUser(user);
+
+            getPostsByUser(username!)
+                .then((postResponse) => {
+                    setPosts(postResponse);
+                    setLoading(false);
                 });
         }
     }, []);
