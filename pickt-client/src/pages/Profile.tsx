@@ -25,14 +25,16 @@ export function Profile() {
     useEffect(() => {
         fetch();
         async function fetch() {
-            const user = await getUserByUsername(username!);
-            if (!user) {
-                setLoading(false);
-                setUser(undefined);
-                return;
-            }
-            
-            setUser(user);
+            getUserByUsername(username!)
+                .then((user) => {
+                    if (!user) {
+                        setLoading(false);
+                        setUser(undefined);
+                        return;
+                    }
+                    
+                    setUser(user);
+                });
         }
     }, []);
 
@@ -40,14 +42,11 @@ export function Profile() {
         fetch();
 
         async function fetch() {
-            const postResponse = await getPostsByUser(username!);
-            
-            setPosts(postResponse);
-            setLoading(false);
-
-            console.log(postResponse);
-            console.log(posts);
-            console.log(isLoading);
+            getPostsByUser(username!)
+                .then((postResponse) => {
+                    setPosts(postResponse);
+                    setLoading(false);
+                });
         }
     }, []);
 
