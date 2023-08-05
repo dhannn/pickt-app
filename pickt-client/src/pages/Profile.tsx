@@ -39,7 +39,7 @@ export function Profile() {
             getPostsByUser(username!)
                 .then((postResponse) => {
                     setLoading(false);
-                    setPosts([...postResponse]);
+                    setPosts(postResponse);
                 });
         }
     }, []);
