@@ -18,7 +18,7 @@ export function Profile() {
     const [ user, setUser ] = useState<User>();
     const [ posts, setPosts ] = useState<Post[]>();
     const { isLoading, setLoading, loadingIcon } = useLoading();
-    
+
     const username = formattedUsername?.slice(1);
     const userAuth = useUserAuth()!;
 
@@ -33,14 +33,17 @@ export function Profile() {
             }
             
             setUser(user);
-            
+        }
+    }, []);
+
+    useEffect(() => {
+        fetch();
+
+        async function fetch() {
             const postResponse = await getPostsByUser(username!);
             
-            setPosts(() => postResponse);
-            setUser(() => user);
+            setPosts(postResponse);
             setLoading(false);
-            console.log(postResponse);
-            console.log(postResponse + ':' + isLoading);
         }
     }, []);
 
