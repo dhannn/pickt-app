@@ -11,9 +11,6 @@ const URL = 'api.pickt.live';
 export async function getPosts() {
     const response = await fetch(`https://${URL}/posts/`);
 
-    console.log(`https://${URL}/posts/`);
-    
-
     try {
         const posts = await response.json();        
         return posts;
