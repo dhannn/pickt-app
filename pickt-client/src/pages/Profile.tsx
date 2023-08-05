@@ -31,7 +31,6 @@ export function Profile() {
             }
             
             setUser(user);
-            console.log(username);
             
             const posts = await getPostsByUser(username!)
             setPosts(posts);

@@ -32,7 +32,7 @@ export async function getPostsByUser(username: string) {
         });
     
         const posts = await response.json();
-        console.log(posts);
+        console.log(`https://${SERVER_PORT}/posts?username=${username}/`);
         
         return posts;
     } catch(error) {
