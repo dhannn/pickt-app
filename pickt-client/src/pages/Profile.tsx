@@ -35,6 +35,7 @@ export function Profile() {
             
             const posts = await getPostsByUser(username!);
             console.log(posts);
+            console.log(posts + ':' + isLoading);
             
             setPosts(posts);
             setLoading(false);
