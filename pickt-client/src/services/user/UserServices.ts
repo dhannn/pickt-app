@@ -1,6 +1,6 @@
 import { User } from '../../types/User';
 
-const SERVER_PORT = 'pick-api.onrender.com';
+const SERVER_PORT = 'api.pickt.live';
 
 export async function addUser(user: User) {
     try {
