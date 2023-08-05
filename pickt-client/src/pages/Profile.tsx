@@ -34,18 +34,12 @@ export function Profile() {
                     }
                     
                     setUser(user);
-                });
-        }
-    }, []);
 
-    useEffect(() => {
-        fetch();
-
-        async function fetch() {
-            getPostsByUser(username!)
-                .then((postResponse) => {
-                    setPosts(postResponse);
-                    setLoading(false);
+                    getPostsByUser(username!)
+                        .then((postResponse) => {
+                            setPosts(postResponse);
+                            setLoading(false);
+                        });
                 });
         }
     }, []);
