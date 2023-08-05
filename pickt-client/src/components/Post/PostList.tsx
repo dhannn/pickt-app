@@ -14,7 +14,6 @@ type PostListProps = {
 
 export function PostList(props: PostListProps) {
     const [ posts, setPosts ] = useState<Post[]>([]);
-    // const [ isLoading, setIsLoading ] = useState(true);
 
     const { isLoading, setLoading, loadingIcon } = useLoading();
 
@@ -22,8 +21,8 @@ export function PostList(props: PostListProps) {
         if (!props.posts)
             fetchPosts();
         else {
-            setLoading(false);
             setPosts(props.posts);
+            setLoading(false);
         }
 
         async function fetchPosts() {

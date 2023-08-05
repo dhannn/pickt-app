@@ -28,13 +28,12 @@ export function Profile() {
         async function fetch() {
             const user = await getUserByUsername(username!);
             if (!user) {
-                setLoading(false);
                 setUser(undefined);
+                setLoading(false);
                 return;
             }
             
             setUser(user);
-
             getPostsByUser(username!)
                 .then((postResponse) => {
                     setLoading(false);
