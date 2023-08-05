@@ -22,7 +22,6 @@ export async function getPosts() {
 
 export async function getPostsByUser(username: string) {
     try {
-        
         const response = await fetch(`https://${SERVER_PORT}/posts?username=${username}/`, {
             method: "GET",
             headers: {
@@ -32,6 +31,9 @@ export async function getPostsByUser(username: string) {
             mode: "cors"
         });
     
+        console.log(await response.json());
+        
+
         return response.json();
     } catch(error) {
         console.error(error);
