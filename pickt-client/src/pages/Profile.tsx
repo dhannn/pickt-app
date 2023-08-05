@@ -34,7 +34,7 @@ export function Profile() {
             getPostsByUser(username!).then(
                 (postsResponse) => {
                     setLoading(false);
-                    console.log(postsResponse);
+                    console.log(username);
                     
                     setPosts(postsResponse);
                 }
