@@ -6,7 +6,7 @@ import object from './../../data/Posts.json';
 let postsJSON: Post[];
 postsJSON = object;
 
-const URL = 'https://api.pickt.live';
+const URL = 'api.pickt.live';
 
 export async function getPosts() {
     const response = await fetch(`https://${URL}/posts/`);
