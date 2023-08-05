@@ -22,7 +22,7 @@ export async function getPosts() {
 
 export async function getPostsByUser(username: string) {
     try {
-        const response = await fetch(`https://${SERVER_PORT}/posts?username=${username}/`, {
+        const response = await fetch(`https://${SERVER_PORT}/posts?username=${username}`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -32,7 +32,6 @@ export async function getPostsByUser(username: string) {
         });
     
         const posts = await response.json();
-        console.log(`https://${SERVER_PORT}/posts?username=${username}/`);
         
         return posts;
     } catch(error) {
