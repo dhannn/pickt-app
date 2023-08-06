@@ -8,6 +8,7 @@ import { useUserAuth } from '../../hooks/useUserAuth';
 import { Post, PostTag } from '../../types/Post';
 import { redirect } from 'react-router-dom';
 import { AddPicture } from './AddPicture';
+import { useLoading } from '../../hooks/useLoading';
 
 type CreatePostProperties = {
     isFormFocused: boolean,
@@ -16,7 +17,8 @@ type CreatePostProperties = {
 
 export default function CreatePostForm(props: CreatePostProperties) {    
     const formTags = ['Need Feedback','Discussion', 'Question', 'Tips & Tricks', 'Others'];
-
+    const { isLoading, loadingIcon, setLoading } = useLoading();
+    
     const { isFormFocused, setFocused } = props;
     const [ profilePictureBase64, setProfilePicture ] = useState<string>('');
     const form = useRef<HTMLFormElement>(null);
@@ -25,8 +27,10 @@ export default function CreatePostForm(props: CreatePostProperties) {
     const tagRef = useRef<HTMLSelectElement>(null);
     const contentRef = useRef<HTMLTextAreaElement>(null);
     
-    return isFormFocused? renderActiveForm(): renderInactiveForm();
+    setLoading(false);
 
+    return isFormFocused? renderActiveForm(): renderInactiveForm();
+    
 
     function renderActiveForm() {
         return (
@@ -54,8 +58,8 @@ export default function CreatePostForm(props: CreatePostProperties) {
     function handleSubmit(e: React.MouseEvent) {
         e.preventDefault();
         if (form.current?.checkValidity()) {
-            setFocused!(false);
-
+            setLoading(true);
+            
             const post: Post = {
                 _id: '',
                 content: {
@@ -73,9 +77,13 @@ export default function CreatePostForm(props: CreatePostProperties) {
                     downvotes: 0
                 }
             };
-
-            createPost(post);
-            window.location.reload();
+            
+            createPost(post)
+                .then(() => {
+                    setFocused!(false);
+                    setLoading(false);
+                    window.location.reload();
+                });
         } else {
             form.current?.reportValidity()
         }
