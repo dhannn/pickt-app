@@ -31,6 +31,8 @@ export default function CreatePostForm(props: CreatePostProperties) {
         setLoading(false);
     }, []);
 
+    if (isLoading) { return loadingIcon; }
+
     return isFormFocused? renderActiveForm(): renderInactiveForm();
     
 
