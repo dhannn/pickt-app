@@ -23,7 +23,7 @@ export interface UserInsert {
     password: string,
 
     bio?: string,
-    profilePictureURL?: string,
+    profilePictureURI?: string,
 }
 
 export interface UserUpdate {

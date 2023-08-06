@@ -45,8 +45,7 @@ export const router = express.Router();
  * DELETE   /posts/:postId/comments/:commentId/
  *          Delete a comment
  */
-
-router.use(bodyParser.json());
+router.use(bodyParser.json({limit: '500mb'}));
 
 /**
  * Routes for GET requests

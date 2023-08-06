@@ -1,6 +1,8 @@
 import React, { ChangeEvent, DragEvent, EventHandler, useRef, useState } from "react";
 import Avatar from "../shared/Avatar/Avatar";
 
+
+import * as LZ from 'lz-string';
 import userStyles from './User.module.css';
 import styles from './../../index.module.css';
 import Button from "../shared/Button";
@@ -141,7 +143,7 @@ export function UserInfoComponent(user: UserInfoProps) {
         }
         
         if (profilePictureURL !== profilePictureBase64) {
-            modified.profilePictureURI = profilePictureBase64;
+            modified.profilePictureURI =  profilePictureBase64;
         }
 
         if (modified) {

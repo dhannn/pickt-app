@@ -54,7 +54,6 @@ export async function getUserByUsername(req: Request, res: Response) {
 
 export async function editUserInfo(req: Request, res: Response) {
     const body = req.body;
-    console.log(body);
     
     const user = await updateUser(body);
 
@@ -62,6 +61,6 @@ export async function editUserInfo(req: Request, res: Response) {
 }
 
 export async function deactivateUser(req: Request, res: Response) {
-    const user = deleteUser(req.params.username);
+    const user = await deleteUser(req.params.username);
     res.status(200).json(user);
 }

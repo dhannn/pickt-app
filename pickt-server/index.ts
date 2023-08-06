@@ -6,13 +6,13 @@ import { router as UserRouter } from './routes/UserRoutes';
 import { connectToMongo } from './models/db';
 const app = express();
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log('Server running');
 });
 
 import cors from 'cors';
 const corsOptions ={
-    origin:'https://www.pickt.live', 
+    origin: process.env.ORIGIN, 
     credentials:true,
     optionSuccessStatus:200
 }

@@ -54,8 +54,8 @@ export async function insertUser(data: UserInsert) {
         email: data.email,
         password: data.password,
         bio: data.bio,
-        profilePictureURI: data.profilePictureURL
-    });
+        profilePictureURI: data.profilePictureURI
+    });    
 
     await user.save()
     return user;
