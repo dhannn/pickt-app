@@ -244,6 +244,7 @@ export async function updatePost(data: PostUpdate) {
     
     if (content !== undefined) {
         post.content.content = content;
+        post.metadata.lastModified = new Date();
         post.markModified('content');
     }
 

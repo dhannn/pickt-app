@@ -66,8 +66,9 @@ export function PostSnippet(props: Post) {
     
     function renderContent(postContent: PostContent, postMetadata: PostMetadata) {
         const { title, content } = postContent;
-        const { tag, author, createdAt } = postMetadata;
-        const relativeDate = getRelativeDateTime(new Date(createdAt));
+        const { tag, author, createdAt, lastModified } = postMetadata;
+        const relativeCreatedDate = getRelativeDateTime(new Date(createdAt));
+        const relativeModifiedDate = getRelativeDateTime(new Date(lastModified!));
 
         const truncatedContent = truncatePost(content);
 
@@ -77,7 +78,8 @@ export function PostSnippet(props: Post) {
                 <p> <PostTag tag={tag}/>      </p>
                 <h1 className={`${postStyles['title']}`}>{ title }       </h1>
                 <Link to={`/user/@${author.username}`} className={`${globalStyles['inline']} ${postStyles['author']}`}> @{ author.username } </Link>
-                <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
+                <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeCreatedDate } </p>
+                <p className={`${globalStyles['inline']} ${postStyles['date']}`} style={{display: "inline", color: 'gray', marginLeft: '10px', fontSize: '0.8em'}}> {lastModified !== undefined && `Edited ${ relativeModifiedDate }`} </p>
                 <p className={postStyles['content']} dangerouslySetInnerHTML={{ __html: truncatedContent }}/>
                 
                 <p style={{color: 'var(--greenish-gray)', fontSize: 'var(--small-font-size)', marginTop: '1vh'}}>{ `${commentCount} comment${commentCount > 1? 's': ''}` }</p>

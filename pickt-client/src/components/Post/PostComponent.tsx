@@ -82,9 +82,10 @@ export function PostComponent(props: Post) {
 
     function renderContent(postInfo: PostContent, postMetadata: PostMetadata) {
         const { title, content, photoUrl } = postInfo;
-        const { tag, createdAt, author } = postMetadata;
+        const { tag, createdAt, author, lastModified } = postMetadata;
 
-        const relativeDate = getRelativeDateTime(new Date(createdAt));
+        const relativeCreatedDate = getRelativeDateTime(new Date(createdAt));
+        const relativeModifiedDate = getRelativeDateTime(new Date(lastModified!));
         const htmlified = htmlify(content);
         
         return (
@@ -94,7 +95,8 @@ export function PostComponent(props: Post) {
                     <PostTag tag={ tag }/>
                     <h1 className={`${postStyles['title-full']}`}>{ title }</h1>
                     <Link className={`${globalStyles['inline']} ${postStyles['author']}`} to={`/user/@${ author.username }`}> @{ author.username } </Link>
-                    <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeDate } </p>
+                    <p className={`${globalStyles['inline']} ${postStyles['date']}`}> &#x2022; { relativeCreatedDate } </p>
+                    <p className={`${globalStyles['inline']} ${postStyles['date']}`} style={{display: "inline", color: 'gray', marginLeft: '10px', fontSize: '0.8em'}}> {lastModified !== undefined && `Edited ${ relativeModifiedDate }`} </p>
 
                     {
                         state === 'display' &&

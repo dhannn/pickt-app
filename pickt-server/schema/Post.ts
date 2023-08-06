@@ -20,7 +20,8 @@ export interface PostContent {
 export interface PostMetadata  {
     tag: PostTag,
     author: User,
-    createdAt: Date
+    createdAt: Date,
+    lastModified: Date
 }
 
 export type PostTag = 'Need Feedback' | 'Discussion' | 'Question' | 'Tips & Tricks' | 'Others';
