@@ -6,7 +6,7 @@ import { convertImageToBase64 } from '../../utils/uploadPhoto';
 
 export function AddPicture({isFocused, setFocus, photo, setPhoto}: { isFocused: boolean, setFocus: React.Dispatch<React.SetStateAction<boolean>>, photo: string, setPhoto: React.Dispatch<React.SetStateAction<string>>}) {
     
-    return photo === undefined? renderDefaultView(): renderUploadedView();
+    return photo === ''? renderDefaultView(): renderUploadedView();
     
     function renderDefaultView() {
         return (
@@ -21,7 +21,7 @@ export function AddPicture({isFocused, setFocus, photo, setPhoto}: { isFocused: 
     function renderUploadedView() {
         return <div
             className={formStyles['photo-input-preview-create-post']}
-            style={{ backgroundImage: `url(${photo})`, backgroundColor: `#373b4840` }}
+            style={{ backgroundImage: `url(${photo})`, backgroundPosition: 'center', backgroundColor: `#373b4840` }}
             onDrop={handleDrop}
         >
             <input

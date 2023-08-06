@@ -89,7 +89,7 @@ export function PostComponent(props: Post) {
         
         return (
             <>
-                <div className={`${postStyles['photo-full']}`} style={{backgroundImage: `url("${photoUrl}")`}}></div>
+                <div className={`${postStyles['photo-full']}`} style={{backgroundImage: `url("${photoUrl}")`, backgroundPosition: 'center'}}></div>
                 <div className={`${postStyles['full-post']}`}>
                     <PostTag tag={ tag }/>
                     <h1 className={`${postStyles['title-full']}`}>{ title }</h1>

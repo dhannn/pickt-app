@@ -21,6 +21,7 @@ export type PostMetadata = {
     tag: PostTag,
     author: User,
     createdAt: Date,
+    lastModified?: Date
 }
 
 export type PostTag = 'Need Feedback' | 'Discussion' | 'Question' | 'Tips & Tricks' | 'Others';
