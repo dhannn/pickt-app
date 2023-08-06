@@ -63,7 +63,6 @@ export async function getCommentById(req: Request, res: Response) {
 
 export async function createPost(req: Request, res: Response) {
     const data: Post = req.body;
-    console.log(data);
     
     const post = await insertPost(data);
 

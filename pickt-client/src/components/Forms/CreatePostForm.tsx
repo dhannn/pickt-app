@@ -69,7 +69,7 @@ export default function CreatePostForm(props: CreatePostProperties) {
                 content: {
                     title: titleRef.current!.value,
                     content: contentRef.current!.value,
-                    photoUrl: undefined
+                    photoUrl: pictureBase64
                 },
                 metadata: {
                     tag: tagRef.current?.value! as PostTag,
