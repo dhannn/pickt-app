@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import formStyles from './Forms.module.css'
+import { convertImageToBase64 } from '../../utils/uploadPhoto';
 
-export function AddPicture({isFocused, setFocus}: { isFocused: boolean, setFocus: React.Dispatch<React.SetStateAction<boolean>>}) {
-    let [ photo, setPhoto ] = useState<string | undefined>();
+export function AddPicture({isFocused, setFocus, photo, setPhoto}: { isFocused: boolean, setFocus: React.Dispatch<React.SetStateAction<boolean>>, photo: string, setPhoto: React.Dispatch<React.SetStateAction<string>>}) {
     
     return photo === undefined? renderDefaultView(): renderUploadedView();
     
@@ -39,12 +39,15 @@ export function AddPicture({isFocused, setFocus}: { isFocused: boolean, setFocus
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         if (e.target.files && e.target.files[0]) {
-            setPhoto(URL.createObjectURL(e.target.files[0]));
+            convertImageToBase64(e.target.files[0])
+                .then((dat) => {
+                    setPhoto(dat);
+                })
         }         
     }
 
     function handleDelete() {
-        setPhoto(undefined);
+        setPhoto('');
     }
 
     function handleDrop(e: React.DragEvent<HTMLDivElement>) {
@@ -52,6 +55,9 @@ export function AddPicture({isFocused, setFocus}: { isFocused: boolean, setFocus
         const file = e.dataTransfer.files[0];
 
         if(!file.type.match('image*')) return;
-        setPhoto(URL.createObjectURL(file));
+        convertImageToBase64(file)
+            .then((dat) => {
+                setPhoto(dat);
+            })
     }
 }

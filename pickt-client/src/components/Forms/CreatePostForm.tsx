@@ -16,11 +16,11 @@ type CreatePostProperties = {
 }
 
 export default function CreatePostForm(props: CreatePostProperties) {    
-    const formTags = ['Need Feedback','Discussion', 'Question', 'Tips & Tricks', 'Others'];
+    const formTags = ['Need Feedback','Discussion', 'Question', 'Tips & Tricks', 'For Highlight', 'Others'];
     const { isLoading, loadingIcon, setLoading } = useLoading();
     
     const { isFormFocused, setFocused } = props;
-    const [ profilePictureBase64, setProfilePicture ] = useState<string>('');
+    const [ pictureBase64, setPicture ] = useState<string>('');
     const form = useRef<HTMLFormElement>(null);
     const userAuth = useUserAuth();
     const titleRef = useRef<HTMLInputElement>(null);
@@ -39,7 +39,7 @@ export default function CreatePostForm(props: CreatePostProperties) {
     function renderActiveForm() {
         return (
             <form ref={form} className={`${formStyles['form']} ${formStyles['active-form']}`}>   
-                <AddPicture isFocused={isFormFocused} setFocus={() => {}}/>
+                <AddPicture isFocused={isFormFocused} setFocus={() => {}} photo={pictureBase64} setPhoto={setPicture}/>
                 <div className={formStyles['post-title'] + ' ' + globalStyles['rounded-10px'] + ' ' + formStyles['formInput']}>
                     <Label classNames={formStyles['post-title-label']} value='Title'/>
                     <Input ref={titleRef} required classNames={`${globalStyles['rounded-10px']} ${formStyles['post-title-input']}`} style={{padding: '10px', background: 'none', borderColor: 'white'}} />
