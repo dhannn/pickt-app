@@ -26,8 +26,10 @@ export default function CreatePostForm(props: CreatePostProperties) {
     const titleRef = useRef<HTMLInputElement>(null);
     const tagRef = useRef<HTMLSelectElement>(null);
     const contentRef = useRef<HTMLTextAreaElement>(null);
-    
-    setLoading(false);
+ 
+    useEffect(() => {
+        setLoading(false);
+    }, []);
 
     return isFormFocused? renderActiveForm(): renderInactiveForm();
     
